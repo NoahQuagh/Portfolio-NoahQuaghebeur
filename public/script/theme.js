@@ -17,6 +17,7 @@ const themes = {
         '--title': '#f0a060',
         '--bghover': 'rgba(211,211,211,0.46)',
         '--code-color': '#2d7a3a',
+        '--sidebarMenu-hover': '#e3e2e2',
         '--badge-bg-red': 'rgba(200,64,26,0.1)',
         '--badge-col-red': '#c8401a',
         '--badge-bor-red': 'rgba(200,64,26,0.3)',
@@ -31,10 +32,10 @@ const themes = {
         '--badge-bor-green': 'rgba(0,180,120,0.3)',
     },
     dark: {
-        '--bg': '#0b0b0b',
-        '--bg2': '#0d0e14',
+        '--bg': '#0d0e14',
+        '--bg2': '#0b0b0b',
         '--bg3': '#1c1e2e',
-        '--ink': '#ededed',
+        '--ink': '#e4e4e4',
         '--ink2': '#aaabaf',
         '--ink3': '#ececec',
         '--accent': '#7c6fe0',
@@ -45,6 +46,7 @@ const themes = {
         '--title': '#f0a060',
         '--border': 'gray',
         '--bghover': 'rgba(255,255,255,0.4)',
+        '--sidebarMenu-hover': 'rgba(255,255,255,0.26)',
         '--code-color': '#5dd62c',
         '--badge-bg-red': 'rgba(232,64,64,0.15)',
         '--badge-col-red': '#e84040',
@@ -87,7 +89,14 @@ function applyTheme(theme) {
     document.querySelectorAll('#sidebar .iconmenu img').forEach(img => {
         img.style.filter = isDark ? 'invert(1)' : 'invert(0)';
     });
-    document.getElementById('menu').style.filter = isDark ? 'invert(1)' : 'invert(0)';
+    if (document.querySelectorAll('#sidebar .dd-arrow img')) {
+        document.querySelectorAll('#sidebar .dd-arrow img').forEach(img => {
+            img.style.filter = isDark ? 'invert(1)' : 'invert(0)';
+        });
+    }
+    if (document.getElementById('menu')) {
+        document.getElementById('menu').style.filter = isDark ? 'invert(1)' : 'invert(0)';
+    }
 }
 
 function updateThemeBtn() {

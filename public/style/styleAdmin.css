@@ -1,76 +1,81 @@
+/* ─── DROPDOWN ─── */
 .dropdown {
     position: relative;
     width: 100%;
-    overflow: hidden;
-    padding: 3px;
-    padding-bottom: 10px;
-}
-
-#sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    list-style: none;
-    overflow: hidden;
-    padding-right: 20px;
-}
-
-.header-inner {
-    margin-left: 3px;
+    padding: 0 3px;
 }
 
 /* Même style que les li de la sidebar */
 .dropdown-trigger {
     display: flex;
+    gap: 0.2rem;
     align-items: center;
-    justify-content: flex-start;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
-    padding: 0;
-}
-
-.dropdown-trigger div {
     margin-right: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
 }
 
 .dropdown-trigger:hover {
-    transform: scale(1.02);
-    background: #dddcdc;
+    background: var(--sidebarMenu-hover);
 }
 
-/* Icône — même que .iconmenu */
+#sidebar div nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+
 .dropdown-trigger .iconmenu {
     width: 30px;
     height: 30px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Texte — même que les <a> de la sidebar */
 .dropdown-trigger a {
     font-family: sans-serif;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.06em;
-    color: var(--ink);
+    color: var(--ink2);
+    padding: 10px 14px;
     white-space: nowrap;
     cursor: pointer;
 }
 
+/* Flèche — cachée quand sidebar fermée, visible quand ouverte */
+.dd-arrow {
+    margin-left: auto;
+    font-size: 10px;
+    color: var(--ink3);
+    font-family: var(--font-mono);
+    padding-right: 10px;
+    opacity: 0;
+}
 
-.dropdown.open .dd-arrow {
+.dd-arrow img {
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+#sidebar:hover .dd-arrow,
+#sidebar.open .dd-arrow {
+    opacity: 1; /* visible sidebar ouverte */
+}
+
+.dropdown.open .dd-arrow img {
     transform: rotate(180deg);
 }
 
-/* Submenu */
+/* ─── SUBMENU ─── */
 .dd-menu {
     display: none;
     list-style: none;
+    padding: 2px 0 2px 20px;
     margin: 0;
 }
 
@@ -78,29 +83,64 @@
     display: block;
 }
 
+/* Masquer le submenu si la sidebar est fermée (pas hover, pas open) */
+#sidebar:not(:hover):not(.open) .dd-menu {
+    display: none !important;
+}
+
 .dd-menu li {
     border: 1px solid transparent;
     border-radius: 10px;
+    margin-right: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .dd-menu li:hover {
-    transform: scale(1.02);
-    background: #dddcdc;
+    background: var(--sidebarMenu-hover);
+    transform: translateX(3px);
 }
 
 .dd-menu li a {
     display: block;
-    padding: 6px 14px 6px 42px;
+    padding: 6px 14px 6px 10px;
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.06em;
-    color: var(--ink);
+    color: var(--ink2);
     white-space: nowrap;
 }
 
-.dd-menu li a:before {
-    content: "> ";
+.dd-menu li a::before {
+    content: "→ ";
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--ink3);
+}
+
+.header-nav:hover {
+    background: var(--sidebarMenu-hover);
+    border-radius: 12px;
+}
+
+footer {
+    background: var(--ink);
+    color: var(--bg2);
+    text-align: center;
+    padding: 1.25rem 2rem;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    grid-area: footer;
+    z-index: 10;
+}
+
+footer a {
+    color: var(--bg2);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--title);
 }

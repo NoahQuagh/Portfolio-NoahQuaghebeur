@@ -513,7 +513,7 @@ function ouvrirProjet(index) {
         <img src="../img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img">
         <div class="projet-back-div-btn">
             <button class="projet-back-btn" onclick="projet()">← Retour</button>
-            <a class="projet-doc-btn" href="../page/doc.html">Documentation</a>
+            <a class="projet-doc-btn" href="../page/gigadoc.html">Documentation</a>
             <button class="projet-code-btn" onclick="">Obtenir le code</button>
         </div>
         <div class="projet-tech-list">
