@@ -1,5 +1,4 @@
 <?php
-require_once 'includes/guard.php';
 chdir('/var/www/html');
 
 shell_exec('git reset --hard origin/main 2>&1');
