@@ -17,16 +17,25 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"/>
 <body>
 
+<div id="sidebar-overlay"></div>
+
+<!-- Header mobile -->
+<header>
+  <button id="menu-btn" onclick="toggleMenu()">
+    <img src="../img/menu.svg" id="menuMobile" alt="menu">
+  </button>
+</header>
+
 <aside id="sidebar">
   <div>
-    <header>
+    <div>
       <ul class="header-nav" id="header">
         <li>
-          <div class="iconmenu"><img class="menu" src="../img/keyboard_double_arrow_right.svg" alt="menu"></div>
+          <div class="iconmenu"><img class="menu" src="../img/keyboard_double_arrow_right.svg" alt="menu" onclick="toggleMenu()"></div>
           <a><span class="doc-hero-title-header">Giga<em>Admin</em></span></a>
         </li>
       </ul>
-    </header>
+    </div>
 
     <div class="separator"></div>
     <nav>

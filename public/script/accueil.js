@@ -46,14 +46,6 @@ function toggleSidebar() {
     sidebar.classList.toggle('open');
 }
 
-function navigationMobile() {
-    const navPills = document.getElementById('customNav');
-    if (!navPills) return;
-
-    navPills.innerHTML = ``;
-    navPills.innerHTML = `<img src="../img/menu.svg" alt="menu" id="menu" onclick="toggleMenu()">`
-}
-
 /* ─────────────────────────────────────────
    TRANSITION DE CONTENU
 ───────────────────────────────────────── */
@@ -261,7 +253,12 @@ function accueil() {
                         <div class="bio-block">
                             <div class="block-label">Biographie</div>
                             <div class="block-title">À PROPOS DE MOI_</div>
-                            <p>Jeune étudiant en BUT Informatique curieux, passionné et performant</p>
+                            <p>
+                                Étudiant en BUT Informatique à l'IUT Grand Ouest Normandie, je me spécialise dans le développement d'applications, 
+                                le Web, l'administration système et la gestion de bases de données.
+                                De la gestion de serveurs sous Linux à la conception d'interfaces modernes, j'aime transformer des lignes de code 
+                                en solutions fonctionnelles, performantes et sécurisées.
+                            </p>
                         </div>
                         <div class="actu-block">
                             <div class="block-label">Actuellement</div>
@@ -422,4 +419,8 @@ window.onload = function () {
         document.getElementById('dev-modal').style.display = 'none';
     }
 };
+
+function compte() {
+    window.location.href = "../page/login.html";
+}
 

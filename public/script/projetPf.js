@@ -19,7 +19,7 @@ function projet() {
             link: ''
         },
         {
-            fileName: 'img',
+            fileName: 'imgPortfolio',
             date: 'Projet personnel — 2026',
             titre: 'Portfolio',
             desc: 'Développement de mon portfolio.',

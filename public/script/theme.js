@@ -43,7 +43,7 @@ const themes = {
         '--accent3': '#4caf50',
         '--rule': 'rgba(200,204,224,0.1)',
         '--rule2': 'rgba(209,209,209,0.24)',
-        '--title': '#f0a060',
+        '--title': '#7c6fe0',
         '--border': 'gray',
         '--bghover': 'rgba(255,255,255,0.4)',
         '--sidebarMenu-hover': 'rgba(255,255,255,0.26)',
@@ -96,6 +96,9 @@ function applyTheme(theme) {
     }
     if (document.getElementById('menu')) {
         document.getElementById('menu').style.filter = isDark ? 'invert(1)' : 'invert(0)';
+    }
+    if (document.getElementById('menuMobile')) {
+        document.getElementById('menuMobile').style.filter = isDark ? 'invert(1)' : 'invert(0)';
     }
 }
 

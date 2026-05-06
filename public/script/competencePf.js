@@ -3,32 +3,67 @@ const competences = [
         categorie: 'Développement web',
         icone: '◈',
         skills: [
-            {nom: 'HTML', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'},
-            {nom: 'CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'},
+            {
+                nom: 'HTML',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+                doc: 'https://developer.mozilla.org/fr/docs/Web/HTML'
+            },
+            {
+                nom: 'CSS',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+                doc: 'https://developer.mozilla.org/fr/docs/Web/CSS'
+            },
             {
                 nom: 'JavaScript',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+                doc: 'https://developer.mozilla.org/fr/docs/Web/JavaScript'
             },
-            {nom: 'PHP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg'},
+            {
+                nom: 'PHP',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/PHP'
+            },
         ]
     },
     {
         categorie: 'Développement logiciel',
         icone: '◇',
         skills: [
-            {nom: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'},
-            {nom: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'},
-            {nom: 'C', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg'},
+            {
+                nom: 'Java',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/Java_(langage)'
+            },
+            {
+                nom: 'Python',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/Python_(langage)'
+            },
+            {
+                nom: 'C',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/C_(langage)'
+            },
         ]
     },
     {
         categorie: 'Bases de données',
         icone: '▣',
         skills: [
-            {nom: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'},
             {
-                nom: 'Oracle',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg'
+                nom: 'MySQL',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/MySQL'
+            },
+            {
+                nom: 'Oracle SQL',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/Oracle_(entreprise)'
+            },
+            {
+                nom: 'MariaDB',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/MariaDB'
             },
         ]
     },
@@ -36,30 +71,51 @@ const competences = [
         categorie: 'Réseaux & systèmes',
         icone: '◉',
         skills: [
-            {nom: 'Linux', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg'},
-            {nom: 'Windows', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg'},
+            {
+                nom: 'Linux',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/Linux'
+            },
+            {
+                nom: 'Windows',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/Microsoft_Windows'
+            },
+            {
+                nom: 'Apache',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/Apache_HTTP_Server'
+            },
         ]
     },
     {
         categorie: 'Outils & environnement',
         icone: '◆',
         skills: [
-            {nom: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'},
+            {
+                nom: 'Git',
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/Git'
+            },
             {
                 nom: 'IntelliJ',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg'
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/IntelliJ_IDEA'
             },
             {
                 nom: 'PhpStorm',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpstorm/phpstorm-original.svg'
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpstorm/phpstorm-original.svg',
+                doc: 'https://fr.wikipedia.org/wiki/PhpStorm'
             },
             {
                 nom: 'WebStorm',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webstorm/webstorm-original.svg'
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webstorm/webstorm-original.svg',
+                doc: 'https://www.bureaudestalents.com/glossaire-tech/webstorm'
             },
             {
                 nom: 'Clion',
-                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clion/clion-original.svg'
+                logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clion/clion-original.svg',
+                doc: 'https://www.jetbrains.com/fr-fr/clion/'
             }
         ]
     },
@@ -68,7 +124,7 @@ const competences = [
 function comptence() {
     const items = competences.map((cat, i) => {
         const skills = cat.skills.map(s => `
-            <div class="skill-item">
+            <div class="skill-item" onclick="renvoiDoc('${s.doc}')">
                 <img src="${s.logo}" alt="${s.nom}" class="skill-logo">
                 <span class="skill-nom">${s.nom}</span>
             </div>`).join('');
@@ -104,4 +160,8 @@ function comptence() {
         }, {threshold: 0.15});
         document.querySelectorAll('.comp-card').forEach(el => observer.observe(el));
     }, 300);
+}
+
+function renvoiDoc(url) {
+    window.open(url, '_blank');
 }

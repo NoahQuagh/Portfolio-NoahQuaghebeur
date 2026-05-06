@@ -50,6 +50,10 @@
   </div>
   <nav>
     <ul class="header-nav" id="header-nav-2">
+        <li onclick="compte()" class="compte">
+          <div class="iconmenu"><img src="../img/person.svg" alt="house" onclick=""></div>
+          <a>Compte</a>
+        </li>
         <button id="theme-toggle-btn" onclick="toggleTheme()">
           <div class="iconmenu" id="light_mode"><img src="../img/light_mode.svg" alt="theme"></div>
           <span class="theme-label">Light Mode</span>
@@ -82,8 +86,13 @@
           </li>
         </ul>
         <ul class="nav-pills-custom" id="customNav2">
-          <li class="nav-item" onclick="toggleSidebar()">
+          <li class="nav-item" id="menu-btn" onclick="toggleSidebar()">
             <img src="../img/menu.svg" alt="menu" id="menu">
+          </li>
+        </ul>
+        <ul class="header-nav">
+          <li onclick="compte()" class="compte">
+            <div class="iconmenu"><img src="../img/person.svg" alt="house" onclick=""></div>
           </li>
         </ul>
       </nav>
