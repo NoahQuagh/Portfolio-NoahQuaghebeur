@@ -12,6 +12,20 @@
 </head>
 <body>
 
+<div id="dev-modal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="status-dot"></span>
+      <span class="header-text">// SYSTEM_NOTIFICATION</span>
+    </div>
+    <div class="modal-body">
+      <h2>Portfolio en cours de développement</h2>
+      <p>Ce site est actuellement en phase de construction. Certaines interactions, fonctions ou visuels peuvent être instables ou manquants.</p>
+    </div>
+    <button onclick="closeModal()" class="modal-btn">COMPRIS</button>
+  </div>
+</div>
+
 <aside id="sidebar">
   <div>
     <nav>
@@ -23,7 +37,7 @@
           <div class="iconmenu"><img src="../img/school.svg" alt="commande"></div>
           <a>Parcours</a></li>
         <li onclick="projet()">
-          <div class="iconmenu"><img src="../img/folder2.svg" alt="changelog"></div>
+          <div class="iconmenu"><img src="../img/folde.svg" alt="changelog"></div>
           <a>Projets</a></li>
         <li onclick="comptence()">
           <div class="iconmenu"><img src="../img/skill.svg" alt="changelog"></div>
@@ -68,10 +82,8 @@
           </li>
         </ul>
         <ul class="nav-pills-custom" id="customNav2">
-          <li class="nav-item">
-            <img src="../img/menu.svg" alt="menu" id="menu" onclick="toggleMenu()">
-          </li>
-          <li class="nav-item">
+          <li class="nav-item" onclick="toggleSidebar()">
+            <img src="../img/menu.svg" alt="menu" id="menu">
           </li>
         </ul>
       </nav>
@@ -89,5 +101,9 @@
 
 <script src="../script/accueil.js"></script>
 <script src="../script/theme.js"></script>
+<script src="../script/competencePf.js"></script>
+<script src="../script/expPf.js"></script>
+<script src="../script/parcoursPf.js"></script>
+<script src="../script/projetPf.js"></script>
 </body>
 </html>

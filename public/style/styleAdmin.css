@@ -1,3 +1,16 @@
+
+body.sidebar-open {
+    grid-template-columns: 300px 1fr;
+}
+
+#sidebar.open {
+    width: 300px;
+}
+
+#sidebar:hover {
+    width: 300px;
+}
+
 /* ─── DROPDOWN ─── */
 .dropdown {
     position: relative;
@@ -58,8 +71,13 @@
     opacity: 0;
 }
 
+#header-nav-3:hover {
+    background-color: var(--sidebarMenu-hover);
+    border-radius: 12px;
+}
+
 .dd-arrow img {
-    transition: opacity 0.2s, transform 0.2s;
+    transition: all 0.5s ease;
 }
 
 #sidebar:hover .dd-arrow,
@@ -75,7 +93,7 @@
 .dd-menu {
     display: none;
     list-style: none;
-    padding: 2px 0 2px 20px;
+    padding: 2px 0 2px 4rem;
     margin: 0;
 }
 
@@ -119,10 +137,6 @@
     color: var(--ink3);
 }
 
-.header-nav:hover {
-    background: var(--sidebarMenu-hover);
-    border-radius: 12px;
-}
 
 footer {
     background: var(--ink);
@@ -144,3 +158,9 @@ footer a {
 footer a:hover {
     color: var(--title);
 }
+
+.iconmenu img {
+    height: 30px;
+    width: 30px;
+}
+
