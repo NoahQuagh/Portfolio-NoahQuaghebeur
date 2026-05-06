@@ -238,7 +238,7 @@ function accueil() {
                 <div class="profil-grid">
                     <div class="profile-card">
                         <div class="profile-image-container">
-                            <img src="../img/photoMoi.png" alt="Noah Quaghebeur" class="profile-image">
+                            <img src="../img/photoNoah.jpg" alt="Noah Quaghebeur" class="profile-image">
                         </div>
                         <div class="profile-name">NOAH QUAGHEBEUR</div>
                         <div class="profile-title-badge">Étudiant</div>
