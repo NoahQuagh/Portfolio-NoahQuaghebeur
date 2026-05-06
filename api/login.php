@@ -21,7 +21,7 @@ if (empty($username) || empty($password)) {
 }
 
 try {
-    $stmt = $db->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
+    $stmt = $db->prepare("SELECT * FROM users_nq WHERE username = ? LIMIT 1");
     $stmt->execute([$username]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
