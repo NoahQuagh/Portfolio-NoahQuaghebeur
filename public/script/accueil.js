@@ -40,10 +40,25 @@ function navigation() {
 }
 
 function toggleSidebar() {
+    toggleMenu();
+}
+
+function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
-    const body = document.querySelector('body');
-    body.classList.toggle('menu-open');
+    const overlay = document.getElementById('sidebar-overlay');
+    const isOpen = sidebar.classList.contains('open');
     sidebar.classList.toggle('open');
+    if (overlay) overlay.classList.toggle('show');
+    if (!isOpen && overlay) {
+        overlay.onclick = () => closeMenu();
+    }
+}
+
+function closeMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('show');
 }
 
 /* ─────────────────────────────────────────
@@ -378,11 +393,8 @@ window.addEventListener('resize', () => {
         }
     }
 
-    if (largeur > 500) {
-        if (c) {
-            c.classList.remove('open');
-            c.style.display = '';
-        }
+    if (largeur > 800) {
+        closeMenu();
         document.body.classList.remove('sidebar-open');
     }
 });
@@ -423,4 +435,3 @@ window.onload = function () {
 function compte() {
     window.location.href = "../page/login.html";
 }
-

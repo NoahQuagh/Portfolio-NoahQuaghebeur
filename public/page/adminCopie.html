@@ -90,7 +90,7 @@
   <nav>
     <ul class="header-nav" id="header-nav-3">
         <button id="theme-toggle-btn" onclick="toggleTheme()">
-          <div class="iconmenu" id="dark_mode"><img src="../img/moon_stars.svg" alt="theme"></div>
+          <div class="iconmenu" id="dark_mode"><img src="../img/moon_stars.svg" alt="theme" style="height: 25px;width: 25px;"></div>
           <span class="theme-label">Dark Mode</span>
         </button>
       </li>

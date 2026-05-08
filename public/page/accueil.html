@@ -12,6 +12,9 @@
 </head>
 <body>
 
+<!-- Overlay sidebar mobile -->
+<div id="sidebar-overlay"></div>
+
 <div id="dev-modal" class="modal-overlay">
   <div class="modal-content">
     <div class="modal-header">
@@ -50,14 +53,14 @@
   </div>
   <nav>
     <ul class="header-nav" id="header-nav-2">
-        <li onclick="compte()" class="compte">
-          <div class="iconmenu"><img src="../img/person.svg" alt="house" onclick=""></div>
-          <a>Compte</a>
-        </li>
-        <button id="theme-toggle-btn" onclick="toggleTheme()">
-          <div class="iconmenu" id="light_mode"><img src="../img/light_mode.svg" alt="theme"></div>
-          <span class="theme-label">Light Mode</span>
-        </button>
+      <li onclick="compte()" class="compte">
+        <div class="iconmenu"><img src="../img/person.svg" alt="house" onclick=""></div>
+        <a>Compte</a>
+      </li>
+      <button id="theme-toggle-btn" onclick="toggleTheme()">
+        <div class="iconmenu" id="light_mode"><img src="../img/light_mode.svg" alt="theme"></div>
+        <span class="theme-label">Light Mode</span>
+      </button>
       </li>
     </ul>
   </nav>
@@ -65,6 +68,19 @@
 
 <header>
   <div class="contenuHeader">
+
+    <div class="logo-barre">
+      <div class="nav-pills-custom" id="customNav2">
+        <button id="menu-btn" onclick="toggleMenu()" style="background:none;border:none;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;border-radius:8px;">
+          <img src="../img/menu.svg" alt="menu" style="width:24px;height:24px;">
+        </button>
+      </div>
+
+      <div class="logo">
+        <h2 class="titrePortfolio">Portfolio</h2>
+      </div>
+    </div>
+
     <div class="head-barre">
       <nav class="sliding-nav-container">
         <ul class="nav-pills-custom" id="customNav">
@@ -85,18 +101,15 @@
             <button class="nav-link" data-name="experience" onclick="experience()">\EXPÉRIENCES</button>
           </li>
         </ul>
-        <ul class="nav-pills-custom" id="customNav2">
-          <li class="nav-item" id="menu-btn" onclick="toggleSidebar()">
-            <img src="../img/menu.svg" alt="menu" id="menu">
-          </li>
-        </ul>
-        <ul class="header-nav">
-          <li onclick="compte()" class="compte">
-            <div class="iconmenu"><img src="../img/person.svg" alt="house" onclick=""></div>
-          </li>
-        </ul>
       </nav>
     </div>
+
+    <div onclick="compte()" class="compteHeader">
+      <div class="iconmenu">
+        <img src="../img/person.svg" alt="house" onclick="">
+      </div>
+    </div>
+
   </div>
 </header>
 
@@ -114,5 +127,6 @@
 <script src="../script/expPf.js"></script>
 <script src="../script/parcoursPf.js"></script>
 <script src="../script/projetPf.js"></script>
+<script src="../script/sidebar.js"></script>
 </body>
 </html>

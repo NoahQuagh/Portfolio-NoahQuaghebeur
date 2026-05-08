@@ -257,7 +257,7 @@ main {
 
     /* Désactiver l'ouverture au hover sur mobile */
     #sidebar:hover {
-        width: 280px;
+        width: 250px;
     }
 
     #sidebar:hover .menu {
