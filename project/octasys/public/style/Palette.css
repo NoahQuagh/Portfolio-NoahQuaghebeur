@@ -1,0 +1,81 @@
+:root {
+    /* — Couleurs primaires — */
+    --color-brand-ink: #0A0A0F;
+    --color-brand-void: #050508;
+    --color-brand-electric: #00E5FF;
+    --color-brand-pulse: #7C3AED;
+    --color-brand-flare: #FF4D6D;
+    --color-brand-lime: #A8FF3E;
+
+    /* — Couleurs neutres — */
+    --color-neutral-100: #F5F5F7;
+    --color-neutral-200: #E0E0E6;
+    --color-neutral-400: #9696A8;
+    --color-neutral-600: #4A4A5E;
+    --color-neutral-800: #1E1E2C;
+    --color-neutral-900: #111118;
+
+    /* — Surfaces & fond — */
+    --color-bg: #08080D;
+    --color-surface-1: #0F0F1A;
+    --color-surface-2: #161624;
+    --color-surface-3: #1E1E30;
+
+    /* — Texte — */
+    --color-text-primary: #F0F0F8;
+    --color-text-secondary: #9696B4;
+    --color-text-muted: #5A5A72;
+
+    /* — Bordures — */
+    --color-border-subtle: rgba(255, 255, 255, 0.06);
+    --color-border-default: rgba(255, 255, 255, 0.12);
+    --color-border-accent: rgba(0, 229, 255, 0.35);
+    --color-border-glow: rgba(124, 58, 237, 0.45);
+
+    /* — Typographie — */
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'Courier New', monospace;
+
+    /* — Tailles de texte — */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.75rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3.5rem;
+    --text-5xl: 5rem;
+
+    /* — Bordures arrondies — */
+    --radius-xs: 2px;
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 32px;
+    --radius-2xl: 48px;
+    --radius-pill: 9999px;
+
+    /* — Espacements — */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-24: 6rem;
+
+    /* — Ombres & effets — */
+    --shadow-electric: 0 0 40px rgba(0, 229, 255, 0.15);
+    --shadow-pulse: 0 0 60px rgba(124, 58, 237, 0.2);
+    --shadow-card: 0 4px 32px rgba(0, 0, 0, 0.4);
+
+    /* — Transitions — */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-fast: 150ms;
+    --duration-base: 280ms;
+    --duration-slow: 500ms;
+}

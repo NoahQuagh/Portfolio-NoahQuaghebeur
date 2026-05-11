@@ -99,10 +99,67 @@
 </aside>
 
 <main>
+  <!--
   <div class="dropdown" id="dd-site">
     <div class="dropdown-trigger">
       <div class="iconmenu"><img src="../img/handyman.svg" alt="menu"></div>
       <a>Mettre maintenance</a>
+    </div>
+  </div>-->
+  <div class="admin-container">
+    <header class="admin-header">
+      <h1>// DASHBOARD_SYSTEM_v1.0</h1>
+      <p>Bienvenue, Noah. Système opérationnel.</p>
+    </header>
+
+    <div class="admin-grid">
+      <section class="admin-card">
+        <div class="card-header">
+          <i class="fas fa-briefcase"></i>
+          <span>PORTFOLIO_STATS</span>
+        </div>
+        <div class="stats-list">
+          <div class="stat-item"><span>Projets :</span> <strong>12</strong></div>
+          <div class="stat-item"><span>Expériences :</span> <strong>5</strong></div>
+          <div class="stat-item"><span>Vues totales :</span> <strong>1,240</strong></div>
+        </div>
+        <a href="manage_projects.php" class="card-link">Gérer les projets →</a>
+      </section>
+
+      <section class="admin-card">
+        <div class="card-header">
+          <i class="fas fa-robot"></i>
+          <span>BOT_STATUS</span>
+        </div>
+        <div class="bot-status">
+          <div class="status-indicator">
+            <span class="status-dot online"></span>
+            <span>En ligne (Dell-Server)</span>
+          </div>
+          <p>Dernière interaction : <br><code>2026-05-10 16:45:12</code></p>
+        </div>
+        <a href="bot_logs.php" class="card-link">Voir les logs →</a>
+      </section>
+
+      <section class="admin-card highlight">
+        <div class="card-header">
+          <i class="fas fa-cogs"></i>
+          <span>SYSTEM_CONTROL</span>
+        </div>
+        <div class="control-actions">
+          <div class="maintenance-row">
+            <div class="text-group">
+              <span class="label">Mode Maintenance</span>
+              <p class="sub-label">Verrouille l'accès public</p>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="maintenance-toggle" onchange="toggleMaintenance(this)">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <button class="btn-secondary">Recharger le Cache</button>
+        </div>
+      </section>
     </div>
   </div>
 </main>

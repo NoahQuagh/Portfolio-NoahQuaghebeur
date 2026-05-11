@@ -164,4 +164,115 @@ footer a:hover {
     width: 30px;
 }
 
+:root {
+    --bg-dark: #0d0d0d;
+    --card-bg: #1a1a1a;
+    --accent: #ff9800; /* Orange pour la maintenance */
+    --text-main: #e0e0e0;
+    --text-dim: #888;
+}
+
+.admin-container {
+    padding: 2rem;
+    font-family: 'IBM Plex Mono', monospace;
+    color: var(--text-main);
+}
+
+.admin-header {
+    margin-bottom: 3rem;
+    border-left: 4px solid var(--text-main);
+    padding-left: 15px;
+}
+
+.admin-header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.admin-card {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+}
+
+/* Stats & Bot Style */
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    color: #4caf50;
+}
+
+.status-dot.online {
+    width: 10px;
+    height: 10px;
+    background: #4caf50;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #4caf50;
+}
+
+/* Control Section */
+.maintenance-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.sub-label {
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-top: 2px;
+}
+
+.card-link {
+    margin-top: auto;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--text-dim);
+    transition: 0.3s;
+}
+
+.card-link:hover {
+    color: #fff;
+}
+
+.btn-secondary {
+    margin-top: 15px;
+    background: transparent;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 8px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
 
