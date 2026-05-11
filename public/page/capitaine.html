@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Capitaine - </title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="../style/stylePalette.css">
+  <link rel="stylesheet" href="../style/StyleHeaderSidebar.css">
+  <link rel="stylesheet" href="../style/styleCapitaine.css">
+</head>
+<body>
+
+<header>
+  <button id="menu-btn" onclick="toggleMenu()">
+    <img src="../img/menu.svg" id="menuMobile" alt="menu">
+  </button>
+</header>
+
+<aside id="sidebar">
+  <div>
+
+    <div>
+      <ul class="header-nav" id="header">
+        <li>
+          <div class="iconmenu"><img class="menu" src="../img/keyboard_double_arrow_right.svg" alt="menu" onclick="toggleMenu()"></div>
+          <a><span class="doc-hero-title-header">Giga<em>Leader</em></span></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="separator"></div>
+
+    <nav>
+      <div class="dropdown">
+        <div class="dropdown-trigger" onclick="">
+          <div class="iconmenu"><img src="../img/house.svg" alt="gigabot"></div>
+          <a>Accueil</a>
+        </div>
+      </div>
+    </nav>
+
+    <nav>
+      <div class="dropdown">
+        <div class="dropdown-trigger" onclick="">
+          <div class="iconmenu"><img src="../img/event.svg" alt="gigabot"></div>
+          <a>Event</a>
+        </div>
+      </div>
+    </nav>
+
+    <nav>
+      <div class="dropdown">
+        <div class="dropdown-trigger" onclick="">
+          <div class="iconmenu"><img src="../img/groups.svg" alt="gigabot"></div>
+          <a>Membres</a>
+        </div>
+      </div>
+    </nav>
+
+    <nav>
+      <div class="dropdown">
+        <div class="dropdown-trigger" onclick="">
+          <div class="iconmenu"><img src="../img/scoreboard.svg" alt="gigabot"></div>
+          <a>Matchs</a>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+  <nav>
+    <ul class="header-nav" id="header-nav-3">
+      <button id="theme-toggle-btn" onclick="toggleTheme()">
+        <div class="iconmenu" id="dark_mode"><img src="../img/moon_stars.svg" alt="theme" style="height: 25px;width: 25px;"></div>
+        <span class="theme-label">Dark Mode</span>
+      </button>
+      </li>
+    </ul>
+  </nav>
+
+</aside>
+
+<main>
+  <!-- ─── HERO ─── -->
+  <section class="hero-banner">
+    <div class="capitaine-header">
+      <div class="box-team-capitaine-profile">
+        <img src="../img/capitaineProfil.jpg" alt="capitaine">
+      </div>
+      <div style="position:relative;z-index:1">
+        <h1>Bienvenue <span>Capitaine</span> !</h1>
+        <p class="p-title">// NINGEN · EUROPE</p>
+      </div>
+    </div>
+    <div class="box-team-premier-logo">
+      <img src="../img/Logo_Premier.webp">
+    </div>
+  </section>
+
+
+  <div class="mini-title">//Vue d'ensemble</div>
+
+  <section id="accueil-capitaine">
+
+
+    <div class="box-team">
+
+      <div class="box-team-logo">
+        <img src="../img/ningenLogo.png" class="box-team-logo-img" alt="logo">
+      </div>
+
+      <div class="box-team-info">
+        <h1>Ningen</h1>
+        <div class="team-stats" style="margin-top:0.5rem">
+          <div class="stat-card">
+            <span class="stat-value">6</span>
+            <span class="stat-label">Membres</span>
+          </div>
+          <div class="stat-card accent3">
+            <span class="stat-value">1</span>
+            <span class="stat-label">Victoires</span>
+          </div>
+          <div class="stat-card accent">
+            <span class="stat-value">1</span>
+            <span class="stat-label">Défaites</span>
+          </div>
+          <div class="stat-card accent2">
+            <span class="stat-value">50%</span>
+            <span class="stat-label">Win rate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box box-team-player">
+      <div class="box-header">
+        <span class="box-title">Membres de l'équipe</span>
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--ink3)">6 / 7</span>
+      </div>
+      <div class="box-body">
+        <div class="player-list">
+
+          <div class="player-item">
+            <div class="player-avatar" style="background:rgba(200,64,26,0.1);color:var(--accent);border-color:var(--badge-bor-red)">LP</div>
+            <div class="player-info">
+              <div class="player-name">le_psyko</div>
+              <div class="player-role">Capitaine · IGL</div>
+            </div>
+          </div>
+
+          <div class="player-item">
+            <div class="player-avatar">ZR</div>
+            <div class="player-info">
+              <div class="player-name">ZeroRush</div>
+              <div class="player-role">Capitaine Adjoint</div>
+            </div>
+          </div>
+
+          <div class="player-item">
+            <div class="player-avatar">NX</div>
+            <div class="player-info">
+              <div class="player-name">Nexus_VII</div>
+              <div class="player-role">Joueur</div>
+            </div>
+          </div>
+
+          <div class="player-item">
+            <div class="player-avatar">KL</div>
+            <div class="player-info">
+              <div class="player-name">k1lore</div>
+              <div class="player-role">Joueur</div>
+            </div>
+          </div>
+
+          <div class="player-item">
+            <div class="player-avatar">SH</div>
+            <div class="player-info">
+              <div class="player-name">Shado_W</div>
+              <div class="player-role">Joueur</div>
+            </div>
+          </div>
+
+          <div class="player-item">
+            <div class="player-avatar">VX</div>
+            <div class="player-info">
+              <div class="player-name">V0rtex</div>
+              <div class="player-role">Joueur</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box box-event">
+      <div class="box-header">
+        <span class="box-title">Prochains événements</span>
+        <span style="font-family:var(--font-mono);font-size:10px;color:var(--badge-col-blue);background:var(--badge-bg-blue);border:1px solid var(--badge-bor-blue);padding:2px 8px;border-radius:20px">3 à venir</span>
+      </div>
+      <div class="box-body">
+        <div class="event-list">
+
+          <div class="event-item">
+            <div class="event-date">
+              <span class="day">18</span>
+              <span class="month">Mai</span>
+            </div>
+            <div class="event-info">
+              <div class="event-name">GigaLeague Saison 4</div>
+              <div class="event-desc">Phase de groupes · Bo1</div>
+              <span class="event-tag" style="background:var(--badge-bg-green);color:var(--badge-col-green);border-color:var(--badge-bor-green)">Complet ✓</span>
+            </div>
+          </div>
+
+          <div class="event-item">
+            <div class="event-date">
+              <span class="day">24</span>
+              <span class="month">Mai</span>
+            </div>
+            <div class="event-info">
+              <div class="event-name">Tournoi Amical EU</div>
+              <div class="event-desc">Format 5v5 · Open</div>
+              <span class="event-tag" style="background:var(--badge-bg-yellow);color:var(--badge-col-yellow);border-color:var(--badge-bor-yellow)">En attente</span>
+            </div>
+          </div>
+
+          <div class="event-item">
+            <div class="event-date">
+              <span class="day">01</span>
+              <span class="month">Jun</span>
+            </div>
+            <div class="event-info">
+              <div class="event-name">Coupe des Régions</div>
+              <div class="event-desc">Qualificatifs · Bo3</div>
+              <span class="event-tag" style="background:var(--badge-bg-red);color:var(--badge-col-red);border-color:var(--badge-bor-red)">Insuffisant</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="box box-game">
+      <div class="box-header">
+        <span class="box-title">Derniers matchs</span>
+        <a style="font-family:var(--font-mono);font-size:10px;color:var(--ink3);cursor:pointer;letter-spacing:0.06em">Voir tout →</a>
+      </div>
+      <div class="box-body">
+        <div class="match-list">
+
+          <div class="match-item">
+            <div class="match-top">
+              <span class="match-game">Ascent</span>
+              <span class="match-date">08 Mai</span>
+            </div>
+            <div class="match-score">
+              <span class="match-team">Ningen</span>
+              <div class="score-box">
+                <span class="score-lose">5</span>
+                <span class="score-sep">:</span>
+                <span class="score-win">13</span>
+              </div>
+              <span class="match-team right">TitanXO</span>
+            </div>
+            <span class="result-badge lose">DÉFAITE</span>
+          </div>
+
+          <div class="match-item">
+            <div class="match-top">
+              <span class="match-game">Breeze</span>
+              <span class="match-date">02 Mai</span>
+            </div>
+            <div class="match-score">
+              <span class="match-team">Ningen</span>
+              <div class="score-box">
+                <span class="score-win">13</span>
+                <span class="score-sep">:</span>
+                <span class="score-lose">11</span>
+              </div>
+              <span class="match-team right">VenomCrew</span>
+            </div>
+            <span class="result-badge win">VICTOIRE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+</body>
+<script src="../script/theme.js"></script>
+<script src="../script/sidebar.js"></script>
+</html>
