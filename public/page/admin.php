@@ -97,14 +97,171 @@
     </ul>
   </nav>
 </aside>
-
 <main>
-  <div class="dropdown" id="dd-site">
-    <div class="dropdown-trigger">
-      <div class="iconmenu"><img src="../img/handyman.svg" alt="menu"></div>
-      <a>Mettre maintenance</a>
+
+  <div class="admin-header">
+    <div>
+      <span class="admin-kicker">// DASHBOARD_SYSTEM_v1.0</span>
+      <h1 class="admin-title">Bienvenue, <em>Noah</em></h1>
+    </div>
+    <div class="admin-header-right">
+      <span class="admin-status-dot"></span>
+      <span class="admin-status-label">Tous les systèmes opérationnels</span>
     </div>
   </div>
+
+  <!-- STATS RAPIDES -->
+  <div class="admin-stats-row">
+    <div class="admin-stat-card">
+      <div class="admin-stat-icon">👥</div>
+      <div class="admin-stat-body">
+        <div class="admin-stat-val">65</div>
+        <div class="admin-stat-label">Visiteurs uniques</div>
+        <div class="admin-stat-sub">+12% ce mois</div>
+      </div>
+    </div>
+    <div class="admin-stat-card">
+      <div class="admin-stat-icon">⚡</div>
+      <div class="admin-stat-body">
+        <div class="admin-stat-val">142</div>
+        <div class="admin-stat-label">Commandes exécutées</div>
+        <div class="admin-stat-sub">depuis le dernier restart</div>
+      </div>
+    </div>
+    <div class="admin-stat-card">
+      <div class="admin-stat-icon">🛡️</div>
+      <div class="admin-stat-body">
+        <div class="admin-stat-val">4</div>
+        <div class="admin-stat-label">Équipes Premier</div>
+        <div class="admin-stat-sub">23 joueurs enregistrés</div>
+      </div>
+    </div>
+    <div class="admin-stat-card admin-stat-card--warn">
+      <div class="admin-stat-icon">🐛</div>
+      <div class="admin-stat-body">
+        <div class="admin-stat-val">2</div>
+        <div class="admin-stat-label">Reports ouverts</div>
+        <div class="admin-stat-sub">1 en cours · 1 en attente</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRILLE PRINCIPALE -->
+  <div id="main-accueil">
+
+    <!-- Zone 1 : Visiteurs doughnut -->
+    <div id="zone1">
+      <div class="zone-header">
+        <h4>Visiteurs</h4>
+        <span class="zone-badge">30 derniers jours</span>
+      </div>
+      <div class="chart-donut-wrap">
+        <canvas id="chart-zone1"></canvas>
+      </div>
+    </div>
+
+    <!-- Zone 2 : Statut bot -->
+    <div id="zone2">
+      <div class="zone-header">
+        <h4>GigaBot</h4>
+        <span class="zone-badge zone-badge--green">EN LIGNE</span>
+      </div>
+      <div class="zone-info-list">
+        <div class="zone-info-row">
+          <span class="zone-info-key">Version</span>
+          <span class="zone-info-val">v1.0.6</span>
+        </div>
+        <div class="zone-info-row">
+          <span class="zone-info-key">Uptime</span>
+          <span class="zone-info-val" style="color:#4caf50;">3j 14h 22m</span>
+        </div>
+        <div class="zone-info-row">
+          <span class="zone-info-key">Ping Discord</span>
+          <span class="zone-info-val" style="color:#4caf50;">42 ms</span>
+        </div>
+        <div class="zone-info-row">
+          <span class="zone-info-key">Serveurs</span>
+          <span class="zone-info-val">1</span>
+        </div>
+        <div class="zone-info-row">
+          <span class="zone-info-key">Commandes</span>
+          <span class="zone-info-val">11 slash</span>
+        </div>
+      </div>
+      <canvas id="chart-zone2" height="60" style="margin-top:auto;"></canvas>
+    </div>
+
+    <!-- Zone 3 : Reports -->
+    <div id="zone3">
+      <div class="zone-header">
+        <h4>Reports</h4>
+        <span class="zone-badge zone-badge--red">2 ouverts</span>
+      </div>
+      <div class="zone-report-list">
+        <div class="zone-report-row">
+          <span class="zone-report-dot" style="background:#e84040;"></span>
+          <span class="zone-report-title">Sidebar z-index</span>
+          <span class="zone-report-status" style="color:#e6900a;">EN COURS</span>
+        </div>
+        <div class="zone-report-row">
+          <span class="zone-report-dot" style="background:#e6900a;"></span>
+          <span class="zone-report-title">Autocomplétion vide</span>
+          <span class="zone-report-status" style="color:#e84040;">EN ATTENTE</span>
+        </div>
+        <div class="zone-report-row">
+          <span class="zone-report-dot" style="background:#4caf50;"></span>
+          <span class="zone-report-title">Bot silencieux</span>
+          <span class="zone-report-status" style="color:#4caf50;">RÉSOLU</span>
+        </div>
+        <div class="zone-report-row">
+          <span class="zone-report-dot" style="background:#4caf50;"></span>
+          <span class="zone-report-title">[OBJECT OBJECT] badges</span>
+          <span class="zone-report-status" style="color:#4caf50;">RÉSOLU</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zone 4 : Équipes -->
+    <div id="zone4">
+      <div class="zone-header">
+        <h4>Équipes Premier</h4>
+        <span class="zone-badge">4 équipes</span>
+      </div>
+      <div class="zone-team-list">
+        <div class="zone-team-row">
+          <span class="zone-team-name">TeamAlpha</span>
+          <span class="zone-team-count">7/7</span>
+          <span class="zone-team-badge" style="background:rgba(232,64,64,0.2);color:#e84040;">FULL</span>
+        </div>
+        <div class="zone-team-row">
+          <span class="zone-team-name">NovaFive</span>
+          <span class="zone-team-count">5/7</span>
+          <span class="zone-team-badge" style="background:rgba(76,175,80,0.2);color:#4caf50;">OUVERTE</span>
+        </div>
+        <div class="zone-team-row">
+          <span class="zone-team-name">PhantomSquad</span>
+          <span class="zone-team-count">3/7</span>
+          <span class="zone-team-badge" style="background:rgba(76,175,80,0.2);color:#4caf50;">OUVERTE</span>
+        </div>
+        <div class="zone-team-row">
+          <span class="zone-team-name">IronWolves</span>
+          <span class="zone-team-count">6/7</span>
+          <span class="zone-team-badge" style="background:rgba(230,144,10,0.2);color:#e6900a;">PRESQUE</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content : ligne charts -->
+    <div id="content">
+      <div class="zone-header">
+        <h4>Activité annuelle</h4>
+        <span class="zone-badge">2025</span>
+      </div>
+      <canvas id="chart-content"></canvas>
+    </div>
+
+  </div>
+
 </main>
 
 <footer>
@@ -113,6 +270,7 @@
   </p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="../../public/script/sidebar.js"></script>
 <script src="../../public/script/theme.js"></script>
 <script src="../../public/script/admin.js"></script>

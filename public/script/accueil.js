@@ -201,7 +201,7 @@ function asciiNoah() {
 const terminal = `<div class="terminal-header">
                             <img src="../img/terminal.svg" class="terminal-icon">
                             <span class="terminal-title">Terminal — PS C:\\Users\\Noah</span>
-                            <span class="terminal-close" onclick="closeTerminal()">✕</span>
+                            <span class="terminal-close">✕</span>
                         </div>
                         <div class="terminal-body" id="terminal-output">
                             <div class="output-line info">PS C:\\Users\\Noah&gt; <span class="success">./moi</span></div>
@@ -260,7 +260,7 @@ function accueil() {
                             </div>
                             <div class="stat-item">
                                 <span class="stat-label">Statut</span>
-                                <span class="stat-value">Étudiant en BUT Informatique</span>
+                                <span class="stat-value">Étudiant</span>
                             </div>
                         </div>
                     </div>
@@ -280,10 +280,18 @@ function accueil() {
                             <div class="block-title">ACTUELLEMENT_</div>
                             <p>Étudiant en première année de BUT Informatique à l'Université Caen Normandie.</p>
                         </div>
-                        <div class="nav-arrows">
-                            <button class="arrow-btn" onclick="scrollToSection('body-contact')">
-                                Contactez-moi ↓
-                            </button>
+                        <div class="box-button">
+                            <div class="nav-arrows">
+                                <button class="arrow-btn" onclick="scrollToSection('body-contact')">
+                                    Contactez-moi ↓
+                                </button>
+                            </div>
+                            <div class="nav-arrows" id="cv">
+                                <a href="../document/Noah_Quaghebeur_CV.pdf" download="Noah_Quaghebeur_CV.pdf" class="arrow-btn">
+                                    <img src="../img/file-earmark-person.svg">
+                                    Obtenir le CV
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

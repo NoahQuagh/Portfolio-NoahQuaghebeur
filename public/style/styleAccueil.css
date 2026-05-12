@@ -510,6 +510,7 @@ main {
 }
 
 .arrow-btn {
+    height: 2.5rem;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1608,6 +1609,13 @@ header {
 
 main {
     grid-area: content;
+}
+
+.box-button{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
 }
 
 /* Header visible */

@@ -15,16 +15,6 @@ function parcours() {
             titre: 'BUT Informatique — 1ère année',
             desc: 'Étudiant à l\'IUT de Caen, découverte du développement web, C et Java. Découverte de l\'architecture réseau et des bases de données.'
         },
-        {
-            date: '2026 – 2027',
-            titre: 'BUT Informatique — 2ème année',
-            desc: 'Vide'
-        },
-        {
-            date: '2027 – 2028',
-            titre: 'BUT Informatique — 3ème année',
-            desc: 'Vide'
-        },
     ];
 
     const items = etapes.map((e, i) => `
