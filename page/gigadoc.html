@@ -6,10 +6,10 @@
   <title>GigaBot — Documentation</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
         rel="stylesheet">
-  <link rel="icon" type="image/x-icon" href="../icon/gigabot.ico">
-  <link rel="stylesheet" href="../style/styleDocBot.css">
-  <link rel="stylesheet" href="../style/StyleHeaderSidebar.css">
-  <link rel="stylesheet" href="../style/stylePalette.css">
+  <link rel="icon" type="image/x-icon" href="../assets/icon/gigabot.ico">
+  <link rel="stylesheet" href="../assets/style/styleDocBot.css">
+  <link rel="stylesheet" href="../assets/style/StyleHeaderSidebar.css">
+  <link rel="stylesheet" href="../assets/style/stylePalette.css">
 
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"/>
@@ -20,7 +20,7 @@
 <!-- Header mobile -->
 <header>
   <button id="menu-btn" onclick="toggleMenu()">
-    <img src="../img/menu.svg" alt="menu">
+    <img src="../assets/img/menu.svg" alt="menu">
   </button>
 </header>
 
@@ -29,7 +29,7 @@
     <div>
       <ul class="header-nav" id="header">
         <li>
-          <div class="iconmenu"><img class="menu" src="../img/keyboard_double_arrow_right.svg" alt="menu"
+          <div class="iconmenu"><img class="menu" src="../assets/img/keyboard_double_arrow_right.svg" alt="menu"
                                      onclick="toggleMenu()"></div>
           <a><span class="doc-hero-title-header">Giga<em>Doc</em></span></a>
         </li>
@@ -39,13 +39,13 @@
     <nav>
       <ul class="header-nav" id="header-nav">
         <li onclick="demarage()">
-          <div class="iconmenu"><img src="../img/house.svg" alt="house"></div>
+          <div class="iconmenu"><img src="../assets/img/house.svg" alt="house"></div>
           <a>Présentation</a></li>
         <li onclick="commandeBot()">
-          <div class="iconmenu"><img src="../img/code.svg" alt="commande"></div>
+          <div class="iconmenu"><img src="../assets/img/code.svg" alt="commande"></div>
           <a>Commande</a></li>
         <li onclick="changelog()">
-          <div class="iconmenu"><img src="../img/deployed_code_history.svg" alt="changelog"></div>
+          <div class="iconmenu"><img src="../assets/img/deployed_code_history.svg" alt="changelog"></div>
           <a>Changelog</a></li>
       </ul>
     </nav>
@@ -53,16 +53,16 @@
     <nav>
       <ul class="header-nav" id="header-nav-2">
         <li onclick="dashbord()">
-          <div class="iconmenu"><img src="../img/dashboard.svg" alt="house"></div>
+          <div class="iconmenu"><img src="../assets/img/dashboard.svg" alt="house"></div>
           <a>Tableau de bord</a></li>
         <li onclick="report()">
-          <div class="iconmenu"><img src="../img/bug_report.svg" alt="house"></div>
+          <div class="iconmenu"><img src="../assets/img/bug_report.svg" alt="house"></div>
           <a>Report</a></li>
         <li onclick="projet()">
-          <div class="iconmenu"><img src="../img/folder_code.svg" alt="house"></div>
+          <div class="iconmenu"><img src="../assets/img/folder_code.svg" alt="house"></div>
           <a>Projets</a></li>
         <li onclick="contributeur()">
-          <div class="iconmenu"><img src="../img/groups.svg" alt="house"></div>
+          <div class="iconmenu"><img src="../assets/img/groups.svg" alt="house"></div>
           <a>Contributeur</a></li>
       </ul>
     </nav>
@@ -70,12 +70,12 @@
   <nav>
     <ul class="header-nav" id="header-nav-3">
       <li onclick="compte()" class="compte">
-        <div class="iconmenu"><img src="../img/person.svg" alt="house" onclick=""></div>
+        <div class="iconmenu"><img src="../assets/img/person.svg" alt="house" onclick=""></div>
         <a>Compte</a>
       </li>
       <li>
         <button id="theme-toggle-btn" onclick="toggleTheme()">
-          <div class="iconmenu" id="light_mode"><img src="../img/light_mode.svg" alt="theme"
+          <div class="iconmenu" id="light_mode"><img src="../assets/img/light_mode.svg" alt="theme"
                                                      style="height: 25px;width: 25px;"></div>
           <span class="theme-label">Light Mode</span>
         </button>
@@ -95,9 +95,9 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../script/sidebar.js"></script>
-<script src="../script/documentationBot.js"></script>
-<script src="../script/theme.js"></script>
+<script src="../assets/script/sidebar.js"></script>
+<script src="../assets/script/documentationBot.js"></script>
+<script src="../assets/script/theme.js"></script>
 
 </body>
 </html>

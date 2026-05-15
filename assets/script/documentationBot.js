@@ -1416,7 +1416,7 @@ function contributeur() {
 }
 
 function compte() {
-    window.location.href = "../page/login.html";
+    window.location.href = "../../page/login.html";
 }
 
 /* ─────────────────────────────────────────

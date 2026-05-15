@@ -1,12 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=public/page/accueil.html">
-    <link rel="icon" type="image/x-icon" href="public/icon/NQ.ico">
-    <title>Redirection</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Noah Quaghebeur</title>
+  <link rel="stylesheet" href="assets/style/styleAccueil.css">
+  <link rel="stylesheet" href="assets/style/stylePalette.css">
+  <link rel="icon" type="image/x-icon" href="assets/icon/NQ.ico">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-    <h3>Redirection vers la page d'accueil...</h3>
+
+<!-- Overlay sidebar mobile -->
+<div id="sidebar-overlay"></div>
+
+<div id="dev-modal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="status-dot"></span>
+      <span class="header-text">// SYSTEM_NOTIFICATION</span>
+    </div>
+    <div class="modal-body">
+      <h2>Portfolio en cours de développement</h2>
+      <p>Ce site est actuellement en phase de construction. Certaines interactions, fonctions ou visuels peuvent être instables ou manquants.</p>
+    </div>
+    <button onclick="closeModal()" class="modal-btn">COMPRIS</button>
+  </div>
+</div>
+
+<aside id="sidebar">
+  <div>
+    <nav>
+      <ul class="header-nav" id="header-nav">
+        <li onclick="accueil()">
+          <div class="iconmenu"><img src="assets/img/house.svg" alt="house"></div>
+          <a>Accueil</a></li>
+        <li onclick="parcours()">
+          <div class="iconmenu"><img src="assets/img/school.svg" alt="commande"></div>
+          <a>Parcours</a></li>
+        <li onclick="projet()">
+          <div class="iconmenu"><img src="assets/img/folde.svg" alt="changelog"></div>
+          <a>Projets</a></li>
+        <li onclick="comptence()">
+          <div class="iconmenu"><img src="assets/img/skill.svg" alt="changelog"></div>
+          <a>Compétence</a></li>
+        <li onclick="experience()">
+          <div class="iconmenu"><img src="assets/img/exp.svg" alt="changelog"></div>
+          <a>Expérience</a></li>
+      </ul>
+    </nav>
+  </div>
+  <nav>
+    <ul class="header-nav" id="header-nav-2">
+      <li onclick="compte()" class="compte">
+        <div class="iconmenu"><img src="assets/img/person.svg" alt="house" onclick=""></div>
+        <a>Compte</a>
+      </li>
+      <button id="theme-toggle-btn" onclick="toggleTheme()">
+        <div class="iconmenu" id="light_mode"><img src="assets/img/light_mode.svg" alt="theme"></div>
+        <span class="theme-label">Light Mode</span>
+      </button>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<header>
+  <div class="contenuHeader">
+
+    <div class="logo-barre">
+      <div class="nav-pills-custom" id="customNav2">
+        <button id="menu-btn" onclick="toggleMenu()" style="background:none;border:none;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;border-radius:8px;">
+          <img src="assets/img/menu.svg" alt="menu" style="width:24px;height:24px;">
+        </button>
+      </div>
+
+      <div class="logo">
+        <h2 class="titrePortfolio">Portfolio</h2>
+      </div>
+    </div>
+
+    <div class="head-barre">
+      <nav class="sliding-nav-container">
+        <ul class="nav-pills-custom" id="customNav">
+          <span class="indicator"></span>
+          <li class="nav-item">
+            <button class="nav-link active" data-name="home" onclick="accueil()">\ACCUEIL</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-name="parcours" onclick="parcours()">\PARCOURS</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-name="projet" onclick="projet()">\PROJETS</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-name="competence" onclick="comptence()">\COMPÉTENCES</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-name="experience" onclick="experience()">\EXPÉRIENCES</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div onclick="compte()" class="compteHeader">
+      <div class="iconmenu">
+        <img src="assets/img/person.svg" alt="house" onclick="">
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<main id="accueil"></main>
+
+<footer>
+  <p>&lt; &copy; 2025 Portfolio de Noah Quaghebeur | Développeur Web. Tous droits réservés. |
+    <a href="#">Plan du site</a> | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a> &gt;
+  </p>
+</footer>
+
+<script src="assets/script/accueil.js"></script>
+<script src="assets/script/theme.js"></script>
+<script src="assets/script/competencePf.js"></script>
+<script src="assets/script/expPf.js"></script>
+<script src="assets/script/parcoursPf.js"></script>
+<script src="assets/script/projetPf.js"></script>
+<script src="assets/script/sidebar.js"></script>
 </body>
 </html>

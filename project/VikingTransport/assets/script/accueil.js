@@ -39,8 +39,8 @@ function navigation() {
     window.addEventListener('resize', () => updateIndicator());
 }
 
-function compte(){
-    window.location.href = "../page/login.html";
+function compte() {
+    window.location.href = "page/login.html";
 }
 
 
@@ -148,8 +148,3 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation();
     //accueil();
 });
-
-
-function compte() {
-    window.location.href = "../page/login.html";
-}

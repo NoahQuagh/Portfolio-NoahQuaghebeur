@@ -156,7 +156,7 @@ function validerSaisie(event) {
     } else if (valeur === './jeu') {
         fenetre.innerHTML += `
             <div class="output-line info"><br>[ <span class="cyan">INFO</span> ] Chargement du jeu ...</div>`;
-        window.location.href = '../page/jeu.html';
+        window.location.href = '../../page/jeu.html';
         LigneSuivante();
 
     } else {
@@ -199,7 +199,7 @@ function asciiNoah() {
 }
 
 const terminal = `<div class="terminal-header">
-                            <img src="../img/terminal.svg" class="terminal-icon">
+                            <img src="assets/img/terminal.svg" class="terminal-icon">
                             <span class="terminal-title">Terminal — PS C:\\Users\\Noah</span>
                             <span class="terminal-close">✕</span>
                         </div>
@@ -245,7 +245,7 @@ function accueil() {
                 <div class="profil-grid">
                     <div class="profile-card">
                         <div class="profile-image-container">
-                            <img src="../img/photoNoah.jpg" alt="Noah Quaghebeur" class="profile-image">
+                            <img src="../assets/img/photoNoah.jpg" alt="Noah Quaghebeur" class="profile-image">
                         </div>
                         <div class="profile-name">NOAH QUAGHEBEUR</div>
                         <div class="profile-title-badge">Étudiant</div>
@@ -288,7 +288,7 @@ function accueil() {
                             </div>
                             <div class="nav-arrows" id="cv">
                                 <a href="../document/Noah_Quaghebeur_CV.pdf" download="Noah_Quaghebeur_CV.pdf" class="arrow-btn">
-                                    <img src="../img/file-earmark-person.svg">
+                                    <img src="assets/img/file-earmark-person.svg">
                                     Obtenir le CV
                                 </a>
                             </div>
@@ -353,14 +353,6 @@ function accueil() {
 /* ─────────────────────────────────────────
    UTILITAIRES
 ───────────────────────────────────────── */
-function GoConnexion() {
-    window.location.href = '../page/connexion.html';
-}
-
-function closeTerminal() {
-    const t = document.querySelector('.terminal');
-    if (t) t.style.display = 'none';
-}
 
 function scrollToSection(id) {
     const el = document.getElementById(id);
@@ -441,5 +433,5 @@ window.onload = function () {
 };
 
 function compte() {
-    window.location.href = "../page/login.html";
+    window.location.href = "page/login.html";
 }
