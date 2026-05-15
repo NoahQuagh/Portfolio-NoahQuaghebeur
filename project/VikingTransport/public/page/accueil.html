@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Noah Quaghebeur</title>
+  <link rel="stylesheet" href="../style/styleAccueil.css">
+  <link rel="stylesheet" href="../style/stylePalette.css">
+  <link rel="stylesheet" href="../style/styleTemplate.css">
+  <link rel="icon" type="image/x-icon" href="">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="theme-float">
+  <div onclick="toggleTheme()" class="compteHeader">
+    <div class="iconmenu">
+      <img src="../img/light_mode.svg" alt="house" onclick="">
+    </div>
+  </div>
+</div>
+
+<!-- Overlay sidebar mobile -->
+<div id="sidebar-overlay"></div>
+
+<aside id="sidebar">
+  <div>
+    <nav>
+      <ul class="header-nav" id="header-nav">
+        <li onclick="accueil()">
+          <div class="iconmenu"><img src="../img/house.svg" alt="house"></div>
+          <a>Accueil</a>
+        </li>
+        <li onclick="accueil()">
+          <div class="iconmenu"><img src="../img/house.svg" alt="house"></div>
+          <a>Lignes</a>
+        </li>
+        <li onclick="accueil()">
+          <div class="iconmenu"><img src="../img/house.svg" alt="house"></div>
+          <a>Tarifs</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <nav>
+    <ul class="header-nav" id="header-nav-2">
+      <button id="theme-toggle-btn" onclick="toggleTheme()">
+        <div class="iconmenu" id="light_mode">
+          <img src="../img/light_mode.svg" alt="theme">
+        </div>
+        <span class="theme-label">Light Mode</span>
+      </button>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+<header>
+  <div class="contenuHeader">
+    <div class="logo-barre">
+      <div class="nav-pills-custom" id="customNav2">
+        <button id="menu-btn" onclick="toggleMenu()" style="background:none;border:none;cursor:pointer;padding:6px;display:flex;align-items:center;justify-content:center;border-radius:8px;">
+          <img src="../img/menu.svg" alt="menu" style="width:24px;height:24px;">
+        </button>
+      </div>
+      <div class="logo">
+        <img src="../img/logo.png" alt="logo">
+      </div>
+    </div>
+    <div class="head-barre">
+      <nav class="sliding-nav-container">
+        <ul class="nav-pills-custom" id="customNav">
+          <span class="indicator"></span>
+          <li class="nav-item">
+            <button class="nav-link active" data-name="home" onclick="accueil()">Accueil</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-name="parcours" onclick="">Lignes</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link" data-name="projet" onclick="">Tarifs</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div onclick="compte()" class="compteHeader">
+      <div class="iconmenu">
+        <img src="../img/person.svg" alt="house" onclick="">
+      </div>
+      <p>Se Connecter</p>
+    </div>
+  </div>
+</header>
+
+<main id="accueil">
+  <div class="accueil-content">
+    <img src="../img/bus.png" alt="accueil">
+    <button class="btn-no-border">Je reserve →</button>
+  </div>
+</main>
+
+<footer>
+  <p> &copy; 2026 contenue |
+    <a href="#">Plan du site</a> | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a>
+  </p>
+</footer>
+
+<script src="../script/accueil.js"></script>
+<script src="../script/theme.js"></script>
+<script src="../script/sidebar.js"></script>
+</body>
+</html>

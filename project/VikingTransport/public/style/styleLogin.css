@@ -1,0 +1,289 @@
+body {
+    min-height: 100vh;
+    background: var(--ink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-text);
+    overflow: hidden;
+}
+
+.containerLogin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "login-boxGauche login-boxDroite";
+    width: min(1100px, 95vw);
+    min-height: min(660px, 90vh);
+    border-radius: var(--radiusBox2);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.07);
+    box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    position: relative;
+}
+
+/* ─── INDICATEUR GLISSANT ─── */
+.login-pastille {
+    background: var(--bg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none; /* Ne bloque pas les clics sur les inputs/boutons */
+    z-index: 0;
+    border-radius: 24px;
+    outline-offset: -3px;
+    /* L'effet élastique comme sur ton portfolio */
+    transition:
+            transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+            width 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+            height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+            opacity 0.3s ease;
+    background-image:
+            repeating-linear-gradient(
+                    45deg,
+                    rgba(0,0,0,0.06) 0px,
+                    rgba(0,0,0,0.06) 1px,
+                    transparent 1px,
+                    transparent 12px
+            );
+}
+
+.zone {
+    position: relative;
+    z-index: 1; /* Pour être au-dessus de la pastille */
+}
+
+/* ─── BOXES ─── */
+.zone {
+    position: relative;
+    z-index: 1; /* au-dessus de la pastille */
+}
+
+.login-boxGauche {
+    grid-area: login-boxGauche;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2.5rem;
+}
+
+.containerForm {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.containerForm h2 {
+    font-family: var(--font-button);
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: var(--bg);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h2 span {
+    color: var(--accent);
+}
+
+#loginFormLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.labelZone {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.labelZone label {
+    font-family: var(--font-subtitle);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg3);
+}
+
+.labelZone input {
+    width: 100%;
+    height: 2.75rem;
+    background: var(--ink3);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radiusBox);
+    padding: 0 0.9rem;
+    font-family: var(--font-text);
+    font-size: 0.95rem;
+    color: var(--bg);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.labelZone input::placeholder {
+    color: var(--bg3);
+    opacity: 0.5;
+}
+
+.labelZone input:hover {
+    border-color: rgba(255,255,255,0.18);
+}
+
+.labelZone input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(205, 42, 27, 0.18);
+}
+
+/* Bouton submit */
+.btn-login {
+    width: 100%;
+    height: 2.75rem;
+    margin-top: 0.5rem;
+    background: var(--bg2);
+    border: none;
+    border-radius: var(--radiusBox);
+    color: var(--ink);
+    font-family: var(--font-button);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.btn-login:hover {
+    background: var(--bg3);
+    transform: translateY(-1px);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* ─── ERREUR ─── */
+.error-container {
+    display: none;
+    color: var(--badge-col-red);
+    background-color: var(--badge-bg-red);
+    border: 1px solid var(--badge-bor-red);
+    border-radius: var(--radiusBox);
+    padding: 0.6rem 0.9rem;
+    font-family: var(--font-text);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.error-container.show {
+    display: block;
+}
+
+/* ─── CÔTÉ DROIT — VISUEL ─── */
+.login-boxDroite,.login-boxDroite div {
+    grid-area: login-boxDroite;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 1.25rem;
+}
+
+
+.login-boxDroite h2 {
+    align-self: flex-start;
+    font-family: var(--font-button);
+    font-size: clamp(1.4rem, 1.5vw, 2rem);
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.login-boxDroite p {
+    align-self: flex-start;
+    font-family: var(--font-text);
+    font-size: 0.88rem;
+    color: var(--ink);
+    line-height: 1.6;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    max-width: 260px;
+}
+
+.login-boxDroite button {
+    align-self: flex-start;
+}
+
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 640px) {
+    body {
+        align-items: flex-end;
+    }
+
+    .containerLogin {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "login-boxDroite"
+            "login-boxGauche";
+        width: 100vw;
+        min-height: unset;
+        border-radius: var(--radiusBox2) var(--radiusBox2) 0 0;
+        box-shadow: 0 -16px 60px rgba(0,0,0,0.5);
+    }
+
+    .login-boxDroite {
+        padding: 2rem 2rem 1.5rem;
+        min-height: 180px;
+    }
+
+    .login-boxGauche {
+        padding: 2rem 1.5rem 2.5rem;
+    }
+
+    /* Sur mobile la pastille passe en hauteur */
+    .login-pastille {
+        border-radius: var(--radiusBox2) var(--radiusBox2) 0 0;
+        transition:
+                transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+                width     0.35s ease,
+                height    0.35s ease,
+                opacity   0.2s ease;
+    }
+}
+
+.hidden-content {
+    opacity: 0 !important;
+    transition: opacity 0.2s ease;
+}
+
+/* Animation de réapparition fluide */
+.fade-in {
+    animation: fadeInContent 0.7s ease forwards;
+}
+
+@keyframes fadeInContent {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
