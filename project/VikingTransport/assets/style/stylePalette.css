@@ -1,27 +1,23 @@
 /* ─── COULEURS ─── */
 :root {
-    /* Fonds */
-    --bg: #f2ede6;          /* Noir charbon  */
-    --bg2: #ffffff;         /* Noir légèrement plus clair*/
-    --bg3: #7a7168;         /* Gris anthracite*/
+    --bg: #f2ede6; /* Noir charbon  */
+    --bg2: #ffffff; /* Noir légèrement plus clair*/
+    --bg3: #7a7168; /* Gris anthracite*/
 
-    /* Textes */
-    --ink: #0e0d0c;         /* Blanc cassé crème*/
-    --ink2: #1a1917;        /* Beige gris */
-    --ink3: #252320;        /* Gris moka*/
+    --ink: #0e0d0c; /* Blanc cassé crème*/
+    --ink2: #1a1917; /* Beige gris */
+    --ink3: #252320; /* Gris moka*/
 
-    /* Accents */
-    --accent: #cd2a1b;      /* Rouge viking*/
-    --accent2: #e8e0d4;     /* Blanc nacré — survols*/
-    --accent3: #8c1a10;     /* Rouge sombre*/
+    --accent: #cd2a1b; /* Rouge viking*/
+    --accent2: #e8e0d4; /* Blanc nacré — survols*/
+    --accent3: #8c1a10; /* Rouge sombre*/
 
     --rule: rgba(242, 237, 230, 0.10);
     --rule2: rgba(242, 237, 230, 0.05);
 
-    /* Divers */
-    --title: #c0281a;       /* Rouge sang*/
-    --bghover: rgba(192, 40, 26, 0.12);     /* Hover rouge*/
-    --code-color: #e05c3a;                  /* Rouge orangé*/
+    --title: #c0281a; /* Rouge sang*/
+    --bghover: rgba(192, 40, 26, 0.12); /* Hover rouge*/
+    --code-color: #e05c3a; /* Rouge orangé*/
     --border: rgba(242, 237, 230, 0.14);
     --borderFonce: rgba(19, 19, 19, 0.54); /* Bordure foncé */
     --sidebarMenu-hover: rgba(181, 5, 5, 0.93);
@@ -47,7 +43,7 @@
     --badge-col-blue: #5c90e8;
     --badge-bor-blue: rgba(60, 100, 180, 0.35);
 
-    /* AMBRE*/
+    /* JAUNE */
     --badge-bg-yellow: rgba(200, 130, 20, 0.12);
     --badge-col-yellow: #d4901a;
     --badge-bor-yellow: rgba(200, 130, 20, 0.35);
@@ -58,13 +54,13 @@
     --badge-bor-green: rgba(30, 160, 90, 0.35);
 }
 
-/* ─── RAYONS ─── */
+
 :root {
     --radiusBox: 7px;
     --radiusBox2: 14px;
 }
 
-/* ─── RESET ─── */
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -76,9 +72,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
-/* ─── TRANSITION THÈME ─── */
 *, *::before, *::after {
     transition: background-color 0.25s ease,
     border-color 0.25s ease,

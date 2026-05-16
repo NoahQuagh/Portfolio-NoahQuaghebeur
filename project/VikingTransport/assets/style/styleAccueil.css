@@ -352,7 +352,6 @@ body {
     border-radius: 28px;
 }
 
-/* ─── BOUTON THÈME─── */
 #theme-toggle-btn {
     display: flex;
     align-items: center;
@@ -382,7 +381,6 @@ body {
 }
 
 
-/* ─── MOBILE  ─── */
 @media (max-width: 800px) {
 
     .contenuHeader {
@@ -483,3 +481,174 @@ body {
     margin-top: 10px;
     color: #555;
 }
+
+/*---- tarif ----*/
+
+.tarif-banner {
+    height: 18vh;
+    display: flex;
+    align-items: flex-start;
+    color: var(--bg);
+    font-size: 2rem;
+    font-weight: bold;
+    background-image: url("../img/tarifBanner.jpeg");
+    background-size: cover;
+    background-position: center;
+    padding-top: 3rem;
+    padding-left: 10rem;
+    font-family: var(--font-button);
+}
+
+.tarif-wrap {
+    padding: 1.5rem 0;
+    margin: 2rem 5rem;
+}
+
+.tarif-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.tarif-sub {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Tableau --- */
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead th {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 10px 16px;
+    border-bottom: 1px solid #e5e5e5;
+    background: #fafafa;
+    text-align: left;
+
+}
+
+thead th:last-child {
+    text-align: right;
+}
+
+tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.12s;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f5f8ff;
+}
+
+tbody tr.highlight {
+    background: #deeeff;
+}
+
+tbody td {
+    padding: 10px 16px;
+    color: #222;
+}
+
+tbody td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: #111;
+}
+
+.tranche-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    border: 1px solid #e0e0e0;
+    font-size: 11px;
+    font-weight: 600;
+    color: #666;
+}
+
+tr.highlight .tranche-num {
+    background: #b5d4f4;
+    border-color: #85b7eb;
+    color: #185fa5;
+}
+
+tr.highlight td {
+    color: #0c447c;
+}
+
+tr.highlight td:last-child {
+    color: #0c447c;
+}
+
+.gap-warn-row {
+    display: none;
+}
+
+.gap-warn-row td {
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
+    color: #a32d2d;
+    background: #fff8f8;
+    padding: 6px;
+}
+
+.icon-route {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: -3px;
+    fill: none;
+    stroke: #555;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -63,13 +63,13 @@ const themes = {
     }
 };
 
-// SVG soleil (light) et lune (dark)
+
 const themeIcons = {
     light: `<img src="../img/light_mode.svg" alt="light" style="width:25px;height:25px;filter:invert(0)">`,
     dark: `<img src="../img/moon_stars.svg"  alt="dark"  style="width:25px;height:25px;filter:invert(1)">`
 };
 
-// Labels sidebar
+
 const themeLabels = {
     light: 'Light Mode',
     dark: 'Dark Mode'
@@ -84,7 +84,7 @@ function applyTheme(theme) {
     localStorage.setItem('theme', theme);
     updateThemeBtn();
 
-    // Adapte les icônes de la sidebar (qui peuvent être blanches ou noires)
+
     const isDark = theme === 'dark';
     document.querySelectorAll('#sidebar .iconmenu img').forEach(img => {
         img.style.filter = isDark ? 'invert(1)' : 'invert(0)';

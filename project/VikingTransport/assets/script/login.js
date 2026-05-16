@@ -23,31 +23,25 @@ function moveTo(targetBox) {
 }
 
 function deplaDroite() {
-    // 1. Les deux contenus se dirigent vers le centre de la box parente
     gauche.classList.add('hidden-content');
     droite.classList.add('hidden-content');
 
-    // 2. Glissement élastique de la pastille
     pastille.dataset.side = 'droite';
     moveTo(droite);
 
-    // 3. Changement des contenus au milieu de la course
     setTimeout(() => {
         connecCompte();
         pasDeCompte();
 
-        // 4. On retire la classe de sortie pour jouer l'animation .fade-in depuis le centre
         gauche.classList.remove('hidden-content');
         droite.classList.remove('hidden-content');
     }, 250);
 }
 
 function deplaGauche() {
-    // 1. Les deux contenus se dirigent vers le centre de la box parente
     gauche.classList.add('hidden-content');
     droite.classList.add('hidden-content');
 
-    // 2. Glissement élastique de la pastille
     pastille.dataset.side = 'gauche';
     moveTo(gauche);
 
@@ -55,13 +49,11 @@ function deplaGauche() {
         creaCompteForm();
         creaCompteTxt();
 
-        // 4. On retire la classe de sortie
         gauche.classList.remove('hidden-content');
         droite.classList.remove('hidden-content');
     }, 250);
 }
 
-// Fonctions d'affichage (Modifiées pour inclure les appels de déplacement)
 function creaCompteForm() {
     gauche.innerHTML = `
         <div class="containerForm fade-in">
@@ -156,7 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
     connecCompte();
     pasDeCompte();
 
-    // Position initiale : on commence à gauche sur le login
     setTimeout(() => {
         pastille.dataset.side = 'droite';
         moveTo(droite);

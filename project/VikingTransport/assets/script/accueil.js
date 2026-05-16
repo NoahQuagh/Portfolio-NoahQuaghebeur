@@ -1,6 +1,3 @@
-/* ─────────────────────────────────────────
-   NAVIGATION — sliding indicator
-───────────────────────────────────────── */
 function navigation() {
     const navPills = document.getElementById('customNav');
     if (!navPills) return;
@@ -43,7 +40,6 @@ function compte() {
     window.location.href = "page/login.html";
 }
 
-
 function toggleMenu() {
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebar-overlay');
@@ -62,34 +58,23 @@ function closeMenu() {
     if (overlay) overlay.classList.remove('show');
 }
 
-/* ─────────────────────────────────────────
-   TRANSITION DE CONTENU
-───────────────────────────────────────── */
 function changeContent(elementId, newContent, duration = 300) {
     const element = document.getElementById(elementId);
     if (!element) return;
 
-    // Phase 1 : fondu sortant
     element.style.transition = `opacity ${duration}ms ease, transform ${duration}ms ease`;
     element.style.opacity = '0';
     element.style.transform = 'translateY(12px)';
 
     setTimeout(() => {
-        // Injecter le nouveau contenu
         element.innerHTML = newContent;
 
-        // Forcer un reflow pour que le navigateur prenne en compte opacity:0 avant d'animer
         void element.offsetHeight;
 
-        // Phase 2 : fondu entrant
         element.style.opacity = '1';
         element.style.transform = 'translateY(0)';
     }, duration);
 }
-
-/* ─────────────────────────────────────────
-   PAGE — ACCUEIL
-───────────────────────────────────────── */
 
 function accueil() {
     const content = `
@@ -118,20 +103,49 @@ function ligne() {
     }, 350);
 }
 
-/* ─────────────────────────────────────────
-   UTILITAIRES
-───────────────────────────────────────── */
+function tarif() {
+    const content = `
+        <div class="tarif-banner">
+          <h4>Tarifs</h4>
+        </div>
+        <div class="tarif-wrap">
+ 
+          <p class="tarif-title">Grille tarifaire</p>
+          <p class="tarif-sub">Transport par bus — tarifs selon la distance parcourue</p>
+                 
+          <div class="table-wrapper">
+            <table id="tarif-table">
+              <thead>
+                <tr>
+                  <th style="width:52px">N°</th>
+                  <th>Distance min</th>
+                  <th>Distance max</th>
+                  <th>Tarif</th>
+                </tr>
+              </thead>
+              <tbody id="tarif-body"></tbody>
+            </table>
+          </div>
+         
+        </div>
+    `;
+
+    changeContent('accueil', content);
+
+    setTimeout(() => {
+        initGrille();
+    }, 350);
+
+}
 
 function scrollToSection(id) {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
 }
 
-
 window.addEventListener('resize', () => {
     const largeur = window.innerWidth;
     const hauteur = window.innerHeight;
-    //console.log(`Largeur : ${largeur}px, Hauteur : ${hauteur}px`);
     const t = document.querySelector('.terminal');
     const c = document.querySelector('#sidebar');
 
@@ -152,11 +166,10 @@ window.addEventListener('resize', () => {
     }
 });
 
-/* ─────────────────────────────────────────
-   INIT
-───────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     navigation();
     accueil();
 });
+
+
 
