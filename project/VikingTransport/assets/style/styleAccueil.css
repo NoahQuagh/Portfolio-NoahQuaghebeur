@@ -479,7 +479,7 @@ body {
 .info-box {
     text-align: center;
     margin-top: 10px;
-    color: #555;
+    color: var(--border);
 }
 
 /*---- tarif ----*/
@@ -559,7 +559,7 @@ tbody tr:last-child {
 }
 
 tbody tr:hover {
-    background: #f5f8ff;
+    background: #d6d6d6;
 }
 
 tbody tr.highlight {
