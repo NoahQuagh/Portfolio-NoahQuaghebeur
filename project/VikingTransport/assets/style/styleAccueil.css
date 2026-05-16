@@ -59,11 +59,11 @@ header.is-pinned {
     margin-right: 1rem;
 }
 
-header .compteHeader{
+header .compteHeader {
     padding: 0 0.5rem;
 }
 
-.compteHeader p{
+.compteHeader p {
     color: var(--bg2);
     font-family: var(--font-button);
 }
@@ -129,7 +129,7 @@ header .compteHeader{
     padding: 2px;
 }
 
-.nav-item button{
+.nav-item button {
     font-size: 15px;
     font-weight: 600;
     font-family: var(--font-button);
@@ -168,22 +168,22 @@ header .compteHeader{
 
 
 /*theme-flotant*/
-.theme-float{
+.theme-float {
     position: fixed;
     bottom: 3rem;
     right: 1rem;
     z-index: 1000;
 }
 
-.theme-float .compteHeader{
+.theme-float .compteHeader {
     background: var(--accent);
 }
 
-.theme-float .compteHeader div img{
+.theme-float .compteHeader div img {
     filter: invert(1);
 }
 
-.theme-float .compteHeader:hover{
+.theme-float .compteHeader:hover {
     background: var(--sidebarMenu-hover);
 }
 
@@ -376,7 +376,7 @@ body {
     cursor: pointer;
 }
 
-.accueil-content{
+.accueil-content {
     height: 30vh;
     background: var(--ink2);
 }
@@ -463,7 +463,23 @@ body {
         display: flex;
     }
 
-    .theme-float{
+    .theme-float {
         display: none;
     }
+}
+
+/*---- ligne ----*/
+
+#map {
+    height: 700px;
+    width: auto;
+    margin: 2vw;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.info-box {
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
 }

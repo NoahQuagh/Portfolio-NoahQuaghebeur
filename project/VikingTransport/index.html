@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Noah Quaghebeur</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="assets/style/styleAccueil.css">
   <link rel="stylesheet" href="assets/style/stylePalette.css">
   <link rel="stylesheet" href="assets/style/styleTemplate.css">
@@ -82,7 +83,7 @@
             <button class="nav-link active" data-name="home" onclick="accueil()">Accueil</button>
           </li>
           <li class="nav-item">
-            <button class="nav-link" data-name="parcours" onclick="">Lignes</button>
+            <button class="nav-link" data-name="parcours" onclick="ligne()">Lignes</button>
           </li>
           <li class="nav-item">
             <button class="nav-link" data-name="projet" onclick="">Tarifs</button>
@@ -100,10 +101,6 @@
 </header>
 
 <main id="accueil">
-  <div class="accueil-content">
-    <img src="assets/img/bus.png" alt="accueil">
-    <button class="btn-no-border">Je reserve →</button>
-  </div>
 </main>
 
 <footer>
@@ -111,9 +108,10 @@
     <a href="#">Plan du site</a> | <a href="#">Mentions légales</a> | <a href="#">Politique de confidentialité</a>
   </p>
 </footer>
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="assets/script/accueil.js"></script>
 <script src="assets/script/theme.js"></script>
 <script src="assets/script/sidebar.js"></script>
+<script src="assets/script/mapLigne.js"></script>
 </body>
 </html>

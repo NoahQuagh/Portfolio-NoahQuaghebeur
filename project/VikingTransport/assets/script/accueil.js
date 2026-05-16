@@ -93,17 +93,28 @@ function changeContent(elementId, newContent, duration = 300) {
 
 function accueil() {
     const content = `
-        
+        <div class="accueil-content">
+            <img src="assets/img/bus.png" alt="accueil">
+            <button class="btn-no-border">Je reserve →</button>
+        </div>
+    `;
+
+    changeContent('accueil', content);
+
+}
+
+function ligne() {
+    const content = `
+        <h1>Réseau de Transport - Viking Transport</h1>
+    <div class="info-box">Survolez ou cliquez sur les arrêts et les lignes pour explorer le réseau normand.</div>
+
+    <div id="map"></div>
     `;
 
     changeContent('accueil', content);
 
     setTimeout(() => {
-        const input = document.getElementById('terminal-input');
-        if (input) {
-            input.addEventListener('keydown', validerSaisie);
-            input.focus();
-        }
+        initMap();
     }, 350);
 }
 
@@ -146,5 +157,6 @@ window.addEventListener('resize', () => {
 ───────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     navigation();
-    //accueil();
+    accueil();
 });
+

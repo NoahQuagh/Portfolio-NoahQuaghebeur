@@ -16,8 +16,8 @@ body {
     min-height: min(660px, 90vh);
     border-radius: var(--radiusBox2);
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.07);
-    box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
     position: relative;
 }
 
@@ -35,19 +35,17 @@ body {
     border-radius: 24px;
     outline-offset: -3px;
     /* L'effet élastique comme sur ton portfolio */
-    transition:
-            transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
-            width 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
-            height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
-            opacity 0.3s ease;
-    background-image:
-            repeating-linear-gradient(
-                    45deg,
-                    rgba(0,0,0,0.06) 0px,
-                    rgba(0,0,0,0.06) 1px,
-                    transparent 1px,
-                    transparent 12px
-            );
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    width 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+    opacity 0.3s ease;
+    background-image: repeating-linear-gradient(
+            45deg,
+            rgba(0, 0, 0, 0.06) 0px,
+            rgba(0, 0, 0, 0.06) 1px,
+            transparent 1px,
+            transparent 12px
+    );
 }
 
 .zone {
@@ -123,7 +121,7 @@ h2 span {
     width: 100%;
     height: 2.75rem;
     background: var(--ink3);
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--radiusBox);
     padding: 0 0.9rem;
     font-family: var(--font-text);
@@ -139,7 +137,7 @@ h2 span {
 }
 
 .labelZone input:hover {
-    border-color: rgba(255,255,255,0.18);
+    border-color: rgba(255, 255, 255, 0.18);
 }
 
 .labelZone input:focus {
@@ -193,7 +191,7 @@ h2 span {
 }
 
 /* ─── CÔTÉ DROIT — VISUEL ─── */
-.login-boxDroite,.login-boxDroite div {
+.login-boxDroite, .login-boxDroite div {
     grid-area: login-boxDroite;
     background: transparent;
     display: flex;
@@ -234,6 +232,12 @@ h2 span {
     align-self: flex-start;
 }
 
+.labelZoneLine {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 640px) {
@@ -250,7 +254,7 @@ h2 span {
         width: 100vw;
         min-height: unset;
         border-radius: var(--radiusBox2) var(--radiusBox2) 0 0;
-        box-shadow: 0 -16px 60px rgba(0,0,0,0.5);
+        box-shadow: 0 -16px 60px rgba(0, 0, 0, 0.5);
     }
 
     .login-boxDroite {
@@ -265,25 +269,65 @@ h2 span {
     /* Sur mobile la pastille passe en hauteur */
     .login-pastille {
         border-radius: var(--radiusBox2) var(--radiusBox2) 0 0;
-        transition:
-                transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
-                width     0.35s ease,
-                height    0.35s ease,
-                opacity   0.2s ease;
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+        width 0.35s ease,
+        height 0.35s ease,
+        opacity 0.2s ease;
     }
 }
 
-.hidden-content {
+/* ─── NOUVEAU SYSTÈME DE TRANSITION DE ZONE ─── */
+
+/* ─── EFFETS DE SORTIE (Vers le centre du parent) ─── */
+
+/* La box gauche va vers la droite (le centre) */
+.login-boxGauche.hidden-content {
     opacity: 0 !important;
-    transition: opacity 0.2s ease;
+    transform: translateX(35%);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 1, 1),
+    opacity 0.25s ease;
 }
 
-/* Animation de réapparition fluide */
-.fade-in {
-    animation: fadeInContent 0.7s ease forwards;
+/* La box droite va vers la gauche (le centre) */
+.login-boxDroite.hidden-content {
+    opacity: 0 !important;
+
+    transform: translateX(-35%);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 1, 1),
+    opacity 0.25s ease;
 }
 
-@keyframes fadeInContent {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
+
+/* ─── EFFETS D'ENTRÉE (Depuis le centre du parent) ─── */
+
+/* Le nouveau contenu à gauche surgit du centre et va vers la gauche */
+.login-boxGauche .fade-in {
+    animation: enterFromCenterLeft 0.4s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+/* Le nouveau contenu à droite surgit du centre et va vers la droite */
+.login-boxDroite .fade-in {
+    animation: enterFromCenterRight 0.4s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+@keyframes enterFromCenterLeft {
+    from {
+        opacity: 1;
+        transform: translateX(35%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes enterFromCenterRight {
+    from {
+        opacity: 0;
+        transform: translateX(-35%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
