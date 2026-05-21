@@ -156,7 +156,7 @@ function validerSaisie(event) {
     } else if (valeur === './jeu') {
         fenetre.innerHTML += `
             <div class="output-line info"><br>[ <span class="cyan">INFO</span> ] Chargement du jeu ...</div>`;
-        window.location.href = '../../page/jeu.html';
+        window.location.href = '../../pages/jeu.html';
         LigneSuivante();
 
     } else {
@@ -433,5 +433,5 @@ window.onload = function () {
 };
 
 function compte() {
-    window.location.href = "page/login.html";
+    window.location.href = "../../pages/login.html";
 }

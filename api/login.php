@@ -44,7 +44,7 @@ try {
     $_SESSION['logged_in'] = true;
 
     // IMPORTANT : Rediriger vers admin.php (qui contient le guard) et non admin.php
-    echo json_encode(['success' => true, 'redirect' => '../page/admin.php']);
+    echo json_encode(['success' => true, 'redirect' => '../pages/admin.php']);
 
 } catch (Exception $e) {
     http_response_code(500);

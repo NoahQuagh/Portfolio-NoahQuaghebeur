@@ -97,7 +97,7 @@ function ouvrirProjet(index) {
         <img src="../assets/img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img">
         <div class="projet-back-div-btn">
             <button class="projet-back-btn" onclick="projet()">← Retour</button>
-            <a class="projet-doc-btn" href="../../page/gigadoc.html">Documentation</a>
+            <a class="projet-doc-btn" href="../../pages/gigadoc.html">Documentation</a>
         </div>
         <div class="projet-tech-list">
             ${e.tech.map(t => `<span class="projet-tech-tag">${t}</span>`).join('')}
