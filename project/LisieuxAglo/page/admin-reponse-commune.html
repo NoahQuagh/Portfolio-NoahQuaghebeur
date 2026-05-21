@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réponses des Communes - Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/styleAdmin.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body id="fond">
+
+    <header class="tete">  
+        <div class="contain-header">
+            <h1>RÉPONSES DES COMMUNES</h1>
+            <p>Administration et Analyse</p>
+        </div>
+        <nav class="main-nav">
+            <button class="bouton" onclick="location.href='Accueill-admin.html'">Retour</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 class="mb-4 text-primary">Tableau de bord des réponses</h2>
+        
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <input type="text" id="rechercheCommune" class="form-control" placeholder="🔍 Rechercher une commune...">
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Nom de la Commune</th>
+                        <th scope="col">Nb Habitants</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="corpsTableau">
+                    <tr><td colspan="4" class="text-center">Chargement...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div class="modal fade" id="modalDetails" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Détails de la réponse</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="contenuModalBody">
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="propos">À propos</h3>
+                <p>Site de l'aglomération de Lisieux<br> présentant les enjeux d'un plan<br> local de déplacements.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="accueil.html"><u class="iconAccueil">Accueil</u></a></li>
+                    <li><a href="#"><u class="iconProbleme">Signalé un problème</u></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li class="adresse">21 Rue Henry Chéron, 14100 Lisieux</li>
+                    <li class="telephone">02 31 48 40 40</li>
+                    <li class="mail">courrier@ville-lisieux.fr</li>
+                    <li class="horaire">Lun - Ven: 8h30 - 12h30 et 13h30 - 17h00</li>
+                    <li class="horaire">Sam: 8h30 - 12h00</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Inscrivez-vous pour recevoir nos dernières actualités dans l'aglomération de Lisieux.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit">OK</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 LisieuxAglo. Marwan NAIRI. Tous droits réservés. | <a href="#" style="color: #95a5a6;">Mentions légales</a> | <a href="#" style="color: #95a5a6;">Politique de confidentialité</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

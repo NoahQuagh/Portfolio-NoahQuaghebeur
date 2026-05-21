@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../script/script_Questionnaire_Administre.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="conteneurheader">
+        <nav><a href="accueil.html"><img id="logo" src="../img/aglo_lis.png" alt="logo agglo lisiseux"></a></nav>
+        <div class="titreHeader">
+            <h1>QUESTIONNAIRE ADMINISTRÉ</h1>
+        </div>
+        <nav>
+            <button class="BoutonConnexion" onclick="retourAccueil()">
+                    <img id="connexion" src="../img/connexion.png" alt ="image connexion">
+                    déconnexion
+            </button>
+        </nav>
+    </div>
+</header>
+<div class="container">
+    <div class="conteneur">
+
+        <!-- Contenu du questionnaire -->
+        <div id="contenuQuestionnaire">
+            <div class="compteur-question" id="compteur">Question 1 sur 5</div>
+            <div class="question" id="question"></div>
+            <div class="zone-options" id="zoneOptions"></div>
+
+            <!-- Boutons de navigation -->
+            <div class="groupe-boutons">
+                <button class="btn-secondaire" id="btnPrecedent" onclick="questionPrecedente()" style="display: none;">Précédent</button>
+                <button class="btn-principal" id="btnSuivant" onclick="questionSuivante()" disabled>Suivant</button>
+            </div>
+        </div>
+        <!-- Page des résultat-->
+        <div class="resultats" id="resultats">
+            <h2>Merci pour vos réponses !</h2>
+            <div id="listeResultats"></div>
+            <button class="btn-principal" onclick=retourAccueil() style="width: 100%; margin-top: 20px;">Retour à l'accueil</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Lien du questionnaire</h3>
+            <a class="google" href="https://docs.google.com/forms/d/e/1FAIpQLSfPgAYTklcWF5IBYeCXWJaz7Zj4WKFx1V7eZI9rzJZOvE0N8Q/viewform">Google Forms</a>
+        </div>
+
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="accueil.html"><u class="iconAccueil">Accueil</u></a></li>
+                <li><a href="#"><u class="iconProbleme">Signalé un problème</u></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li class="adresse">21 Rue Henry Chéron, 14100 Lisieux</li>
+                <li class="telephone">02 31 48 40 40</li>
+                <li class="mail">courrier@ville-lisieux.fr</li>
+                <li class="horaire">Lun - Ven: 8h30 - 12h30 et 13h30 - 17h00</li>
+                <li class="horaire">Sam: 8h30 - 12h00</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Inscrivez-vous pour recevoir nos dernières actualités dans l'aglomération de Lisieux.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">OK</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 LisieuxAglo. Noah Quaghebeur. Tous droits réservés. | <a href="#" style="color: #95a5a6;">Mentions légales</a> | <a href="#" style="color: #95a5a6;">Politique de confidentialité</a></p>
+    </div>
+</footer>
+</body>
+</html>

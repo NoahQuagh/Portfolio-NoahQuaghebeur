@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'importance du Recensement</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style/style.css">
+  <script src="../script/script_accueil.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="conteneurheader">
+    <nav><a href="accueil.html"><img id="logo" src="../img/aglo_lis.png" alt="logo agglo lisieux"></a></nav>
+    <div class="titreHeaderRecensement">
+      <img id="stat" src="../img/statistics.png" alt="logo stats">
+      <h1 class="text-center mb-4">L'IMPORTANCE DU RECENSEMENT</h1>
+    </div>
+    <nav>
+      <button class="BoutonConnexion" onclick="connexion()">
+          <img id="connexion" src="../img/connexion.png" alt="logo connexion">
+          Se connecter
+      </button>
+    </nav>
+  </div>
+</header>
+<main class="container my-5">
+  <section class="mb-5">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="h4 mb-3">Pourquoi recenser la population ?</h2>
+        <p>
+          Le recensement de la population est un outil essentiel pour la communauté d'agglomération de Lisieux Normandie.
+          Il permet de connaître précisément les caractéristiques de nos 73 700 habitants répartis sur 53 communes.
+        </p>
+
+        <h2 class="h4 mb-3 mt-4">Les enjeux du recensement pour notre territoire</h2>
+        <p>
+          La population de notre territoire a considérablement évolué au cours de la dernière décennie.
+          Cette évolution rapide nécessite une connaissance précise des besoins de nos administrés, notamment en matière de déplacements.
+        </p>
+
+        <div class="alert alert-info my-4" role="alert">
+          <h3 class="h5 alert-heading">Ce que nous permet le recensement :</h3>
+          <ul class="mb-0">
+            <li>Adapter les services de transport aux besoins réels de la population</li>
+            <li>Optimiser l'organisation des déplacements collectifs</li>
+            <li>Planifier les infrastructures de transport pour les 10 prochaines années</li>
+            <li>Réduire les coûts de transport public tout en améliorant la qualité du service</li>
+          </ul>
+        </div>
+
+        <h2 class="h4 mb-3 mt-4">Caractéristiques de notre agglomération</h2>
+        <div class="row text-center mb-4 g-3">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="display-4 text-primary fw-bold">53</h3>
+                <p class="mb-0">Communes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="display-4 text-primary fw-bold">73 700</h3>
+                <p class="mb-0">Habitants</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h3 class="display-4 text-primary fw-bold">10 ans</h3>
+                <p class="mb-0">Horizon de planification</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3 class="propos">À propos</h3>
+      <p>Site de l'aglomération de Lisieux<br> présentant les enjeux d'un plan<br> local de déplacements.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Liens rapides</h3>
+      <ul>
+        <li><a href="accueil.html"><u class="iconAccueil">Accueil</u></a></li>
+        <li><a href="#"><u class="iconProbleme">Signalé un problème</u></a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <ul>
+        <li class="adresse">21 Rue Henry Chéron, 14100 Lisieux</li>
+        <li class="telephone">02 31 48 40 40</li>
+        <li class="mail">courrier@ville-lisieux.fr</li>
+        <li class="horaire">Lun - Ven: 8h30 - 12h30 et 13h30 - 17h00</li>
+        <li class="horaire">Sam: 8h30 - 12h00</li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Newsletter</h3>
+      <p>Inscrivez-vous pour recevoir nos dernières actualités dans l'aglomération de Lisieux.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Votre email" required>
+        <button type="submit">OK</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 LisieuxAglo. Nolan POIRIER. Tous droits réservés. | <a href="#" style="color: #95a5a6;">Mentions légales</a> | <a href="#" style="color: #95a5a6;">Politique de confidentialité</a></p>
+  </div>
+</footer>
+</body>
+</html>

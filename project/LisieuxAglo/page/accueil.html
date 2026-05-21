@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../script/script_accueil.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="conteneurheader">
+        <nav><a href="accueil.html"><img id="logo" src="../img/aglo_lis.png" alt="logo agglo lisiseux"></a></nav>
+        <div class="titreHeader">
+            <h1>BIENVENUE SUR SITE DE L'AGLOMERATION DE LISIEUX</h1>
+        </div>
+        <nav>
+            <button class="BoutonConnexion" onclick="connexion()">
+                    <img id="connexion" src="../img/connexion.png" alt="image connexion">
+                    Se connecter
+            </button>
+        </nav>
+    </div>
+</header>
+<div class="contenuPage">
+    <div class="container text-center">
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="card" onclick="crise()" style="width: 18rem;">
+                    <img src="../img/flash.png" class="icon" alt="icon des carte de l'accueil">
+                    <div class="card-body">
+                        <h5 class="card-title">Crise énergétique</h5>
+                        <p class="card-text"><br><br>Rapport de la crise énergétique en France</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" onclick="commune()" style="width: 18rem;">
+                    <img src="../img/pantheon.png" class="icon" alt="icon des carte de l'accueil">
+                    <div class="card-body">
+                        <h5 class="card-title">Spécificités des Communes</h5>
+                        <p class="card-text"><br><br>Rapport sur la constitution de l'agglomération de Lisieux</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" onclick="transport()" style="width: 18rem;">
+                    <img src="../img/bus.png" class="icon" alt="icon des carte de l'accueil">
+                    <div class="card-body">
+                        <h5 class="card-title">Organisation des transport</h5>
+                        <p class="card-text"><br>Rapport sur l'organisation des transports de l'agglomération de Lisieux</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" onclick="recensement()" style="width: 18rem;">
+                    <img src="../img/statistics.png" class="icon" alt="icon des carte de l'accueil">
+                    <div class="card-body">
+                        <h5 class="card-title">L'importance du recensement</h5>
+                        <p class="card-text"><br>Explication de l'importance du recensement de l'agglomération</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 class="propos">À propos</h3>
+            <p>Site de l'aglomération de Lisieux<br> présentant les enjeux d'un plan<br> local de déplacements.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="accueil.html"><u class="iconAccueil">Accueil</u></a></li>
+                <li><a href="#"><u class="iconProbleme">Signalé un problème</u></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li class="adresse">21 Rue Henry Chéron, 14100 Lisieux</li>
+                <li class="telephone">02 31 48 40 40</li>
+                <li class="mail">courrier@ville-lisieux.fr</li>
+                <li class="horaire">Lun - Ven: 8h30 - 12h30 et 13h30 - 17h00</li>
+                <li class="horaire">Sam: 8h30 - 12h00</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Inscrivez-vous pour recevoir nos dernières actualités dans l'aglomération de Lisieux.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">OK</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+    <p>&copy; 2025 LisieuxAglo. Nolan POIRIER. Tous droits réservés. | <a href="#" style="color: #95a5a6;">Mentions légales</a> | <a href="#" style="color: #95a5a6;">Politique de confidentialité</a></p>
+    </div>
+</footer>
+</body>
+</html>

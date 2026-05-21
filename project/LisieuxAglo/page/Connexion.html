@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../script/script_connexion.js" defer></script>
+</head>
+<body>
+<div class="contenuPageConnexion">
+    <div class="login-container">
+        <h2>Connexion</h2>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Identifiant:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button class="connexion" type="submit">Se connecter</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+</div>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 class="propos">À propos</h3>
+            <p>Site de l'aglomération de Lisieux<br> présentant les enjeux d'un plan<br> local de déplacements.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="accueil.html"><u class="iconAccueil">Accueil</u></a></li>
+                <li><a href="#"><u class="iconProbleme">Signalé un problème</u></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li class="adresse">21 Rue Henry Chéron, 14100 Lisieux</li>
+                <li class="telephone">02 31 48 40 40</li>
+                <li class="mail">courrier@ville-lisieux.fr</li>
+                <li class="horaire">Lun - Ven: 8h30 - 12h30 et 13h30 - 17h00</li>
+                <li class="horaire">Sam: 8h30 - 12h00</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Inscrivez-vous pour recevoir nos dernières actualités dans l'aglomération de Lisieux.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre email" required>
+                <button type="submit">OK</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 LisieuxAglo. Noah Quaghebeur. Tous droits réservés. | <a href="#" style="color: #95a5a6;">Mentions légales</a> | <a href="#" style="color: #95a5a6;">Politique de confidentialité</a></p>
+    </div>
+</footer>
+</body>
+</html>

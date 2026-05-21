@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crise Énergétique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <header>
+        <div class="conteneurheader">
+            <nav><a href="accueil.html"><img id="logo" src="../img/aglo_lis.png" alt="logo agglo lisieux"></a></nav>
+            <div class="titreHeader">
+                <h1>LA CRISE ÉNERGÉTIQUE ET LA TRANSITION EN FRANCE</h1>
+            </div>
+            <nav>
+                <button class="BoutonConnexion" onclick="connexion()">
+                        <img id="connexion" src="../img/connexion.png" alt="image connexion">
+                        Se connecter
+                </button>
+            </nav>
+        </div>
+    </header>
+    <div class="container mt-3">
+        <button class="btn btn-secondary mb-4" onclick="location.href='accueil.html'">
+            ← Retour
+        </button>
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-3 border-danger">
+                    <div class="card-header bg-danger text-white">
+                        <h2 class="mb-0">⚡ Contexte de la crise énergétique</h2>
+                    </div>
+                    <div class="card-body">
+                        <h5>Depuis 2022, la France et l'Europe font face à une crise énergétique sans précédent. Cette situation résulte de plusieurs facteurs combinés :</h5>
+                        <p>Depuis 2022, la France et l'Europe font face à une crise énergétique sans précédent. Cette situation résulte de plusieurs facteurs combinés :</p>
+                        <ul>
+                            <li><strong>Tensions géopolitiques internationales</strong> ayant perturbé l'approvisionnement en gaz naturel</li>
+                            <li><strong>Augmentation importante des prix de l'énergie</strong> (électricité, gaz, carburants)</li>
+                            <li><strong>Vieillissement du parc nucléaire français</strong> nécessitant des maintenances prolongées</li>
+                            <li><strong>Dépendance aux énergies fossiles</strong> importées de l'étranger</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-3 border-warning">
+                    <div class="card-header bg-warning">
+                        <h2 class="mb-0">💰 Impact sur les ménages français</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Les conséquences de cette crise se font directement ressentir dans le quotidien des Français :</p>
+                        <ul>
+                            <li><strong>Hausse des factures énergétiques</strong> : +15% à +25% pour l'électricité et le gaz en 2023</li>
+                            <li><strong>Augmentation du prix des carburants</strong> impactant les déplacements domicile-travail</li>
+                            <li><strong>Précarité énergétique accrue</strong> : près de 12 millions de Français en difficulté pour payer leurs factures</li>
+                            <li><strong>Nécessité d'adapter les comportements</strong> de consommation et de déplacement</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-3 border-success">
+                    <div class="card-header bg-success text-white">
+                        <h2 class="mb-0">🌱 Bilan de la transition énergétique en France</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Face à ces défis, la France s'est engagée dans une transition énergétique ambitieuse :</p>
+                        
+                        <h5 class="mt-3">Les objectifs nationaux :</h5>
+                        <ul>
+                            <li>Atteindre la <strong>neutralité carbone d'ici 2050</strong></li>
+                            <li>Réduire de <strong>40% la consommation d'énergies fossiles</strong> d'ici 2030</li>
+                            <li>Porter la part des <strong>énergies renouvelables à 33%</strong> de la consommation finale</li>
+                            <li>Diminuer de <strong>50% la consommation énergétique finale</strong> par rapport à 2012</li>
+                        </ul>
+
+                        <h5 class="mt-3">Les actions concrètes :</h5>
+                        <ul>
+                            <li><strong>Développement des énergies renouvelables</strong> : éolien, solaire, biomasse</li>
+                            <li><strong>Rénovation énergétique des bâtiments</strong> avec des aides financières (MaPrimeRénov')</li>
+                            <li><strong>Électrification des transports</strong> et développement des mobilités douces</li>
+                            <li><strong>Sobriété énergétique</strong> encouragée dans tous les secteurs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-3 border-info">
+                    <div class="card-header bg-info text-white">
+                        <h2 class="mb-0">🚌 La mobilité au cœur de la transition</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Le secteur des transports représente <strong>31% des émissions de CO2</strong> en France. C'est pourquoi la transition énergétique passe nécessairement par une transformation de nos modes de déplacements :</p>
+                        <ul>
+                            <li>Développement des <strong>transports en commun</strong> plus accessibles et efficaces</li>
+                            <li>Encouragement du <strong>covoiturage et de l'autopartage</strong></li>
+                            <li>Création d'<strong>infrastructures cyclables</strong> sécurisées</li>
+                            <li>Promotion de la <strong>multimodalité</strong> (combinaison de plusieurs modes de transport)</li>
+                            <li>Aménagement du territoire pour <strong>réduire les distances</strong> domicile-travail</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-3 border-primary">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="mb-0">🏘️ Les mesures locales à Lisieux Normandie</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Notre territoire s'engage activement dans cette transition :</p>
+                        <ul>
+                            <li><strong>Réduction de l'éclairage public</strong> pendant les heures creuses</li>
+                            <li><strong>Sensibilisation des citoyens</strong> à la sobriété énergétique</li>
+                            <li><strong>Aides financières pour l'isolation</strong> des logements</li>
+                            <li><strong>Développement d'un réseau de transport collectif</strong> adapté aux besoins</li>
+                            <li><strong>Installation de bornes de recharge</strong> pour véhicules électriques</li>
+                            <li><strong>Aménagement de pistes cyclables</strong> sécurisées</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="propos">À propos</h3>
+                <p>Site de l'aglomération de Lisieux<br> présentant les enjeux d'un plan<br> local de déplacements.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul>
+                    <li><a href="accueil.html"><u class="iconAccueil">Accueil</u></a></li>
+                    <li><a href="#"><u class="iconProbleme">Signalé un problème</u></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li class="adresse">21 Rue Henry Chéron, 14100 Lisieux</li>
+                    <li class="telephone">02 31 48 40 40</li>
+                    <li class="mail">courrier@ville-lisieux.fr</li>
+                    <li class="horaire">Lun - Ven: 8h30 - 12h30 et 13h30 - 17h00</li>
+                    <li class="horaire">Sam: 8h30 - 12h00</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Inscrivez-vous pour recevoir nos dernières actualités dans l'aglomération de Lisieux.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit">OK</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 LisieuxAglo. Marwan NAIRI et Mathéo RIMBAULT. Tous droits réservés. | <a href="#" style="color: #95a5a6;">Mentions légales</a> | <a href="#" style="color: #95a5a6;">Politique de confidentialité</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
