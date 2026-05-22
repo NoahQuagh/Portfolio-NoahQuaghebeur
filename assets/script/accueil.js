@@ -119,8 +119,7 @@ function validerSaisie(event) {
         'cd parcours': {fn: parcours, name: 'parcours'},
         'cd projets': {fn: projet, name: 'projet'},
         'cd competences': {fn: comptence, name: 'competence'},
-        'cd expériences': {fn: experience, name: 'experience'},
-        'cd connexion': {fn: GoConnexion, name: null},
+        'cd expériences': {fn: experience, name: 'experience'}
     };
 
     ligneActuelle.innerHTML = `<br><span class="prompt">PS C:\\Users\\Noah&gt; <span class="${cmdsNav[valeur] || valeur === 'help' || valeur === './bio' || valeur === './moi' || valeur === './jeu' ? 'success' : 'error'}">${valeur}</span></span>`;
@@ -140,7 +139,7 @@ function validerSaisie(event) {
     } else if (valeur === 'help') {
         fenetre.innerHTML += `
             <div class="output-line info"><br>COMMANDES DISPONIBLES</div>
-            ${['help', 'cd parcours', 'cd projets', 'cd competences', 'cd expériences', 'cd connexion', './bio', './moi', './jeu']
+            ${['help', 'cd parcours', 'cd projets', 'cd competences', 'cd expériences', './bio', './moi', './jeu']
             .map(c => `<div class="output-line" style="color:#5dd62c">   ${c}</div>`).join('')}`;
         LigneSuivante();
 
@@ -433,5 +432,5 @@ window.onload = function () {
 };
 
 function compte() {
-    window.location.href = "../../pages/login.html";
+    window.location.href = "pages/login.html";
 }

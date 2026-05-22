@@ -21,6 +21,17 @@
     --border: rgba(242, 237, 230, 0.14);
     --borderFonce: rgba(19, 19, 19, 0.54); /* Bordure foncé */
     --sidebarMenu-hover: rgba(181, 5, 5, 0.93);
+
+    /*taille de texte*/
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.75rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3.5rem;
+    --text-5xl: 5rem;
 }
 
 /* ─── POLICE ─── */
