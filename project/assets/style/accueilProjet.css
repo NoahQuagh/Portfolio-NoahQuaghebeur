@@ -129,26 +129,16 @@ header {
     background-position: center center;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-            circle at center,
-            transparent 0%,
-            var(--color-bg) 80%
-    );
-    pointer-events: none;
-}
+
 
 .hero::after {
     content: "";
     position: absolute;
     top: 20%;
-    left: 50%;
+    left: 500%;
     transform: translate(-50%, -50%);
     width: 600px;
-    height: 600px;
+    height: auto;
     background: radial-gradient(circle, rgba(108, 92, 231, 0.15) 0%, transparent 70%);
     filter: blur(80px);
     z-index: -1;

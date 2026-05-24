@@ -119,8 +119,8 @@ function validerSaisie(event) {
         'cd parcours': {fn: parcours, name: 'parcours'},
         'cd projets': {fn: projet, name: 'projet'},
         'cd competences': {fn: comptence, name: 'competence'},
-        'cd expériences': {fn: experience, name: 'experience'},
-        'cd connexion': {fn: GoConnexion, name: null},
+        'cd experiences': {fn: experience, name: 'experience'},
+        'cd connexion': {fn: compte, name: null},
     };
 
     ligneActuelle.innerHTML = `<br><span class="prompt">PS C:\\Users\\Noah&gt; <span class="${cmdsNav[valeur] || valeur === 'help' || valeur === './bio' || valeur === './moi' || valeur === './jeu' ? 'success' : 'error'}">${valeur}</span></span>`;
@@ -433,5 +433,5 @@ window.onload = function () {
 };
 
 function compte() {
-    window.location.href = "../../pages/login.html";
+    window.location.href = "pages/login.html";
 }
