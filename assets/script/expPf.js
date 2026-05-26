@@ -5,7 +5,7 @@ const experiences = [
         type: 'CDD',
         debut: 'Déc 2025',
         fin: 'Jan 2026',
-        description: 'Description du poste et des missions effectuées.',
+        description: 'Poste de production en cuisine. Service en salle et du Drive',
         tech: ['Cuisine', 'SAT', 'Drive'],
     }
 ];

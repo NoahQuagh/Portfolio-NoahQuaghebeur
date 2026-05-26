@@ -271,8 +271,7 @@ function accueil() {
                             <p>
                                 Étudiant en BUT Informatique à l'IUT Grand Ouest Normandie, je me spécialise dans le développement d'applications, 
                                 le Web, l'administration système et la gestion de bases de données.
-                                De la gestion de serveurs sous Linux à la conception d'interfaces modernes, j'aime transformer des lignes de code 
-                                en solutions fonctionnelles, performantes et sécurisées.
+                                De la gestion de serveurs sous Linux à la conception d'interfaces modernes.
                             </p>
                         </div>
                         <div class="actu-block">
@@ -287,7 +286,7 @@ function accueil() {
                                 </button>
                             </div>
                             <div class="nav-arrows" id="cv">
-                                <a href="../document/Noah_Quaghebeur_CV.pdf" download="Noah_Quaghebeur_CV.pdf" class="arrow-btn">
+                                <a href="/assets/document/Noah_Quaghebeur_CV.pdf" download="Noah_Quaghebeur_CV.pdf" class="arrow-btn">
                                     <img src="assets/img/file-earmark-person.svg">
                                     Obtenir le CV
                                 </a>
