@@ -37,7 +37,7 @@ function navigation() {
 }
 
 function compte() {
-    window.location.href = "../../../../pages/login.html";
+    window.location.href = "page/login.html";
 }
 
 function toggleMenu() {
