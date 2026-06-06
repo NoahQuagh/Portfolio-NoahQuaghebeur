@@ -19,7 +19,7 @@ async function handleSubmit(e) {
 
 
     try {
-        const res  = await fetch('../../api/login.php', { method: 'POST', body: formData });
+        const res  = await fetch('/api/login.php', { method: 'POST', body: formData });
         const data = await res.json();
 
         if (data.success) {

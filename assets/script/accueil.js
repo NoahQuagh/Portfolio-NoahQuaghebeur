@@ -119,7 +119,8 @@ function validerSaisie(event) {
         'cd parcours': {fn: parcours, name: 'parcours'},
         'cd projets': {fn: projet, name: 'projet'},
         'cd competences': {fn: comptence, name: 'competence'},
-        'cd expériences': {fn: experience, name: 'experience'}
+        'cd experiences': {fn: experience, name: 'experience'},
+        'cd connexion': {fn: compte, name: null},
     };
 
     ligneActuelle.innerHTML = `<br><span class="prompt">PS C:\\Users\\Noah&gt; <span class="${cmdsNav[valeur] || valeur === 'help' || valeur === './bio' || valeur === './moi' || valeur === './jeu' ? 'success' : 'error'}">${valeur}</span></span>`;
@@ -139,7 +140,7 @@ function validerSaisie(event) {
     } else if (valeur === 'help') {
         fenetre.innerHTML += `
             <div class="output-line info"><br>COMMANDES DISPONIBLES</div>
-            ${['help', 'cd parcours', 'cd projets', 'cd competences', 'cd expériences', './bio', './moi', './jeu']
+            ${['help', 'cd parcours', 'cd projets', 'cd competences', 'cd expériences', 'cd connexion', './bio', './moi', './jeu']
             .map(c => `<div class="output-line" style="color:#5dd62c">   ${c}</div>`).join('')}`;
         LigneSuivante();
 
@@ -270,8 +271,7 @@ function accueil() {
                             <p>
                                 Étudiant en BUT Informatique à l'IUT Grand Ouest Normandie, je me spécialise dans le développement d'applications, 
                                 le Web, l'administration système et la gestion de bases de données.
-                                De la gestion de serveurs sous Linux à la conception d'interfaces modernes, j'aime transformer des lignes de code 
-                                en solutions fonctionnelles, performantes et sécurisées.
+                                De la gestion de serveurs sous Linux à la conception d'interfaces modernes.
                             </p>
                         </div>
                         <div class="actu-block">
@@ -286,7 +286,7 @@ function accueil() {
                                 </button>
                             </div>
                             <div class="nav-arrows" id="cv">
-                                <a href="../document/Noah_Quaghebeur_CV.pdf" download="Noah_Quaghebeur_CV.pdf" class="arrow-btn">
+                                <a href="/assets/document/Noah_Quaghebeur_CV.pdf" download="Noah_Quaghebeur_CV.pdf" class="arrow-btn">
                                     <img src="assets/img/file-earmark-person.svg">
                                     Obtenir le CV
                                 </a>

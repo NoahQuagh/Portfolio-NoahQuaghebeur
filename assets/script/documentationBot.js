@@ -310,6 +310,7 @@ function initScrollSpy() {
    GÉNÉRATEURS HTML
 ───────────────────────────────────────── */
 
+// Génère une cmd-card à partir d'un objet commande
 function genCmdCard(cmd) {
 
     const accesHtml = cmd.admin
@@ -351,6 +352,7 @@ function genCmdCard(cmd) {
         </div>`;
 }
 
+// Génère un cmd-group complet (titre + toutes ses cmd-cards)
 function genCmdGroup(groupe) {
     const cards = groupe.cmds.map(genCmdCard).join('');
     return `
@@ -1414,7 +1416,7 @@ function contributeur() {
 }
 
 function compte() {
-    window.location.href = "../pages/login.html";
+    window.location.href = "login.html";
 }
 
 /* ─────────────────────────────────────────

@@ -78,7 +78,7 @@ function ouvrirProjet(index) {
             <span class="chapter-num">${e.date}</span>
             <h2 class="chapter-title">${e.titre}</h2>
         </div>
-        <img src="../assets/img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img" style="object-position:center;object-fit:contain;background: #000000;">
+        <img src="/assets/img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img" style="object-position:center;object-fit:contain;background: #000000;">
         <div class="projet-back-div-btn">
             <button class="projet-back-btn" onclick="projet()">← Retour</button>
             <button class="projet-doc-btn" onclick="">Documentation</button>
@@ -94,7 +94,7 @@ function ouvrirProjet(index) {
             <span class="chapter-num">${e.date}</span>
             <h2 class="chapter-title">${e.titre}</h2>
         </div>
-        <img src="../assets/img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img">
+        <img src="/assets/img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img">
         <div class="projet-back-div-btn">
             <button class="projet-back-btn" onclick="projet()">← Retour</button>
             <a class="projet-doc-btn" href="pages/gigadoc.html">Documentation</a>
@@ -110,7 +110,7 @@ function ouvrirProjet(index) {
             <span class="chapter-num">${e.date}</span>
             <h2 class="chapter-title">${e.titre}</h2>
         </div>
-        <img src="../assets/img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img">
+        <img src="/assets/img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img">
         <div class="projet-back-div-btn">
             <button class="projet-back-btn" onclick="projet()">← Retour</button>
         </div>
