@@ -83,7 +83,7 @@ function accueil() {
         <section class="hero">
             <div class="hero-bg-pattern"></div>
             <div class="hero-inner">
-                <div class="hero-badge">🚌 Réseau normand de cars régionaux</div>
+                <div class="hero-badge">Réseau normand de cars régionaux</div>
                 <h1 class="hero-title">Viking Transport</h1>
                 <p class="hero-sub">
                     Voyagez à travers toute la Normandie avec notre réseau de
@@ -126,23 +126,20 @@ function accueil() {
             <p class="section-sub">Tout ce dont vous avez besoin pour voyager en Normandie</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🗺️</div>
-                    <h3>Réseau étendu</h3>
+                    <div class="service-icon"><img src="assets/img/map.svg"><h3>Réseau étendu</h3></div>
                     <p>19 lignes couvrant l'ensemble de la Normandie, de Cherbourg-en-Cotentin à Gisors, du Havre à Alençon.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🎟️</div>
-                    <h3>Réservation simple</h3>
+                    
+                    <div class="service-icon"><img src="assets/img/credit_card.svg"><h3>Réservation simple</h3></div>
                     <p>Réservez en quelques clics entre deux communes. Sans inscription pour un accès rapide, ou avec un compte pour plus d'avantages.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">⭐</div>
-                    <h3>Programme fidélité</h3>
+                    <div class="service-icon"><img src="assets/img/loyalty.svg"><h3>Programme fidélité</h3></div>
                     <p>Gagnez <strong>1 point pour 10 km</strong> parcourus. Accumulez des points pour obtenir des réductions sur vos prochains voyages.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💰</div>
-                    <h3>Tarifs attractifs</h3>
+                    <div class="service-icon"><img src="assets/img/payments.svg"><h3>Tarifs attractifs</h3></div>
                     <p>13 tranches tarifaires de 5 € à 90 €. Les clients fidélisés bénéficient de réductions supplémentaires selon leur niveau.</p>
                 </div>
             </div>
@@ -206,7 +203,6 @@ function ligne() {
             </div>
         </div>
 
-        <!-- Intro réseau -->
         <section class="ligne-intro">
             <div class="ligne-intro-grid">
                 <div class="ligne-intro-text">
@@ -222,12 +218,6 @@ function ligne() {
                         vers La Hague, ligne 1B dans le sens inverse), vous offrant une flexibilité
                         maximale pour vos déplacements.
                     </p>
-                    <div class="ligne-chips">
-                        <span class="chip">🔴 Lignes 1–5 · Cotentin</span>
-                        <span class="chip">🟢 Lignes 6–10 · Calvados / Orne</span>
-                        <span class="chip">🔵 Lignes 11–15 · Eure / Seine-Maritime</span>
-                        <span class="chip">🟡 Lignes 16–19 · Transversales</span>
-                    </div>
                 </div>
                 <div class="ligne-intro-stats">
                     <div class="mini-stat"><span>19</span><p>Lignes actives</p></div>
@@ -236,32 +226,12 @@ function ligne() {
             </div>
         </section>
 
-        <!-- Info survol -->
         <div class="info-box">
             🗺️ Survolez ou cliquez sur les arrêts et les lignes pour explorer le réseau normand.
         </div>
 
         <!-- Carte -->
         <div id="map"></div>
-
-        <!-- Info complémentaire -->
-        <section class="ligne-footer-info">
-            <div class="lfi-card">
-                <span class="lfi-icon">🕐</span>
-                <h4>Horaires</h4>
-                <p>Consultez les horaires de passage à chaque arrêt directement sur la carte en cliquant sur un nœud.</p>
-            </div>
-            <div class="lfi-card">
-                <span class="lfi-icon">🔀</span>
-                <h4>Correspondances</h4>
-                <p>Des correspondances entre lignes sont possibles dans les communes partagées pour rejoindre votre destination.</p>
-            </div>
-            <div class="lfi-card">
-                <span class="lfi-icon">📍</span>
-                <h4>Arrêts</h4>
-                <p>Chaque commune dispose d'un arrêt unique. La distance entre arrêts détermine le tarif de votre billet.</p>
-            </div>
-        </section>
     `;
 
     changeContent('accueil', content);
@@ -275,7 +245,6 @@ function ligne() {
    ========================================================= */
 function tarif() {
     const content = `
-        <!-- Bannière -->
         <div class="tarif-banner">
             <div class="tarif-banner-inner">
                 <span class="page-banner-badge">Tarifs</span>
@@ -284,10 +253,8 @@ function tarif() {
             </div>
         </div>
 
-        <!-- Contenu principal -->
         <div class="tarif-wrap">
 
-            <!-- Intro -->
             <div class="tarif-intro">
                 <div class="tarif-intro-text">
                     <h3>Comment est calculé votre billet ?</h3>
@@ -298,35 +265,11 @@ function tarif() {
                         ou à l'utilisation de vos <strong>points cumulés</strong>.
                     </p>
                 </div>
-                <div class="tarif-intro-cards">
-                    <div class="tarif-info-card tarif-info-green">
-                        <span class="tic-icon">⭐</span>
-                        <div>
-                            <strong>Niveau Junior</strong>
-                            <p>−20 % sur le tarif de base</p>
-                        </div>
-                    </div>
-                    <div class="tarif-info-card tarif-info-blue">
-                        <span class="tic-icon">🏅</span>
-                        <div>
-                            <strong>Points fidélité</strong>
-                            <p>1 point par 10 km parcourus (min. 1 pt)</p>
-                        </div>
-                    </div>
-                    <div class="tarif-info-card tarif-info-amber">
-                        <span class="tic-icon">🎁</span>
-                        <div>
-                            <strong>Réduction points</strong>
-                            <p>Utilisez vos points pour payer moins cher</p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <p class="tarif-title">Grille des tranches</p>
             <p class="tarif-sub">Transport par bus — tarif de base selon la distance parcourue</p>
 
-            <!-- Tableau -->
             <div class="table-wrapper">
                 <table id="tarif-table">
                     <thead>
@@ -341,7 +284,6 @@ function tarif() {
                 </table>
             </div>
 
-            <!-- Exemple de calcul -->
             <div class="tarif-example">
                 <h4>💡 Exemple de tarif</h4>
                 <p>
@@ -368,18 +310,6 @@ function scrollToSection(id) {
     if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
 }
 
-window.addEventListener('resize', () => {
-    const largeur = window.innerWidth;
-    const t = document.querySelector('.terminal');
-
-    if (!t) return;
-    t.style.display = largeur < 800 ? 'none' : 'flex';
-
-    if (largeur > 800) {
-        closeMenu();
-        document.body.classList.remove('sidebar-open');
-    }
-});
 
 document.addEventListener('DOMContentLoaded', () => {
     navigation();

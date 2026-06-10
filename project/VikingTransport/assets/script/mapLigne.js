@@ -14,16 +14,19 @@ function initMap() {
 
     const coordonneesVilles = {
         "Caen": [49.1828, -0.3707],
+        "Flamanville": [49.5303, -1.8665],
+        "Le Havre": [49.4938, 0.1008],
+
         "Rouen": [49.4431, 1.0993],
         "Cherbourg-en-Cotentin": [49.6337, -1.6221],
-        "Flamanville": [49.5303, -1.8665],
+
         "Granville": [48.8379, -1.5977],
         "Vire Normandie": [48.8378, -0.8893],
         "Argentan": [48.7444, -0.0192],
         "Bayeux": [49.2764, -0.7025],
         "Saint-Lô": [49.1161, -1.0908],
         "Dieppe": [49.9229, 1.0776],
-        "Le Havre": [49.4938, 0.1008],
+
         "Lisieux": [49.1459, 0.2256],
         "Alençon": [48.4323, 0.1436],
         "Avranches": [48.6853, -1.3633]
@@ -47,7 +50,7 @@ function initMap() {
             couleur: "#8e44ad" // Violet
         },
         {
-            nom: "Ligne Axe Majeur (Exemple)",
+            nom: "Ligne Axe Majeur",
             communes: ["Cherbourg-en-Cotentin", "Bayeux", "Caen", "Lisieux", "Rouen"],
             couleur: "#2ecc71" // Vert
         }

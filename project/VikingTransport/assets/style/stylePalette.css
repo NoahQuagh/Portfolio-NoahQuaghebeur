@@ -1,4 +1,4 @@
-/* ─── COULEURS ─── */
+/* COULEURS  */
 :root {
     --bg: #f2ede6; /* Noir charbon  */
     --bg2: #ffffff; /* Noir légèrement plus clair*/
@@ -34,7 +34,7 @@
     --text-5xl: 5rem;
 }
 
-/* ─── POLICE ─── */
+/*  POLICE  */
 :root {
     --font-title: 'Embed code', sans-serif;
     --font-subtitle: 'Montserrat ', sans-serif;
@@ -42,7 +42,7 @@
     --font-button: 'Syne', sans-serif;
 }
 
-/* ─── BADGES ─── */
+/* BADGES */
 :root {
     /* ROUGE*/
     --badge-bg-red: rgba(192, 40, 26, 0.15);
@@ -67,8 +67,8 @@
 
 
 :root {
-    --radiusBox: 7px;
-    --radiusBox2: 14px;
+    --radiusBox-sm: 7px;
+    --radiusBox-md: 14px;
 }
 
 

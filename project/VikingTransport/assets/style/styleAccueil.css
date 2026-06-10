@@ -55,7 +55,7 @@ header.is-pinned {
     align-items: center;
     cursor: pointer;
     width: auto;
-    border-radius: var(--radiusBox);
+    border-radius: var(--radiusBox-sm);
     transition: background 0.15s;
     margin-right: 1rem;
 }
@@ -109,7 +109,7 @@ header .compteHeader {
 }
 
 .indicator {
-    border-radius: var(--radiusBox);
+    border-radius: var(--radiusBox-sm);
     position: absolute;
     top: 50%;
     background: var(--sidebarMenu-hover);
@@ -360,7 +360,7 @@ body {
     cursor: pointer;
     padding: 0;
     gap: 0;
-    border-radius: var(--radiusBox);
+    border-radius: var(--radiusBox-sm);
 }
 
 .theme-label {
@@ -555,19 +555,20 @@ body {
 .service-card {
     background: var(--bg2, #f8f5f0);
     border: 1px solid rgba(0, 0, 0, .06);
-    border-radius: var(--radiusBox2);
+    border-radius: var(--radiusBox-md);
     padding: 1.8rem 1.6rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+    box-shadow: 0 16px 12px rgba(0, 0, 0, .04);
 }
 
 .service-icon {
     font-size: 2rem;
-    margin-bottom: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.service-icon img {
+    margin-bottom: 0.5rem;
 }
 
 .service-card h3 {
@@ -616,7 +617,7 @@ body {
     min-width: 160px;
     background: rgba(255, 255, 255, .05);
     border: 1px solid rgba(255, 255, 255, .1);
-    border-radius: var(--radiusBox2);
+    border-radius: var(--radiusBox-md);
     padding: 1.5rem 1.2rem;
 }
 
@@ -710,7 +711,6 @@ body {
 }
 
 .ligne-banner {
-    background-image: url('../img/ligneBanner.jpeg');
     background-size: cover;
     background-position: center;
 }

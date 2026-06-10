@@ -50,7 +50,7 @@
 }
 
 :root {
-    --radiusBox: 10px;
+    --radiusBox-sm: 10px;
 }
 
 *, *::before, *::after {
@@ -82,7 +82,7 @@ html {
     cursor: pointer;
     padding: 0;
     gap: 0;
-    border-radius: var(--radiusBox);
+    border-radius: var(--radiusBox-sm);
 }
 
 .theme-label {
