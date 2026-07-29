@@ -7,16 +7,16 @@ function projet() {
             desc: 'Simulateur du jeu de la vie.',
             tech: ['Python'],
             details: 'Implémentation du célèbre automate cellulaire de Conway. Chaque cellule évolue selon des règles simples : survie, mort ou naissance en fonction de ses voisins. Interface graphique permettant de dessiner des configurations initiales et d\'observer leur évolution en temps réel.',
-            link: ''
+            link: 'projet.noahquagh.com/project/gameoflife'
         },
         {
             fileName: 'projet2',
             date: 'Projet personnel — 2026',
-            titre: 'Bot Discord : GigaBot',
+            titre: 'Bot Discord : ValoBot',
             desc: 'Développement d\'un bot Discord.',
             tech: ['Java', 'JDA', 'JSON'],
-            details: 'Bot Discord complet avec système de gestion d\'équipes Premier Valorant, commandes slash, invitations par DM avec boutons interactifs, stockage de données JSON et système de rappels automatiques.',
-            link: ''
+            details: 'Bot Discord complet avec système de gestion d\'équipes Premier Valorant, commandes slash, invitations par DM avec boutons interactifs, stockage de données MySQL et système de rappels automatiques.',
+            link: 'valobot.noahquagh.com'
         },
         {
             fileName: 'imgPortfolio',
@@ -25,7 +25,16 @@ function projet() {
             desc: 'Développement de mon portfolio.',
             tech: ['HTML', 'CSS', 'JavaScript'],
             details: 'Site portfolio dynamique avec navigation par sections, terminal interactif simulé, animations de transition, design responsive et thème cohérent inspiré de l\'esthétique des éditeurs de code.',
-            link: ''
+            link: 'www.noahquagh.com'
+        },
+        {
+            fileName: 'together-logo',
+            date: 'Projet personnel — 2026',
+            titre: 'Together',
+            desc: 'Application web de gestion de projet collaboratif.',
+            tech: ['HTML', 'CSS', 'JavaScript','php','MySQL'],
+            details: '',
+            link: 'together.noahquagh.com',
         },
     ];
 
@@ -60,7 +69,6 @@ function projet() {
 
     changeContent('accueil', content);
 
-    // Stocker les projets pour y accéder depuis ouvrirProjet()
     window._projets = projects;
 }
 
@@ -81,7 +89,7 @@ function ouvrirProjet(index) {
         <img src="/assets/img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img" style="object-position:center;object-fit:contain;background: #000000;">
         <div class="projet-back-div-btn">
             <button class="projet-back-btn" onclick="projet()">← Retour</button>
-            <button class="projet-doc-btn" onclick="">Documentation</button>
+            <button class="projet-doc-btn" onclick="">Découvrire</button>
         </div>
         <div class="projet-tech-list">
             ${e.tech.map(t => `<span class="projet-tech-tag">${t}</span>`).join('')}
@@ -97,7 +105,7 @@ function ouvrirProjet(index) {
         <img src="/assets/img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img">
         <div class="projet-back-div-btn">
             <button class="projet-back-btn" onclick="projet()">← Retour</button>
-            <a class="projet-doc-btn" href="pages/gigadoc.html">Documentation</a>
+            <a class="projet-doc-btn" href="pages/gigadoc.html">Découvrire</a>
         </div>
         <div class="projet-tech-list">
             ${e.tech.map(t => `<span class="projet-tech-tag">${t}</span>`).join('')}
@@ -120,11 +128,27 @@ function ouvrirProjet(index) {
         <p class="projet-detail-desc">${e.details}</p>
     `;
     }
+    else if (index === 3) {
+        detail.innerHTML = `
+        <div class="chapter-header" style="margin-bottom:1rem;">
+            <span class="chapter-num">${e.date}</span>
+            <h2 class="chapter-title">${e.titre}</h2>
+        </div>
+        <img src="/assets/img/${e.fileName}.png" alt="${e.titre}" class="projet-detail-img">
+        <div class="projet-back-div-btn">
+            <button class="projet-back-btn" onclick="projet()">← Retour</button>
+            <a class="projet-doc-btn" href="pages/gigadoc.html">Découvrire</a>
+        </div>
+        <div class="projet-tech-list">
+            ${e.tech.map(t => `<span class="projet-tech-tag">${t}</span>`).join('')}
+        </div>
+        <p class="projet-detail-desc">${e.details}</p>
+    `;
+    }
 
 
     liste.innerHTML = '';
 
-    // Slide in depuis la droite (léger délai pour que le CSS de départ soit appliqué)
     requestAnimationFrame(() => {
         requestAnimationFrame(() => {
             detail.classList.add('slide-in');
@@ -137,7 +161,6 @@ function fermerProjet() {
     const detail = document.getElementById('projet-detail');
     if (!liste || !detail) return;
 
-    // Inverser : detail sort à droite, liste revient
     detail.classList.remove('slide-in');
     setTimeout(() => {
         detail.innerHTML = '';

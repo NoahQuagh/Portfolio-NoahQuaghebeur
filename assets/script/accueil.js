@@ -281,14 +281,17 @@ function accueil() {
                         </div>
                         <div class="box-button">
                             <div class="nav-arrows">
-                                <button class="arrow-btn" onclick="scrollToSection('body-contact')">
-                                    Contactez-moi ↓
+                                <button class="relief-button" onclick="scrollToSection('body-contact')">
+                                        <i class="ti ti-mail"></i>
+                                        <span>Contactez-moi ↓</span>
                                 </button>
                             </div>
                             <div class="nav-arrows" id="cv">
-                                <a href="/assets/document/Noah_Quaghebeur_CV.pdf" download="Noah_Quaghebeur_CV.pdf" class="arrow-btn">
-                                    <img src="assets/img/file-earmark-person.svg">
-                                    Obtenir le CV
+                                <a href="/assets/document/Noah_Quaghebeur_CV.pdf" download="Noah_Quaghebeur_CV.pdf">
+                                    <button class="relief-button">
+                                        <i class="ti ti-file"></i>
+                                        <span>Obtenir le CV</span>
+                                    </button>
                                 </a>
                             </div>
                         </div>
@@ -430,7 +433,3 @@ window.onload = function () {
         document.getElementById('dev-modal').style.display = 'none';
     }
 };
-
-function compte() {
-    window.location.href = "pages/login.html";
-}
