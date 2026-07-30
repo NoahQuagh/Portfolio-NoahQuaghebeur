@@ -100,7 +100,6 @@ header.is-pinned {
     top: 60%;
     transform: translateY(-50%);
     background: var(--color-indicator);
-    height: 52px;/*32*/
     width: 0;
     opacity: 0;
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), width 0.3s ease-out;
@@ -201,7 +200,7 @@ main {
 .chapter-num {
     font-family: var(--font-mono);
     font-size: 11px;
-    color: var(--ink3);
+    color: var(--wh3);
     letter-spacing: 0.1em;
     text-transform: uppercase;
     flex-shrink: 0;
@@ -235,6 +234,7 @@ main {
     position: relative;
     overflow: hidden;
     grid-area: hero;
+    height:100vh;
 }
 
 .hero-kicker {
@@ -268,6 +268,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .terminal {
@@ -389,7 +390,7 @@ main {
 }
 
 .profile-card {
-    border: 1.5px solid var(--ink);
+    border: 1.5px solid var(--accent);
     padding: 1.5rem;
     border-radius: 12px;
     background: var(--ink3);
@@ -462,7 +463,7 @@ main {
 }
 
 .bio-block, .actu-block {
-    border: 1.5px solid var(--ink);
+    border: 1.5px solid var(--accent);
     padding: 1.5rem;
     border-radius: 12px;
     background: var(--ink3);
@@ -480,7 +481,7 @@ main {
 }
 
 .block-title {
-    font-family: var(--font-head);
+    font-family: var(--font-title);
     font-size: 20px;
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -630,7 +631,7 @@ main {
     top: 0;
     bottom: 0;
     width: 1.5px;
-    background: var(--ink);
+    background: var(--wh3);
 }
 
 .timeline-item {
@@ -652,8 +653,8 @@ main {
     width: 14px;
     height: 14px;
     border-radius: 2px;
-    border: 2px solid var(--ink);
-    background: var(--ink2);
+    border: 2px solid var(--wh);
+    background: var(--wh2);
     position: relative;
     top: 6px;
     margin-left: 9px;
@@ -667,7 +668,7 @@ main {
 }
 
 .timeline-content {
-    border: 1.5px solid var(--ink);
+    border: 1.5px solid var(--wh3);
     padding: 1.25rem 1.5rem;
     background: var(--ink3);
     margin-bottom: 16px;
@@ -678,13 +679,12 @@ main {
 
 .timeline-content:hover {
     border-color: var(--accent);
-    box-shadow: 3px 3px 0 var(--ink);
 }
 
 .timeline-date {
     font-family: var(--font-mono);
     font-size: 11px;
-    color: var(--ink3);
+    color: var(--wh2);
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
@@ -699,7 +699,7 @@ main {
 
 .timeline-description {
     font-size: 13px;
-    color: var(--ink2);
+    color: var(--wh2);
     line-height: 1.6;
 }
 
@@ -813,10 +813,16 @@ code {
 .project-item {
     display: grid;
     grid-template-columns: 48px 1fr;
+    border: 1px solid var(--wh3);
     gap: 0 1.5rem;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    background: var(--ink3);
+    transition: border-color 0.15s, opacity 0.5s, transform 0.5s;
+    cursor: pointer;
+
 }
 
 .project-item.show {
@@ -825,12 +831,8 @@ code {
 }
 
 .project-content {
-    border: 1.5px solid var(--ink);
     padding: 1.5rem 1.5rem;
     background: var(--ink3);
-    margin-bottom: 16px;
-    cursor: pointer;
-    transition: border-color 0.15s, box-shadow 0.15s;
     width: clamp(220px, 80vw, 900px);
     display: flex;
     flex-wrap: wrap;
@@ -842,15 +844,14 @@ code {
 
 }
 
-.project-content:hover {
+.project-item:hover {
     border-color: var(--accent);
-    box-shadow: 3px 3px 0 var(--ink);
 }
 
 .project-date {
     font-family: var(--font-mono);
     font-size: 11px;
-    color: var(--ink3);
+    color: var(--wh3);
     text-transform: uppercase;
     letter-spacing: 0.08em;
 }
@@ -865,7 +866,7 @@ code {
 
 .project-description {
     font-size: 13px;
-    color: var(--ink2);
+    color: var(--wh2);
     line-height: 1.6;
 }
 
@@ -915,7 +916,7 @@ code {
     gap: 8px;
     border: 1.5px solid var(--wh4);
     padding: 8px 16px;
-    background: transparent;
+    background: var(--ink);
     cursor: pointer;
     font-family: var(--font-mono);
     font-size: 12px;
@@ -927,10 +928,14 @@ code {
 }
 
 .projet-back-btn:hover {
-    background: var(--ink);
-    color: var(--wh2);
+    background: var(--ink2);
+    border: 1.5px solid var(--wh2);
 }
 
+.projet-doc-btn i{
+    color: var(--wh2);
+    font-size: 14px;
+}
 
 .projet-doc-btn {
     display: inline-flex;
@@ -938,7 +943,7 @@ code {
     gap: 8px;
     border: 1.5px solid var(--wh4);
     padding: 8px 16px;
-    background: transparent;
+    background: var(--ink);
     cursor: pointer;
     font-family: var(--font-mono);
     font-size: 12px;
@@ -950,22 +955,8 @@ code {
 }
 
 .projet-doc-btn:hover {
-    background: var(--ink);
-    color: var(--wh2);
-}
-
-.projet-doc-btn::before {
-    content: url('../img/documentationIcon.svg');
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    padding-right: 20px;
-    padding-bottom: 15px;
-    transition: transform 0.15s;
-}
-
-.projet-doc-btn:hover::before {
-    content: url('../img/documentationIconWhite.svg');
+    background: var(--ink2);
+    border: 1.5px solid var(--wh2);
 }
 
 
@@ -1017,9 +1008,9 @@ code {
     font-family: var(--font-mono);
     font-size: 11px;
     padding: 3px 10px;
-    border: 1px solid var(--rule);
+    border: 1px solid var(--wh3);
     background: var(--ink);
-    color: var(--ink2);
+    color: var(--wh2);
     border-radius: 2px;
 }
 
@@ -1028,7 +1019,7 @@ code {
     max-height: 360px;
     object-fit: cover;
     object-position: top;
-    border: 1px solid var(--rule);
+    border: 1px solid var(--accent);
     margin-bottom: 1.5rem;
     display: block;
     border-radius: 12px;
@@ -1036,7 +1027,7 @@ code {
 
 .projet-detail-desc {
     font-size: 14px;
-    color: var(--ink2);
+    color: var(--wh2);
     line-height: 1.8;
     border-left: 3px solid var(--accent);
     padding-left: 1rem;
@@ -1524,6 +1515,12 @@ header {
     width: 100%;
     border-bottom: 1px solid lightgray;
     margin: 10px 0;
+}
+
+.separator-section{
+    height: 0;
+    border-bottom: 1px solid var(--wh4);
+    margin: 10px 2rem;
 }
 
 .header-nav a {

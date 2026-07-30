@@ -11,7 +11,7 @@
     background: var(--main-color);
     border-radius: 10px;
     border: solid 2px var(--secondary-color);
-    box-shadow: 0 6px 0 var(--secondary-color);
+    box-shadow: 0 8px 0 var(--secondary-color);
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -21,14 +21,14 @@
 
 .relief-button:hover{
     transform: translateY(-2px);
-    box-shadow: 0 8px 0 var(--secondary-color);
+    box-shadow: 0 10px 0 var(--secondary-color);
 }
 
 .relief-button span{
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-family: var(--font-text-family);
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-weight: 400;
+    letter-spacing: 0.08em;
     color: var(--text-color);
 }
 
@@ -38,6 +38,6 @@
 }
 
 .relief-button:active{
-    transform: translateY(6px);
+    transform: translateY(8px);
     box-shadow: 0 1px 0 var(--secondary-color);
 }

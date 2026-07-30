@@ -120,7 +120,6 @@ function validerSaisie(event) {
         'cd projets': {fn: projet, name: 'projet'},
         'cd competences': {fn: comptence, name: 'competence'},
         'cd experiences': {fn: experience, name: 'experience'},
-        'cd connexion': {fn: compte, name: null},
     };
 
     ligneActuelle.innerHTML = `<br><span class="prompt">PS C:\\Users\\Noah&gt; <span class="${cmdsNav[valeur] || valeur === 'help' || valeur === './bio' || valeur === './moi' || valeur === './jeu' ? 'success' : 'error'}">${valeur}</span></span>`;
@@ -235,7 +234,7 @@ function accueil() {
                 </div>
             </div>
         </section>
-
+        <div class="separator-section"></div>
         <!-- PROFIL -->
         <div class="section-wrap">
             <div class="chapter" id="body-profil">
@@ -248,7 +247,6 @@ function accueil() {
                             <img src="../assets/img/photoNoah.jpg" alt="Noah Quaghebeur" class="profile-image">
                         </div>
                         <div class="profile-name">NOAH QUAGHEBEUR</div>
-                        <div class="profile-title-badge">Étudiant</div>
                         <div class="profile-stats">
                             <div class="stat-item">
                                 <span class="stat-label">Localisation</span>
@@ -267,7 +265,6 @@ function accueil() {
                     <div class="profil-right">
                         <div class="bio-block">
                             <div class="block-label">Biographie</div>
-                            <div class="block-title">À PROPOS DE MOI_</div>
                             <p>
                                 Étudiant en BUT Informatique à l'IUT Grand Ouest Normandie, je me spécialise dans le développement d'applications, 
                                 le Web, l'administration système et la gestion de bases de données.
@@ -276,21 +273,20 @@ function accueil() {
                         </div>
                         <div class="actu-block">
                             <div class="block-label">Actuellement</div>
-                            <div class="block-title">ACTUELLEMENT_</div>
                             <p>Étudiant en première année de BUT Informatique à l'Université Caen Normandie.</p>
                         </div>
                         <div class="box-button">
                             <div class="nav-arrows">
                                 <button class="relief-button" onclick="scrollToSection('body-contact')">
                                         <i class="ti ti-mail"></i>
-                                        <span>Contactez-moi ↓</span>
+                                        <span>CONTACTEZ-MOI ↓</span>
                                 </button>
                             </div>
                             <div class="nav-arrows" id="cv">
                                 <a href="/assets/document/Noah_Quaghebeur_CV.pdf" download="Noah_Quaghebeur_CV.pdf">
                                     <button class="relief-button">
                                         <i class="ti ti-file"></i>
-                                        <span>Obtenir le CV</span>
+                                        <span>OBTENIR LE CV</span>
                                     </button>
                                 </a>
                             </div>
@@ -298,7 +294,7 @@ function accueil() {
                     </div>
                 </div>
             </div>
-
+            <div class="separator-section"></div>
             <!-- CONTACT -->
             <div class="chapter" id="body-contact" style="border-bottom:none; padding-bottom:4rem;">
                 <div class="chapter-header">

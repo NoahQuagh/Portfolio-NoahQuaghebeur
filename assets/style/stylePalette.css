@@ -27,6 +27,7 @@
 /* POLICE */
 :root {
     --font-head: 'Syne', sans-serif;
+    --font-title: "Lexend", sans-serif;
     --font-body: 'DM Sans', sans-serif;
     --font-mono: 'DM Sans', sans-serif;
     --font-nq: 'IBM Plex Mono', monospace;
