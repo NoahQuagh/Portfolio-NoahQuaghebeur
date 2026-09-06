@@ -2,8 +2,4 @@
 **/.metadata
 **/.recommenders
 /node_modules
-racourci.txt
-shema_flux_authentification.txt
 .env
-includes/db.php
-shema_projet.txt

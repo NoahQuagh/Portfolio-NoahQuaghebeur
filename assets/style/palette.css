@@ -1,0 +1,93 @@
+/* COULEUR */
+:root {
+    --wh:  #f2ede6;
+    --wh2: #ffffff;
+    --wh3: #7a7168;
+    --ink:  #0e0d0c;
+    --ink2: #1a1917;
+    --ink3: #252320;
+    --color1: #123456;
+    --icon-color: #676666;
+    --box-hover: #33312d;
+    --badge-bg-blue:   rgba(60,100,180,.12);
+    --badge-col-blue:  #5c90e8;
+    --badge-bor-blue:  rgba(60,100,180,.35);
+    --badge-bg-green:  rgba(30,160,90,.12);
+    --badge-col-green: #28b870;
+    --badge-bor-green: rgba(30,160,90,.35);
+    --badge-bg-yellow: rgba(200,130,20,.12);
+    --badge-col-yellow:#d4901a;
+    --badge-bor-yellow:rgba(200,130,20,.35);
+    --badge-bg-red:    rgba(192,40,26,.15);
+    --badge-col-red:   #e04030;
+    --badge-bor-red:   rgba(192,40,26,.4);
+
+    /*taille de texte*/
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.75rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3.5rem;
+    --text-5xl: 5rem;
+
+    /*marge de texte*/
+    --marge-3xs: 0.2rem;
+    --marge-xxs: 0.5rem;
+    --marge-xs: 0.75rem;
+    --marge-sm: 0.875rem;
+    --marge-base: 1rem;
+    --marge-lg: 1.5rem;
+    --marge-xl: 2rem;
+    --marge-2xl: 2.5rem;
+    --marge-3xl: 3rem;
+    --marge-4xl: 3.5rem;
+    --marge-5xl: 4rem;
+
+    /*police*/
+    --font-title: 'Inter', sans-serif;
+    --font-text: 'DM Sans', sans-serif;
+
+    --font-head:  'TWK Lausanne',sans-serif;/*'Montserrat', sans-serif;*/
+    --font-mono: 'IBM Plex Mono', monospace;
+
+    /*radius*/
+    --r-xs: 6px;
+    --r-sm: 7px;
+    --r-xxs: 4px;
+    --r-md: 14px;
+    --r-lg: 20px;
+    --r-circle: 25px;
+    --r-full: 100%;
+}
+
+
+*,*::before,*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    text-decoration:none
+}
+
+html{
+    scroll-behavior:smooth
+}
+
+body{
+    background:var(--ink2);
+    color:var(--wh);
+    font-family:var(--font-text);
+    font-size:15px;
+    line-height:1.65;
+    display:grid;
+    grid-template-columns:64px 1fr;
+    grid-template-rows:1fr auto;
+    grid-template-areas:"sidebar content" "footer footer";
+    min-height:100vh
+}
+
+*,*::before,*::after{
+    transition:background-color .25s ease,border-color .25s ease,color .15s ease
+}
