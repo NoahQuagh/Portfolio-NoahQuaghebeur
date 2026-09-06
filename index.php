@@ -6,13 +6,14 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noah Quaghebeur — Portfolio</title>
+    <title>Noah Quaghebeur - Portfolio</title>
     <link rel="stylesheet" href="assets/style/mainPage.css">
     <link rel="stylesheet" href="assets/style/toolsTipsText.css">
     <link rel="stylesheet" href="assets/style/header.css">
     <link rel="stylesheet" href="assets/style/palette.css">
     <link rel="stylesheet" href="assets/style/sidebar.css">
     <link rel="stylesheet" href="assets/style/footer.css">
+    <link rel="stylesheet" href="assets/style/burger.css">
     <link rel="stylesheet" href="assets/style/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
@@ -23,20 +24,20 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
     <nav class="sb-nav">
         <p class="sb-label">Navigation</p>
         <ul class="sb-list">
-            <li class="sb-item active" onclick="scrollTo('#hero')">
-                <i class="ti ti-home" aria-hidden="true"></i><span>Accueil</span>
+            <li class="sb-item active">
+                <a href="#hero"><i class="ti ti-home" aria-hidden="true"></i><span>Accueil</span></a>
             </li>
-            <li class="sb-item" onclick="scrollTo('#competences')">
-                <i class="ti ti-code" aria-hidden="true"></i><span>Compétences</span>
+            <li class="sb-item">
+              <a href="#competences"><i class="ti ti-code" aria-hidden="true"></i><span>Compétences</span></a>
             </li>
-            <li class="sb-item" onclick="scrollTo('#parcours')">
-                <i class="ti ti-school" aria-hidden="true"></i><span>Parcours</span>
+            <li class="sb-item">
+              <a href="#parcours"><i class="ti ti-school" aria-hidden="true"></i><span>Parcours</span></a>
             </li>
-            <li class="sb-item" onclick="scrollTo('#projets')">
-                <i class="ti ti-folder" aria-hidden="true"></i><span>Projets</span>
+            <li class="sb-item">
+              <a href="#projets"><i class="ti ti-folder" aria-hidden="true"></i><span>Projets</span></a>
             </li>
-            <li class="sb-item" onclick="scrollTo('#experience')">
-                <i class="ti ti-briefcase" aria-hidden="true"></i><span>Expériences</span>
+            <li class="sb-item">
+              <a href="#experience"><i class="ti ti-briefcase" aria-hidden="true"></i><span>Expériences</span></a>
             </li>
         </ul>
     </nav>
@@ -54,6 +55,9 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
       </ul>
     </nav>
   </div>
+  <div class="menu">
+    <i class="ti ti-menu-2"></i>
+  </div>
 </header>
 
 <main>
@@ -62,7 +66,9 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
       <ul>
         <li><a href="mailto:<?= $mail ?>"><i class="ti ti-mail" aria-hidden="true"></i></a></li>
         <li><i class="ti ti-language" aria-hidden="true"></i></li>
-        <li><i class="ti ti-moon" aria-hidden="true"></i></li>
+        <li id="theme-btn" style="cursor:pointer;">
+          <i class="ti ti-moon" id="theme-icon" aria-hidden="true"></i>
+        </li>
       </ul>
     </div>
 
@@ -91,8 +97,8 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
                         <img src="assets/img/<?= $pp ?>" alt="Noah Quaghebeur">
                     </div>
                     <div class="hero-social">
-                        <a href="https://github.com/NoahQuagh/" aria-label="GitHub"><i class="ti ti-brand-github" aria-hidden="true"></i></a>
-                        <a href="https://linkedin.com" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://github.com/NoahQuagh/" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github" aria-hidden="true"></i></a>
+                        <a href="https://linkedin.com" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
                         <a href="mailto:<?= $mail ?>" aria-label="Email"><i class="ti ti-mail" aria-hidden="true"></i></a>
                     </div>
                 </div>
@@ -154,6 +160,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
         <li onclick="scrollTo('#parcours')"><a href="#parcours">Parcours</a></li>
         <li onclick="scrollTo('#projets')"><a href="#projets">Projets</a></li>
         <li onclick="scrollTo('#experience')"><a href="#experience">Expériences</a></li>
+        <li onclick="scrollTo('#experience')"><a href="auth/login.php">Connexion</a></li>
       </ul>
     </div>
 
@@ -163,7 +170,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
         <li><a href="mailto:<?= $mail ?>" target="_blank" rel="noopener">E-mail</a></li>
         <li><a href="https://github.com/NoahQuagh" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="http://together.noahquagh.com" target="_blank" rel="noopener">Together</a></li>
+        <?php require_once __DIR__ . '/api/loaders/loadListProFooter.php'?>
       </ul>
     </div>
 
@@ -187,5 +194,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
 <script src="assets/script/renderer/parcoursRenderer.js"></script>
 <script src="assets/script/renderer/projetsRenderer.js"></script>
 <script src="assets/script/renderer/experiencesRenderer.js"></script>
+<script src="assets/script/theme.js"></script>
+<script src="assets/script/burger.js"></script>
 </body>
 </html>

@@ -3,3 +3,4 @@
 **/.recommenders
 /node_modules
 .env
+/db

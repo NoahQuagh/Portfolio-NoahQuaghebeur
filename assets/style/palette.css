@@ -1,15 +1,40 @@
 /* COULEUR */
-:root {
-    --wh:  #f2ede6;
+:root[data-theme="dark"] {
+    --wh: #f2ede6;
     --wh2: #ffffff;
     --wh3: #7a7168;
-    --ink:  #0e0d0c;
+    --ink: #0e0d0c;
     --ink2: #1a1917;
     --ink3: #252320;
     --color1: #123456;
     --icon-color: #676666;
     --box-hover: #33312d;
+    --shadow-header:0 10px 50px rgb(13 84 135 / 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    --bg-header:rgba(18, 18, 20, 0.75);
+    --bg-hover-header: rgb(255 255 255 / 0.14);
+    --bg-option:rgba(18, 18, 20, 0.75);
+    --bg-hover-option: rgba(255, 255, 255, 0.15);
+}
 
+:root[data-theme="light"] {
+    --ink:  #f5f4f0;
+    --ink2: #dfded6;
+    --ink3: #dedad2;
+    --wh:   #0e0d0c;
+    --wh2:  #1a1917;
+    --wh3:  #7a7168;
+    --box-hover: rgba(14, 13, 12, 0.06);
+    --color1: #2b7bc8;
+    --icon-color: #676666;
+    --shadow-header:0 10px 50px rgb(51 146 223 / 0.7), 0 0 0 1px rgb(255 255 255 / 0.64) inset;
+    --bg-header: rgb(220 220 225 / 0.75);
+    --bg-hover-header: rgb(191 189 189 / 0.4);
+    --bg-hover-option: rgb(191 191 191 / 0.75);
+    --bg-option: rgb(223 222 222 / 0.75);
+}
+
+
+:root{
     --badge-bg-blue:   rgba(60,100,180,.12);
     --badge-col-blue:  #5c90e8;
     --badge-bor-blue:  rgba(60,100,180,.35);

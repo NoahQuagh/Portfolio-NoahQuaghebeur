@@ -7,7 +7,7 @@
     white-space: normal;
     text-align: center;
 
-    background-color: #1e222b;
+    background-color: var(--ink3);
     font-family: var(--font-text);
     font-weight: 400;
     color: var(--wh2);
