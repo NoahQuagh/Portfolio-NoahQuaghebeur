@@ -1,5 +1,5 @@
 const sections = document.querySelectorAll('section[id]');
-const items    = document.querySelectorAll('.sb-item');
+const items    = document.querySelectorAll('.nav-item');
 
 function setActive() {
     let current = '';

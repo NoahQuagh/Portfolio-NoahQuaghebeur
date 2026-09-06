@@ -1,0 +1,48 @@
+@media (max-width: 800px) {
+    body {
+        grid-template-columns:1fr;
+        grid-template-areas:"content" "footer"
+    }
+
+    #sidebar {
+        display: none
+    }
+
+    .hero-inner {
+        grid-template-columns:1fr;
+        text-align: center
+    }
+
+    .hero-right {
+        order: -1
+    }
+
+    .hero-avatar {
+        width: 160px;
+        height: 160px
+    }
+
+    .hero-avatar-initials {
+        font-size: 50px
+    }
+
+    .hero-social {
+        flex-direction: row;
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-top: var(--marge-sm)
+    }
+
+    .hero-badge, .hero-actions {
+        justify-content: center
+    }
+
+    .hero-desc {
+        margin: 0 auto
+    }
+
+    .hero-name {
+        font-size: var(--text-3xl)
+    }
+}

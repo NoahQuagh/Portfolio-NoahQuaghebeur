@@ -9,6 +9,7 @@
     --color1: #123456;
     --icon-color: #676666;
     --box-hover: #33312d;
+
     --badge-bg-blue:   rgba(60,100,180,.12);
     --badge-col-blue:  #5c90e8;
     --badge-bor-blue:  rgba(60,100,180,.35);
@@ -75,19 +76,10 @@ html{
     scroll-behavior:smooth
 }
 
-body{
-    background:var(--ink2);
-    color:var(--wh);
-    font-family:var(--font-text);
-    font-size:15px;
-    line-height:1.65;
-    display:grid;
-    grid-template-columns:64px 1fr;
-    grid-template-rows:1fr auto;
-    grid-template-areas:"sidebar content" "footer footer";
-    min-height:100vh
-}
-
 *,*::before,*::after{
     transition:background-color .25s ease,border-color .25s ease,color .15s ease
+}
+
+a{
+    text-decoration: none;
 }

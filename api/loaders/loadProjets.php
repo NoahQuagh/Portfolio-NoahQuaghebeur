@@ -57,7 +57,7 @@ ORDER BY p.pro_id, d.dom_id
 } catch (\Throwable $e) {
     error_log("[Competence Error] " . $e->getMessage());
     http_response_code(500);
-    echo json_encode(['success' => false, 'message' => 'Erreur lors de la récupération des competences.']);
+    echo json_encode(['success' => false, 'message' => 'Erreur lors de la récupération des projets.']);
     exit();
 }
 ?>

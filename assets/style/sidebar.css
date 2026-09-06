@@ -1,0 +1,139 @@
+#sidebar {
+    grid-area: sidebar;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 60px;
+    background: var(--ink);
+    border-right: 1px solid var(--ink3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width .28s cubic-bezier(.4, 0, .2, 1);
+    z-index: 100;
+
+    display: none;
+    visibility: hidden;
+}
+
+#sidebar:hover, #sidebar.open {
+    width: 220px
+}
+
+.sb-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 12px;
+    flex-shrink: 0
+}
+
+.sb-logo-name {
+    font-family: var(--font-head);
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--wh);
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity .2s ease .05s, transform .2s ease .05s;
+    white-space: nowrap
+}
+
+#sidebar:hover .sb-logo-name, #sidebar.open .sb-logo-name {
+    opacity: 1;
+    transform: translateX(0)
+}
+
+.sb-divider {
+    height: 1px;
+    background: var(--ink3);
+    margin: 4px 10px;
+    flex-shrink: 0
+}
+
+.sb-nav {
+    flex: 1;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+.sb-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: #4a4843;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 0 8px 8px;
+    opacity: 0;
+    transition: opacity .2s ease;
+    white-space: nowrap
+}
+
+#sidebar:hover .sb-label, #sidebar.open .sb-label {
+    opacity: 1
+}
+
+.sb-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+.sb-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--wh3);
+    font-family: var(--font-text);
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: left
+}
+
+.sb-item i {
+    font-size: 19px;
+    flex-shrink: 0;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.sb-item span {
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: opacity .2s ease .05s, transform .2s ease .05s
+}
+
+#sidebar:hover .sb-item span, #sidebar.open .sb-item span {
+    opacity: 1;
+    transform: translateX(0)
+}
+
+.sb-item:hover {
+    background: var(--box-hover);
+    color: var(--wh)
+}
+
+.sb-item.active {
+    background: var(--ink3);
+    color: var(--wh)
+}
+
+.sb-bottom {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
