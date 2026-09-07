@@ -6,12 +6,13 @@ require_once __DIR__ . '/../auth/guard.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gérer les Compétences - Admin</title>
+    <title>Gérer les Domaines - Admin</title>
     <link rel="stylesheet" href="../assets/style/palette.css">
     <link rel="stylesheet" href="../assets/style/responsive.css">
     <link rel="stylesheet" href="../assets/style/admin/mainAdmin.css">
     <link rel="stylesheet" href="../assets/style/admin/competenceAdmin.css">
     <link rel="stylesheet" href="../assets/style/spinner.css">
+  <link rel="icon" type="image/png" href="../assets/icon/NQ.ico">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>

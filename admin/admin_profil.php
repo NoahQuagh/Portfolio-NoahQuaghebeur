@@ -7,11 +7,12 @@ require_once __DIR__ . '/../api/loaders/loadProfile.php'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier le Profil - Admin Portfolio</title>
+    <title>Modifier le Profil - Admin</title>
     <link rel="stylesheet" href="../assets/style/palette.css">
     <link rel="stylesheet" href="../assets/style/responsive.css">
     <link rel="stylesheet" href="../assets/style/admin/mainAdmin.css">
     <link rel="stylesheet" href="../assets/style/admin/profile.css">
+  <link rel="icon" type="image/png" href="../assets/icon/NQ.ico">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
@@ -47,19 +48,23 @@ require_once __DIR__ . '/../api/loaders/loadProfile.php'
             <textarea id="biographie" name="biographie" rows="5" class="form-textarea" required><?= $bio ?></textarea>
         </div>
 
-        <div class="form-grid">
-            <div class="form-group">
-                <label class="form-label">Photo de profil</label>
-                <input type="file" id="photo" name="photo" class="form-input-file">
-                <span class="form-hint">Format accepté : JPG, PNG.</span>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label">Fichier CV (PDF)</label>
-                <input type="file" id="cv" name="cv" accept=".pdf" class="form-input-file">
-                <span class="form-hint">Format accepté : PDF uniquement.</span>
-            </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label" for="photo">
+            <i class="ti ti-photo"></i> Photo de profil
+          </label>
+          <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" class="form-input-file">
+          <span class="form-hint">Formats acceptés : JPG, PNG</span>
         </div>
+
+        <div class="form-group">
+          <label class="form-label" for="cv">
+            <i class="ti ti-file-text"></i> Fichier CV (PDF)
+          </label>
+          <input type="file" id="cv" name="cv" accept=".pdf" class="form-input-file">
+          <span class="form-hint">Format accepté : PDF uniquement</span>
+        </div>
+      </div>
 
         <div class="form-actions">
             <button type="submit" class="btn-submit">

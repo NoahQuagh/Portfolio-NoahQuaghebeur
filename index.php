@@ -16,6 +16,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
     <link rel="stylesheet" href="assets/style/burger.css">
     <link rel="stylesheet" href="assets/style/spinner.css">
     <link rel="stylesheet" href="assets/style/responsive.css">
+    <link rel="icon" type="image/png" href="assets/icon/NQ.ico">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 </head>
@@ -86,7 +87,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
                     <a class="btn-primary" href="#projets">
                         <i class="ti ti-folders" aria-hidden="true"></i> Voir mes projets
                     </a>
-                    <a href="assets/docs/<?= $cv ?? "cv_tmp.pdf" ?>" download="<?= $cv ? "CV_Noah_Quaghebeur.pdf" : "CV_Noah_Quaghebeur_non_actualiser.pdf"?>" aria-label="Télécharger le CV" class="btn-ghost">
+                    <a href="assets/docs/<?= $cv ?? "CV_Noah_Quaghebeur.pdf" ?>" download="<?= $cv ? "CV_Noah_Quaghebeur.pdf" : "CV_Noah_Quaghebeur_non_actualiser.pdf"?>" aria-label="Télécharger le CV" class="btn-ghost">
                         <i class="ti ti-download" aria-hidden="true"></i> Télécharger le CV
                     </a>
                 </div>

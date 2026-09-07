@@ -1,15 +1,26 @@
-body{
-    background:var(--ink2);
-    color:var(--wh);
-    font-family:var(--font-text);
-    font-size:15px;
-    line-height:1.65;
-    display:grid;
-    grid-template-columns:64px 1fr;
-    grid-template-rows:1fr auto;
-    grid-template-areas:"content content"
+body {
+    position: relative;
+    background-color: var(--ink2);
+    color: var(--wh);
+    font-family: var(--font-text);
+    font-size: 15px;
+    line-height: 1.65;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "content content"
                         "footer footer";
-    min-height:100vh
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: radial-gradient(var(--color-dot-bg) 2px, transparent 0);
+    background-size: 30px 30px;
+    pointer-events: none;
 }
 
 main {
@@ -62,13 +73,7 @@ main {
 }
 
 .hero-bg {
-    position: absolute;
-    inset: 0;
-    /*background: radial-gradient(ellipse at 30% 50%, rgba(79, 81, 83, 0.25) 0%, transparent 60%);*/
-    background-color: var(--ink2);
-    background-image: radial-gradient(var(--color-dot-bg) 2px, transparent 0);
-    background-size: 30px 30px;
-    pointer-events: none;
+    background: transparent;
 }
 
 .hero-inner {
@@ -112,7 +117,8 @@ main {
     font-size: var(--text-sm);
     color: var(--wh3);
     line-height: 1.7;
-    max-width: 440px
+    max-width: 440px;
+    background: transparent;
 }
 
 .hero-actions {
@@ -233,7 +239,11 @@ section {
 }
 
 .section-header {
-    margin-bottom: var(--marge-xl)
+    margin-bottom: var(--marge-xl);
+}
+
+#competences,#parcours,#projets,#experience {
+    background: var(--ink2);
 }
 
 .section-eyebrow {
@@ -317,7 +327,6 @@ section {
     border-color: var(--icon-color)
 }
 
-/* ── Timeline (parcours / expérience) ── */
 .timeline {
     display: flex;
     flex-direction: column;
@@ -452,7 +461,6 @@ section {
 
 
 
-/* Titre + liens GitHub/site — colonne 2, ligne 1 */
 .project-card-top {
     grid-column: 2;
     grid-row: 1;
@@ -499,7 +507,6 @@ section {
     color: var(--wh);
 }
 
-/* Description — colonne 2, ligne 2 */
 .project-desc {
     grid-column: 2;
     grid-row: 2;
@@ -513,7 +520,6 @@ section {
     overflow: hidden;
 }
 
-/* Badges — pleine largeur, ligne 3 */
 .project-tags {
     grid-column: 1 / -1;
     grid-row: 3;
