@@ -40,6 +40,6 @@ require_once __DIR__ . '/../api/loaders/loadProfile.php'
     </form>
 
 </main>
-<script src="../assets/script/admin/authentification.js"></script>
+<script src="../assets/script/auth/authentification.js"></script>
 </body>
 </html>
