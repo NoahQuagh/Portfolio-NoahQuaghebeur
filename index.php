@@ -14,6 +14,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
     <link rel="stylesheet" href="assets/style/sidebar.css">
     <link rel="stylesheet" href="assets/style/footer.css">
     <link rel="stylesheet" href="assets/style/burger.css">
+    <link rel="stylesheet" href="assets/style/spinner.css">
     <link rel="stylesheet" href="assets/style/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
@@ -64,7 +65,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
 
     <div class="option">
       <ul>
-        <li><a href="mailto:<?= $mail ?>"><i class="ti ti-mail" aria-hidden="true"></i></a></li>
+        <li><a href="mailto:<?= $mail ?? "noah.quaghebeur@laposte.net" ?>"><i class="ti ti-mail" aria-hidden="true"></i></a></li>
         <li><i class="ti ti-language" aria-hidden="true"></i></li>
         <li id="theme-btn" style="cursor:pointer;">
           <i class="ti ti-moon" id="theme-icon" aria-hidden="true"></i>
@@ -79,13 +80,13 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
             <div class="hero-left">
                 <h1 class="hero-name">NOAH<br><em>QUAGHEBEUR</em></h1>
                 <p class="hero-desc">
-                    <?= $bio ?>
+                    <?= $bio ?? "" ?>
                 </p>
                 <div class="hero-actions">
                     <a class="btn-primary" href="#projets">
                         <i class="ti ti-folders" aria-hidden="true"></i> Voir mes projets
                     </a>
-                    <a href="assets/docs/<?= $cv ?>" download="CV_Noah_Quaghebeur.pdf" aria-label="Télécharger le CV" class="btn-ghost">
+                    <a href="assets/docs/<?= $cv ?? "cv_tmp.pdf" ?>" download="<?= $cv ? "CV_Noah_Quaghebeur.pdf" : "CV_Noah_Quaghebeur_non_actualiser.pdf"?>" aria-label="Télécharger le CV" class="btn-ghost">
                         <i class="ti ti-download" aria-hidden="true"></i> Télécharger le CV
                     </a>
                 </div>
@@ -94,12 +95,12 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
             <div class="hero-right">
                 <div class="hero-avatar-wrap">
                     <div class="hero-avatar">
-                        <img src="assets/img/<?= $pp ?>" alt="Noah Quaghebeur">
+                        <img src="assets/img/<?= $pp ?? "pp_tmp.jpg" ?>" alt="Noah Quaghebeur">
                     </div>
                     <div class="hero-social">
                         <a href="https://github.com/NoahQuagh/" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github" aria-hidden="true"></i></a>
                         <a href="https://linkedin.com" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
-                        <a href="mailto:<?= $mail ?>" aria-label="Email"><i class="ti ti-mail" aria-hidden="true"></i></a>
+                        <a href="mailto:<?= $mail ?? "noah.quaghebeur@laposte.net" ?>" aria-label="Email"><i class="ti ti-mail" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -114,7 +115,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
             <p class="section-eyebrow">// chapitre 1</p>
             <h2 class="section-title">Compétences</h2>
         </div>
-        <div class="skills-grid" id="skill-zone"></div>
+        <div class="skills-grid" id="skill-zone"><span class="loader"></span></div>
     </section>
 
     <div class="section-sep" aria-hidden="true"></div>
@@ -124,7 +125,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
             <p class="section-eyebrow">// chapitre 2</p>
             <h2 class="section-title">Parcours</h2>
         </div>
-        <div class="timeline" id="timeline-zone"></div>
+        <div class="timeline" id="timeline-zone"><span class="loader"></span></div>
     </section>
 
     <div class="section-sep" aria-hidden="true"></div>
@@ -134,7 +135,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
             <p class="section-eyebrow">// chapitre 3</p>
             <h2 class="section-title">Projets</h2>
         </div>
-        <div class="projects-grid" id="projet-zone"></div>
+        <div class="projects-grid" id="projet-zone"><span class="loader"></span></div>
     </section>
 
     <div class="section-sep" aria-hidden="true"></div>
@@ -144,7 +145,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
             <p class="section-eyebrow">// chapitre 4</p>
             <h2 class="section-title">Expériences</h2>
         </div>
-        <div class="timeline" id="exp-zone"></div>
+        <div class="timeline" id="exp-zone"><span class="loader"></span></div>
     </section>
 
 </main>
@@ -167,7 +168,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
     <div>
       <h4>Réseaux & Projets</h4>
       <ul>
-        <li><a href="mailto:<?= $mail ?>" target="_blank" rel="noopener">E-mail</a></li>
+        <li><a href="mailto:<?= $mail ?? "noah.quaghebeur@laposte.net" ?>" target="_blank" rel="noopener">E-mail</a></li>
         <li><a href="https://github.com/NoahQuagh" target="_blank" rel="noopener">GitHub</a></li>
         <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
         <?php require_once __DIR__ . '/api/loaders/loadListProFooter.php'?>

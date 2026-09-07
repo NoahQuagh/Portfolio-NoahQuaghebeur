@@ -64,7 +64,10 @@ main {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 30% 50%, rgba(79, 81, 83, 0.25) 0%, transparent 60%);
+    /*background: radial-gradient(ellipse at 30% 50%, rgba(79, 81, 83, 0.25) 0%, transparent 60%);*/
+    background-color: var(--ink2);
+    background-image: radial-gradient(var(--color-dot-bg) 2px, transparent 0);
+    background-size: 30px 30px;
     pointer-events: none;
 }
 
@@ -143,19 +146,18 @@ main {
     align-items: center;
     gap: 8px;
     padding: 10px 20px;
-    background: transparent;
+    background: var(--ink3);
     color: var(--wh3);
     border: 1px solid var(--icon-color);
     border-radius: var(--r-sm);
     font-family: var(--font-text);
     font-size: var(--text-sm);
     font-weight: 500;
-    cursor: pointer
-}
-
-.btn-ghost:hover {
-    border-color: var(--icon-color);
-    color: var(--wh)
+    cursor: pointer;
+    &:hover {
+        border-color: var(--icon-color);
+        color: var(--wh)
+    }
 }
 
 .hero-right {

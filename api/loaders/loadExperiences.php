@@ -18,7 +18,7 @@ SELECT exp_logo,
        CONCAT(exp_type_contrat, ' - ', exp_nom_poste) as travail,
        CONCAT(exp_entreprise, ' - ', exp_localisation) as lieu,
        COALESCE(exp_description, 'Description vide') as description
-FROM POR_EXPERIENCES");
+FROM POR_EXPERIENCES order by exp_date_debut desc");
 
     $req->execute();
 

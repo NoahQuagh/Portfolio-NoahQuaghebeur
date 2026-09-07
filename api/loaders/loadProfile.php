@@ -20,9 +20,9 @@ select use_bio,use_email,use_nom_cv,use_pp from POR_USERS where use_id=1
 
 
 } catch (\Throwable $e) {
-    $bio= 'vide';
-    $mail= 'vide';
-    $cv= 'vide';
+    $bio= null;
+    $mail= null;
+    $cv= null;
 }
 ?>
 
