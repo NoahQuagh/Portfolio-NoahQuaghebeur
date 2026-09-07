@@ -9,7 +9,7 @@ try{
     $db->exec("SET lc_time_names = 'fr_FR'");
 
     $req = $db->prepare("
-SELECT exp_logo,
+SELECT exp_logo,exp_id,
        CASE
            WHEN exp_date_fin IS NULL THEN CONCAT(DATE_FORMAT(exp_date_debut, '%M %Y'), ' - En cours')
            WHEN DATE_FORMAT(exp_date_debut, '%Y-%m') = DATE_FORMAT(exp_date_fin, '%Y-%m') THEN DATE_FORMAT(exp_date_debut, '%M %Y')
@@ -17,8 +17,9 @@ SELECT exp_logo,
            END as date,
        CONCAT(exp_type_contrat, ' - ', exp_nom_poste) as travail,
        CONCAT(exp_entreprise, ' - ', exp_localisation) as lieu,
-       COALESCE(exp_description, 'Description vide') as description
-FROM POR_EXPERIENCES order by exp_date_debut desc");
+       COALESCE(exp_description, 'Description vide') as description,
+       exp_date_debut,exp_date_fin,exp_type_contrat,exp_nom_poste,exp_entreprise,exp_localisation,exp_description
+FROM POR_EXPERIENCES order by exp_date_debut desc;");
 
     $req->execute();
 
@@ -26,11 +27,19 @@ FROM POR_EXPERIENCES order by exp_date_debut desc");
 
     $formattedExperiences = array_map(function($p) {
         return [
+            'id'           => $p['exp_id'],
             'icon'           => $p['exp_logo'],
             'date'          => $p['date'],
             'travail'        => $p['travail'],
             'localisation'          => $p['lieu'],
             'desc'    => $p['description'],
+            'date_debut'    => $p['exp_date_debut'],
+            'date_fin'    => $p['exp_date_fin'],
+            'contrat'    => $p['exp_type_contrat'],
+            'poste'    => $p['exp_nom_poste'],
+            'entreprise'    => $p['exp_entreprise'],
+            'loc'    => $p['exp_localisation'],
+            'description'    => $p['exp_description'],
         ];
     }, $exp);
 

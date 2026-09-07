@@ -1,7 +1,7 @@
 /* Accordéon pour création de catégorie */
 .admin-details {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border: 1px solid rgb(255 255 255 / 0.24);
     border-radius: 12px;
     padding: 1rem;
     margin-bottom: 2rem;
@@ -16,10 +16,12 @@
     gap: 8px;
 }
 
-/* Groupe de cartes par catégorie */
 .admin-card-group {
     background: rgba(255, 255, 255, 0.015);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgb(255 255 255 / 0.24);
+}
+
+.card-group,.admin-card-group{
     border-radius: 16px;
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -32,7 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgb(255 255 255 / 0.16);
     padding-bottom: 1rem;
 }
 .cat-title {
@@ -43,7 +45,6 @@
 .cat-title i { font-size: 22px; color: var(--color1, #c8401a); }
 .cat-title h2 { font-size: 20px; font-weight: 800; color: #fff; margin: 0; }
 
-/* Grille des cartes de domaine */
 .domaines-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -52,7 +53,7 @@
 
 .domaine-card {
     background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgb(255 255 255 / 0.24);
     border-radius: 12px;
     padding: 1rem;
     display: flex;
@@ -72,7 +73,7 @@
     width: 32px;
     height: 32px;
     border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgb(255 255 255 / 0.24);
     background: transparent;
     color: #fff;
     cursor: pointer;
@@ -84,15 +85,135 @@
 .btn-save:hover { background: #1a8c3a; border-color: #1a8c3a; }
 .btn-delete:hover { background: #c8401a; border-color: #c8401a; }
 
-/* Formulaire rapide pour ajouter un domaine */
 .add-domaine-form {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr auto;
     gap: 10px;
     align-items: center;
     background: rgba(255, 255, 255, 0.02);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
     padding-top: 1rem;
+}
+
+.form-input,
+select.form-input {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #f1f5f9;
+    background-color: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    backdrop-filter: blur(4px);
+}
+
+.form-input::placeholder {
+    color: #64748b;
+}
+
+.form-input:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(15, 23, 42, 0.8);
+}
+
+.form-input:focus {
+    border-color: #6366f1;
+    background-color: rgba(15, 23, 42, 0.95);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+select.form-input {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%3A94a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    padding-right: 2.25rem;
+}
+
+select.form-input option {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn-submit:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: transparent;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-icon:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #f1f5f9;
+}
+
+.btn-delete:hover {
+    background-color: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #f87171;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+}
+
+
+.add-domaine-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #94a3b8;
+    margin-bottom: 0.25rem;
 }
 
 @media (max-width: 768px) {

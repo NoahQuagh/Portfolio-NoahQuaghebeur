@@ -28,7 +28,6 @@ require_once __DIR__ . '/../auth/guard.php'
     <h1 class="page-title">Que voulez-vous<br><em>modifier ?</em></h1>
     <p class="page-sub">Choisissez une section pour éditer son contenu affiché sur le portfolio.</p>
 
-    <!-- CARTE PRINCIPALE : INFOS PERSO -->
     <div class="sections-grid" style="margin-bottom:0;">
         <a href="admin_profil.php" class="section-card section-card-main card-profil">
             <div class="card-main-inner">
@@ -94,6 +93,18 @@ require_once __DIR__ . '/../auth/guard.php'
                 <div class="card-desc">Stages, alternances et expériences professionnelles.</div>
             </div>
         </a>
+
+        <a href="admin_domaines.php" class="section-card card-dom">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+          <div class="card-icon"><i class="ti ti-code"></i></div>
+          <i class="ti ti-chevron-right card-arrow"></i>
+        </div>
+        <div class="card-body">
+          <div class="card-label">Domaines</div>
+          <div class="card-title">Technologie</div>
+          <div class="card-desc">Gestion des technologies, langages et outils maîtrisés.</div>
+        </div>
+      </a>
 
     </div>
 </main>

@@ -150,6 +150,7 @@ main {
 .card-parcours{ --card-accent: #1a8c3a; }
 .card-projets { --card-accent: #c8951a; }
 .card-exp     { --card-accent: #7c1ac8; }
+.card-dom     { --card-accent: #1ac89a; }
 
 .section-card:hover { border-color: var(--card-accent); }
 

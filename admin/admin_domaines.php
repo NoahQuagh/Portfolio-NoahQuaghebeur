@@ -29,17 +29,17 @@ require_once __DIR__ . '/../auth/guard.php';
 </header>
 
 <main>
-    <h1 class="page-title">Gérer les <em>Expériences</em></h1>
-    <p class="page-sub">Ajoutez ou modifiez les différentes expériences.</p>
+    <h1 class="page-title">Gérer les <em>Domaines</em></h1>
+    <p class="page-sub">Ajoutez ou Suprimer les domaines d'expertise.</p>
 
-    <div class="section-divider"><span>Expériences réaliser</span></div>
+    <div class="section-divider"><span>Domaines existants</span></div>
 
-    <section class="card-group" id="expriences-zone">
+    <section class="card-group" id="domaines-zone">
         <span class="loader"></span>
     </section>
 
 </main>
-<script src="../assets/script/admin/renderer/ExperiencesRenderer.js"></script>
+<script src="../assets/script/admin/renderer/DomainesRenderer_admin.js"></script>
 <script>
     document.querySelectorAll('.admin-details form').forEach(form => {
         form.addEventListener('submit', async function(e) {
@@ -68,5 +68,4 @@ require_once __DIR__ . '/../auth/guard.php';
 </script>
 </body>
 </html>
-
 

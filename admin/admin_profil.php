@@ -35,27 +35,27 @@ require_once __DIR__ . '/../api/loaders/loadProfile.php'
     <h1 class="page-title">Informations<br><em>personnelles</em></h1>
     <p class="page-sub">Modifiez vos informations : mail, bio, photo ou CV.</p>
 
-    <form action="../api/admin/updaters/update_profil.php" method="POST" enctype="multipart/form-data" class="admin-form">
+    <form action="../api/admin/updaters/update_profile.php" method="POST" enctype="multipart/form-data" class="admin-form">
 
         <div class="form-group">
-            <label for="email" class="form-label">Adresse Email</label>
+            <label class="form-label">Adresse Email</label>
             <input type="email" id="email" name="email" value="<?= $mail ?>" required class="form-input">
         </div>
 
         <div class="form-group">
-            <label for="biographie" class="form-label">Biographie / Description</label>
+            <label class="form-label">Biographie / Description</label>
             <textarea id="biographie" name="biographie" rows="5" class="form-textarea" required><?= $bio ?></textarea>
         </div>
 
         <div class="form-grid">
             <div class="form-group">
-                <label for="photo" class="form-label">Photo de profil</label>
+                <label class="form-label">Photo de profil</label>
                 <input type="file" id="photo" name="photo" class="form-input-file">
                 <span class="form-hint">Format accepté : JPG, PNG.</span>
             </div>
 
             <div class="form-group">
-                <label for="cv" class="form-label">Fichier CV (PDF)</label>
+                <label class="form-label">Fichier CV (PDF)</label>
                 <input type="file" id="cv" name="cv" accept=".pdf" class="form-input-file">
                 <span class="form-hint">Format accepté : PDF uniquement.</span>
             </div>

@@ -177,7 +177,7 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
 
     <div>
       <h4 class="titre-about">Portfolio de Noah Quaghebeur</h4>
-      <p class="about">Portfolio interactif développé pour mettre en valeur mon parcours, mes compétences et mes réalisations techniques.</p>
+      <p class="about">Portfolio interactif développé pour mettre en valeur mon parcours, mes compétences et mes réalisations techniques. Réalisé le 06/09/2026</p>
     </div>
 
   </section>

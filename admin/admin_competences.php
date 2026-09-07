@@ -29,7 +29,6 @@ require_once __DIR__ . '/../auth/guard.php';
 </header>
 
 <main>
-    <div class="page-kicker">// SAVOIR-FAIRE</div>
     <h1 class="page-title">Gérer les <em>Compétences</em></h1>
     <p class="page-sub">Ajoutez ou modifiez des domaines d'expertise et leurs catégories associées.</p>
 
@@ -37,7 +36,7 @@ require_once __DIR__ . '/../auth/guard.php';
         <summary class="admin-details-summary">
             <i class="ti ti-folder-plus"></i> + Créer une nouvelle catégorie (ex: DevOps, Sécurité)
         </summary>
-        <form action="actions/add_categorie.php" method="POST" class="admin-form" style="margin-top: 1rem;">
+        <form action="../api/admin/inserters/add_competence.php" method="POST" class="admin-form" style="margin-top: 1rem;">
             <div class="form-grid">
                 <div class="form-group">
                     <label for="com_categorie" class="form-label">Nom de la catégorie</label>
@@ -56,24 +55,37 @@ require_once __DIR__ . '/../auth/guard.php';
 
     <div class="section-divider"><span>Catégories existantes</span></div>
 
-        <section class="admin-card-group" id="competence-zone">
+    <section class="card-group" id="competence-zone">
             <span class="loader"></span>
-        </section>
-
-    <form action="actions/create_domaine.php" method="POST" class="add-domaine-form">
-        <input type="hidden" name="dom_comp_id">
-        <span class="form-label" style="grid-column: 1 / -1;">+ Créer une nouvelle technologie</span>
-
-        <input type="text" name="dom_nom" placeholder="Nom (ex: PostgreSQL)" required class="form-input">
-        <input type="text" name="dom_logo" placeholder="Logo " required class="form-input">
-        <input type="text" name="dom_desc" placeholder="Description" required class="form-input">
-
-        <button type="submit" class="btn-submit" style="padding: 0.5rem 1rem;">
-            <i class="ti ti-plus"></i> Créer
-        </button>
-    </form>
+    </section>
 
 </main>
 <script src="../assets/script/admin/renderer/CompetenceRenderer_admin.js"></script>
+<script>
+    document.querySelectorAll('.admin-details form').forEach(form => {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    window.location.reload();
+                } else {
+                    alert('Erreur : ' + result.message);
+                }
+            } catch (error) {
+                alert('Une erreur est survenue lors de l\'ajout : '+error);
+            }
+        });
+    });
+</script>
 </body>
 </html>

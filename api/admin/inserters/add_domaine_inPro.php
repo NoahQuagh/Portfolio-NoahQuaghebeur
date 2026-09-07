@@ -1,0 +1,35 @@
+<?php
+session_start();
+require_once __DIR__.'/../../../db/connexion_portfolio_db.php';
+
+header('Content-Type: application/json; charset=utf-8');
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['success' => false, 'message' => 'Méthode non autorisée']);
+    exit;
+}
+
+$proId = trim($_POST['pro_id'] ?? '');
+$domId = trim($_POST['dom_id'] ?? '');
+
+if (empty($proId) || empty($domId)) {
+    echo json_encode(['success' => false, 'message' => 'Id du projet et id du domaine requis']);
+    exit;
+}
+
+try {
+    $pdo = getDB();
+
+    $stmt = $pdo->prepare("insert into POR_PROJET_DOMAINES (pod_pro_id, pod_dom_id) VALUE (?,?)");
+    $stmt->execute([$proId, $domId]);
+
+    header('Location: ../../../admin/admin_projets.php');
+    exit;
+
+} catch (\Throwable $e) {
+    error_log("[Add Domaine Error] " . $e->getMessage());
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'Erreur d\'ajout du domaine']);
+}
+

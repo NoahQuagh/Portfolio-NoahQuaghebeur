@@ -6,8 +6,8 @@ try{
 
     $db = getDB();
 
-    $req = $db->prepare("select par_icone,CONCAT(DATE_FORMAT(par_date_debut, '%Y'),' - ',COALESCE(DATE_FORMAT(par_date_fin, '%Y'), 'En cours')) as date,
-       par_titre,par_localisation,par_description
+    $req = $db->prepare("select par_id,par_icone,CONCAT(DATE_FORMAT(par_date_debut, '%Y'),' - ',COALESCE(DATE_FORMAT(par_date_fin, '%Y'), 'En cours')) as date,
+       par_titre,par_localisation,par_description,par_date_debut,par_date_fin
 from POR_PARCOURS ORDER BY par_id desc");
 
     $req->execute();
@@ -16,11 +16,14 @@ from POR_PARCOURS ORDER BY par_id desc");
 
     $formattedParcours = array_map(function($p) {
         return [
+            'id'           => $p['par_id'],
             'icon'           => $p['par_icone'],
             'date'          => $p['date'],
             'titre'        => $p['par_titre'],
             'localisation'          => $p['par_localisation'],
             'desc'    => $p['par_description'],
+            'date_debut'    => $p['par_date_debut'],
+            'date_fin'    => $p['par_date_fin']
         ];
     }, $parcours);
 

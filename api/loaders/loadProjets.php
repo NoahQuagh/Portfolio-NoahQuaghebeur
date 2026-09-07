@@ -13,17 +13,22 @@ try{
     p.pro_github,
     p.pro_lien,
     p.pro_img,
+    d.dom_id,
     d.dom_nom,
     d.dom_logo
 FROM POR_PROJETS p
-         JOIN POR_PROJET_DOMAINES pd ON pd.pod_pro_id = p.pro_id
-         JOIN POR_DOMAINES d         ON d.dom_id = pd.pod_dom_id
+         left JOIN POR_PROJET_DOMAINES pd ON pd.pod_pro_id = p.pro_id
+         left JOIN POR_DOMAINES d         ON d.dom_id = pd.pod_dom_id
 ORDER BY p.pro_id, d.dom_id
 ');
 
     $req->execute();
 
     $rows = $req->fetchAll();
+
+    $reqDom = $db->prepare('SELECT dom_id, dom_nom FROM POR_DOMAINES ORDER BY dom_nom');
+    $reqDom->execute();
+    $tousLesDomaines = $reqDom->fetchAll();
 
     $grouped = [];
     foreach ($rows as $row) {
@@ -43,6 +48,7 @@ ORDER BY p.pro_id, d.dom_id
 
         if ($row['dom_nom']) {
             $grouped[$id]['domaines'][] = [
+                'id'  => $row['dom_id'],
                 'nom'  => $row['dom_nom'],
                 'logo' => $row['dom_logo']
             ];
@@ -51,7 +57,8 @@ ORDER BY p.pro_id, d.dom_id
 
     echo json_encode([
         'success' => true,
-        'data'    => array_values($grouped)
+        'data'    => array_values($grouped),
+        'tous_domaines'  => $tousLesDomaines
     ]);
 
 } catch (\Throwable $e) {
