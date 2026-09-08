@@ -21,15 +21,20 @@ function renderParcours(data) {
 
     const skill_grid = document.getElementById('timeline-zone');
 
-    skill_grid.innerHTML = data.map(t => `
+    skill_grid.innerHTML = data.map(t => {
+        const titre = (lang === 'en' && t.titre_en) ? t.titre_en : t.titre;
+        const desc = (lang === 'en' && t.desc_en) ? t.desc_en : (t.desc ?? '');
+
+        return `
         <div class="timeline-item">
             <div class="timeline-dot"><i class="${t.icon}" aria-hidden="true"></i></div>
             <div class="timeline-content">
                 <p class="timeline-period">${t.date}</p>
-                <h3 class="timeline-title">${t.titre}</h3>
+                <h3 class="timeline-title">${titre}</h3>
                 <p class="timeline-sub">${t.localisation}</p>
-                <p class="timeline-desc">${t.desc}</p>
+                <p class="timeline-desc">${desc}</p>
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }

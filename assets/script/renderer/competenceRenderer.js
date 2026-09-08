@@ -19,23 +19,32 @@ function renderCompetence(data) {
         return;
     }
 
+
+
     const skill_grid = document.getElementById('skill-zone');
 
-    skill_grid.innerHTML = data.map(t => `
+    skill_grid.innerHTML = data.map(t => {
+    const categorie = (lang === 'en' && t.categorie_en) ? t.categorie_en : t.categorie;
+        return`
         <div class="skill-cat">
             <div class="skill-cat-title">
                 <i class="${t.icone}" aria-hidden="true"></i>
-                ${t.categorie}
+                ${categorie}
             </div>
             <div class="skill-tags">
-                ${t.domaines.map(d => `
-                    <span class="skill-tag tooltip-container">
-                        ${d.logo ? `<img src="${d.logo}" alt="${d.nom}">` : ''}
-                        ${d.nom}
-                        <span class="tooltip-text">${d.desc ?? ''}</span>
-                    </span>
-                `).join('')}
+                ${t.domaines.map(d => {
+            const desc = (lang === 'en' && d.desc_en) ? d.desc_en : (d.desc ?? '');
+
+            return `
+                        <span class="skill-tag tooltip-container">
+                            ${d.logo ? `<img src="${d.logo}" alt="${d.nom}">` : ''}
+                            ${d.nom}
+                            <span class="tooltip-text">${desc}</span>
+                        </span>
+                    `;
+        }).join('')}
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }

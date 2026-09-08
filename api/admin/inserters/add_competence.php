@@ -11,9 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $cate = trim($_POST['com_categorie'] ?? '');
+$cateEN = trim($_POST['com_categorie_en'] ?? '');
 $icon = trim($_POST['com_icone'] ?? '');
 
-if (empty($cate) || empty($icon)) {
+if (empty($cate) || empty($icon) || empty($cateEN)) {
     echo json_encode(['success' => false, 'message' => 'Nom de la catégorie et icône requis']);
     exit;
 }
@@ -21,8 +22,8 @@ if (empty($cate) || empty($icon)) {
 try {
     $pdo = getDB();
 
-    $stmt = $pdo->prepare("INSERT INTO POR_COMPETENCES (com_categorie, com_icone) VALUES (?, ?)");
-    $stmt->execute([$cate, $icon]);
+    $stmt = $pdo->prepare("INSERT INTO POR_COMPETENCES (com_categorie, com_icone,com_categorie_en) VALUES (?, ?,?)");
+    $stmt->execute([$cate, $icon,$cateEN]);
 
     echo json_encode(['success' => true, 'message' => 'création de la catégorie reussie']);
 

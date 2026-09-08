@@ -8,11 +8,13 @@ try {
         SELECT
     c.com_id,
     c.com_categorie,
+    c.com_categorie_en,
     c.com_icone,
     d.dom_id,
     d.dom_nom,
     d.dom_logo,
-    d.dom_desc
+    d.dom_desc,
+    d.dom_desc_en
 FROM POR_COMPETENCES c
          left JOIN POR_DOMAINES d ON d.dom_comp_id = c.com_id
 ORDER BY c.com_id, d.dom_id
@@ -27,6 +29,7 @@ ORDER BY c.com_id, d.dom_id
             $grouped[$cat] = [
                 'id'        => $row['com_id'],
                 'categorie' => $row['com_categorie'],
+                'categorie_en' => $row['com_categorie_en'],
                 'icone'     => $row['com_icone'],
                 'domaines'  => []
             ];
@@ -36,6 +39,7 @@ ORDER BY c.com_id, d.dom_id
             'nom'  => $row['dom_nom'],
             'logo' => $row['dom_logo'],
             'desc' => $row['dom_desc'],
+            'desc_en' => $row['dom_desc_en'],
         ];
     }
 

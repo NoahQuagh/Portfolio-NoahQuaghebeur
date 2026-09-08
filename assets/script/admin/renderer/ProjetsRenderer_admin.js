@@ -43,10 +43,16 @@ function renderProjets_admin(data,tousDomaines) {
                 
                 
                 <label  class="form-label">Titre</label>
+                <input type="text" name="pro_titre_en" value="${data.nom_en}" required class="form-input">
+                
+                <label  class="form-label">Titre anglais</label>
                 <input type="text" name="pro_titre" value="${data.nom}" required class="form-input">
                 
                 <label  class="form-label">Description</label>
                 <textarea name="pro_desc" required class="form-input">${data.desc}</textarea>
+                
+                <label  class="form-label">Description anglais</label>
+                <textarea name="pro_desc_en" required class="form-input">${data.desc_en}</textarea>
                 
                 <label  class="form-label">GitHub</label>
                 <input type="text" name="pro_github" value="${data.github}" required class="form-input">
@@ -105,8 +111,14 @@ function renderProjets_admin(data,tousDomaines) {
                 <label  class="form-label">Titre</label>
                 <input type="text" name="pro_titre"  required class="form-input">
                 
+                <label  class="form-label">Titre anglais</label>
+                <input type="text" name="pro_titre_en"  required class="form-input">
+                
                 <label  class="form-label">Description</label>
                 <textarea name="pro_desc" required class="form-input"></textarea>
+                
+                <label  class="form-label">Description anglais</label>
+                <textarea name="pro_desc_en" required class="form-input"></textarea>
                 
                 <label " class="form-label">GitHub</label>
                 <input type="text" name="pro_github"  required class="form-input">

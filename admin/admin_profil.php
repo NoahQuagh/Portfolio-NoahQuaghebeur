@@ -44,11 +44,25 @@ require_once __DIR__ . '/../api/loaders/loadProfile.php'
         </div>
 
         <div class="form-group">
-            <label class="form-label">Biographie / Description</label>
+            <label class="form-label">Biographie</label>
             <textarea id="biographie" name="biographie" rows="5" class="form-textarea" required><?= $bio ?></textarea>
         </div>
 
+      <div class="form-group">
+        <label class="form-label">Biographie anglais</label>
+        <textarea id="biographie" name="biographie_en" rows="5" class="form-textarea" required><?= $bioEN ?></textarea>
+      </div>
+
       <div class="form-grid">
+
+        <div class="form-group">
+          <label class="form-label" for="cv">
+            <i class="ti ti-file-text"></i> Fichier CV (PDF)
+          </label>
+          <input type="file" id="cv" name="cv" accept=".pdf" class="form-input-file">
+          <span class="form-hint">Format accepté : PDF uniquement</span>
+        </div>
+
         <div class="form-group">
           <label class="form-label" for="photo">
             <i class="ti ti-photo"></i> Photo de profil
@@ -59,11 +73,12 @@ require_once __DIR__ . '/../api/loaders/loadProfile.php'
 
         <div class="form-group">
           <label class="form-label" for="cv">
-            <i class="ti ti-file-text"></i> Fichier CV (PDF)
+            <i class="ti ti-file-text"></i> Fichier CV anglais (PDF)
           </label>
-          <input type="file" id="cv" name="cv" accept=".pdf" class="form-input-file">
+          <input type="file" id="cv_en" name="cv_en" accept=".pdf" class="form-input-file">
           <span class="form-hint">Format accepté : PDF uniquement</span>
         </div>
+
       </div>
 
         <div class="form-actions">

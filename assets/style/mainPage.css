@@ -62,6 +62,65 @@ main {
     }
 }
 
+
+.option ul li.lang-option {
+    position: relative;
+}
+
+
+.lang-bubbles {
+    position: absolute;
+    left: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%) scale(0.85);
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.lang-option.open .lang-bubbles {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(-50%) scale(1);
+}
+
+.lang-bubble {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--r-circle);
+    background: var(--bg-option);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--wh);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.lang-bubble:hover {
+    background: var(--bg-hover-option);
+    border-color: var(--badge-col-blue);
+    color: var(--badge-col-blue);
+    transform: translateY(-2px);
+}
+
+.lang-bubble.active {
+    background: var(--badge-col-blue);
+    color: #ffffff;
+    border-color: var(--badge-col-blue);
+}
+
 .hero {
     min-height: 100vh;
     display: flex;

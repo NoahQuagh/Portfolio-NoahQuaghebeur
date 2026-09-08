@@ -13,8 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $nom = trim($_POST['dom_nom'] ?? '');
 $icon = trim($_POST['dom_logo'] ?? null);
 $desc = trim($_POST['dom_desc'] ?? '');
+$descEN = trim($_POST['dom_desc_en'] ?? '');
 
-if (empty($nom)  || empty($desc)) {
+if (empty($nom)  || empty($desc) || empty($descEN)) {
     echo json_encode(['success' => false, 'message' => 'Information manquante']);
     exit;
 }
@@ -22,8 +23,8 @@ if (empty($nom)  || empty($desc)) {
 try {
     $pdo = getDB();
 
-    $stmt = $pdo->prepare("insert into POR_DOMAINES (dom_nom, dom_logo, dom_desc) values (?,?,?)");
-    $stmt->execute([$nom, $icon,$desc]);
+    $stmt = $pdo->prepare("insert into POR_DOMAINES (dom_nom, dom_logo, dom_desc,dom_desc_en) values (?,?,?,?)");
+    $stmt->execute([$nom, $icon,$desc,$descEN]);
 
     header('Location: ../../../admin/admin_domaines.php');
     exit;

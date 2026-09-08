@@ -12,9 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $parId = trim($_POST['par_id'] ?? '');
 $parNom = trim($_POST['par_titre'] ?? '');
+$parNomEN = trim($_POST['par_titre_en'] ?? '');
 $parIcon = trim($_POST['par_icon'] ?? '');
 $parLoc = trim($_POST['par_loc'] ?? '');
 $parDesc = trim($_POST['par_desc'] ?? '');
+$parDescEN = trim($_POST['par_desc_en'] ?? '');
 $parDateDebut = trim($_POST['date_debut'] ?? '');
 $parDateFinInput = trim($_POST['date_fin'] ?? '');
 
@@ -25,7 +27,7 @@ if (!empty($parDateFinInput)) {
     $parDateFin = null;
 }
 
-if (empty($parNom) || empty($parIcon) ||  empty($parLoc) ||  empty($parDesc) ||  empty($parDateDebut) ||  empty($parId)) {
+if (empty($parNom) || empty($parIcon) ||  empty($parLoc) ||  empty($parDesc) ||  empty($parDateDebut) ||  empty($parId) ||  empty($parNomEN) ||  empty($parDescEN)) {
     echo json_encode(['success' => false, 'message' => 'Informations manquantes']);
     exit;
 }
@@ -33,8 +35,8 @@ if (empty($parNom) || empty($parIcon) ||  empty($parLoc) ||  empty($parDesc) || 
 try {
     $pdo = getDB();
 
-    $stmt = $pdo->prepare("update POR_PARCOURS set par_icone=? , par_date_debut=? , par_date_fin=? , par_titre=? , par_localisation=? , par_description=? where par_id=?");
-    $stmt->execute([$parIcon,$parDateDebut,$parDateFin,$parNom,$parLoc,$parDesc,$parId]);
+    $stmt = $pdo->prepare("update POR_PARCOURS set par_icone=? , par_date_debut=? , par_date_fin=? , par_titre=? , par_localisation=? , par_description=?,par_titre_en=? ,par_description_en=? where par_id=?");
+    $stmt->execute([$parIcon,$parDateDebut,$parDateFin,$parNom,$parLoc,$parDesc,$parNomEN,$parDescEN,$parId]);
 
     header('Location: ../../../admin/admin_parcours.php');
     exit;

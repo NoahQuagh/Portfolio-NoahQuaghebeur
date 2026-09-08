@@ -21,13 +21,14 @@ function renderCompetence_admin(categories, tousLesDomaines) {
     }
 
     zone.innerHTML =`
-        <form action="../api/admin/inserters/add_domaine.php" method="POST" class="add-domaine-form admin-card-group">
+        <form action="../api/admin/inserters/add_domaine.php" method="POST" class=" admin-card-group">
             <input type="hidden" name="dom_comp_id">
             <span class="form-label" style="grid-column: 1 / -1;">+ Créer une nouvelle technologie</span>
     
             <input type="text" name="dom_nom" placeholder="Nom (ex: PostgreSQL)" required class="form-input">
             <input type="text" name="dom_logo" placeholder="Logo " class="form-input">
             <input type="text" name="dom_desc" placeholder="Description" required class="form-input">
+            <input type="text" name="dom_desc_en" placeholder="Description anglaise" required class="form-input">
     
             <button type="submit" class="btn-submit" style="padding: 0.5rem 1rem;">
                 <i class="ti ti-plus"></i> Créer

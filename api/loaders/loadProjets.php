@@ -9,7 +9,9 @@ try{
     $req = $db->prepare('SELECT
     p.pro_id,
     p.pro_nom,
+    p.pro_nom_en,
     p.pro_desc,
+    p.pro_desc_en,
     p.pro_github,
     p.pro_lien,
     p.pro_img,
@@ -38,7 +40,9 @@ ORDER BY p.pro_id, d.dom_id
             $grouped[$id] = [
                 'id'       => $row['pro_id'],
                 'nom'      => $row['pro_nom'],
+                'nom_en'      => $row['pro_nom_en'],
                 'desc'     => $row['pro_desc'],
+                'desc_en'   => $row['pro_desc_en'],
                 'github'   => $row['pro_github'],
                 'lien'     => $row['pro_lien'],
                 'img'      => $row['pro_img'],

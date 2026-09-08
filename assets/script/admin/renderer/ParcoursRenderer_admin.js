@@ -45,6 +45,9 @@ function renderParcours_admin(data) {
                 <label class="form-label">Formation</label>
                 <input type="text" name="par_titre" value="${data.titre}" required class="form-input">
                 
+                <label class="form-label">Formation anglais</label>
+                <input type="text" name="par_titre_en" value="${data.titre_en}" required class="form-input">
+                
                 <label class="form-label">Icon</label>
                 <input type="text" name="par_icon" value="${data.icon}" required class="form-input">
                 
@@ -53,6 +56,9 @@ function renderParcours_admin(data) {
                 
                 <label class="form-label">Description</label>
                 <textarea name="par_desc" required class="form-input">${data.desc}</textarea>
+                
+                <label class="form-label">Description anglais</label>
+                <textarea name="par_desc_en" required class="form-input">${data.desc_en}</textarea>
                 
                 <label class="form-label">Dates</label>
                 <input type="date" name="date_debut" value="${data.date_debut}" required class="form-input">
@@ -75,6 +81,9 @@ function renderParcours_admin(data) {
                 <label class="form-label">Formation</label>
                 <input type="text" name="par_titre" placeholder="titre" required class="form-input">
                 
+                <label class="form-label">Formation anglais</label>
+                <input type="text" name="par_titre_en" placeholder="titre" required class="form-input">
+                
                 <label class="form-label">Icon</label>
                 <input type="text" name="par_icon" placeholder="ti ti-school ou ti ti-certificate" required class="form-input">
                 
@@ -83,6 +92,9 @@ function renderParcours_admin(data) {
                 
                 <label class="form-label">Description</label>
                 <textarea name="par_desc" placeholder="description" required class="form-input"></textarea>
+                
+                <label class="form-label">Description anglais</label>
+                <textarea name="par_desc_en" placeholder="description" required class="form-input"></textarea>
                 
                 <label class="form-label">Dates</label>
                 <input type="date" name="date_debut" required class="form-input">

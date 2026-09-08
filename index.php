@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/api/loaders/loadProfile.php'
+require_once __DIR__ . '/config/language.php';
+require_once __DIR__ . '/api/loaders/loadProfile.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -24,22 +25,22 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
 
 <aside id="sidebar">
     <nav class="sb-nav">
-        <p class="sb-label">Navigation</p>
+        <p class="sb-label"><?= __tphp('navigation') ?></p>
         <ul class="sb-list">
             <li class="sb-item active">
-                <a href="#hero"><i class="ti ti-home" aria-hidden="true"></i><span>Accueil</span></a>
+                <a href="#hero"><i class="ti ti-home" aria-hidden="true"></i><span><?= __tphp('home') ?></span></a>
             </li>
             <li class="sb-item">
-              <a href="#competences"><i class="ti ti-code" aria-hidden="true"></i><span>Compétences</span></a>
+              <a href="#competences"><i class="ti ti-code" aria-hidden="true"></i><span><?= __tphp('skills') ?></span></a>
             </li>
             <li class="sb-item">
-              <a href="#parcours"><i class="ti ti-school" aria-hidden="true"></i><span>Parcours</span></a>
+              <a href="#parcours"><i class="ti ti-school" aria-hidden="true"></i><span><?= __tphp('courses') ?></span></a>
             </li>
             <li class="sb-item">
-              <a href="#projets"><i class="ti ti-folder" aria-hidden="true"></i><span>Projets</span></a>
+              <a href="#projets"><i class="ti ti-folder" aria-hidden="true"></i><span><?= __tphp('projects') ?></span></a>
             </li>
             <li class="sb-item">
-              <a href="#experience"><i class="ti ti-briefcase" aria-hidden="true"></i><span>Expériences</span></a>
+              <a href="#experience"><i class="ti ti-briefcase" aria-hidden="true"></i><span><?= __tphp('experiences') ?></span></a>
             </li>
         </ul>
     </nav>
@@ -49,11 +50,11 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
   <div class="header-container">
     <nav class="header-nav">
       <ul>
-        <li class="nav-item active" onclick="scrollTo('#hero')"><a href="#hero"><span>Accueil</span></a></li>
-        <li class="nav-item" onclick="scrollTo('#competences')"><a href="#competences"><span>Compétences</span></a></li>
-        <li class="nav-item" onclick="scrollTo('#parcours')"><a href="#parcours"><span>Parcours</span></a></li>
-        <li class="nav-item" onclick="scrollTo('#projets')"><a href="#projets"><span>Projets</span></a></li>
-        <li class="nav-item" onclick="scrollTo('#experience')"><a href="#experience"><span>Expériences</span></a></li>
+        <li class="nav-item active" onclick="scrollTo('#hero')"><a href="#hero"><span><?= __tphp('home') ?></span></a></li>
+        <li class="nav-item" onclick="scrollTo('#competences')"><a href="#competences"><span><?= __tphp('skills') ?></span></a></li>
+        <li class="nav-item" onclick="scrollTo('#parcours')"><a href="#parcours"><span><?= __tphp('courses') ?></span></a></li>
+        <li class="nav-item" onclick="scrollTo('#projets')"><a href="#projets"><span><?= __tphp('projects') ?></span></a></li>
+        <li class="nav-item" onclick="scrollTo('#experience')"><a href="#experience"><span><?= __tphp('experiences') ?></span></a></li>
       </ul>
     </nav>
   </div>
@@ -64,15 +65,23 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
 
 <main>
 
-    <div class="option">
-      <ul>
-        <li><a href="mailto:<?= $mail ?? "noah.quaghebeur@laposte.net" ?>"><i class="ti ti-mail" aria-hidden="true"></i></a></li>
-        <li><i class="ti ti-language" aria-hidden="true"></i></li>
-        <li id="theme-btn" style="cursor:pointer;">
-          <i class="ti ti-moon" id="theme-icon" aria-hidden="true"></i>
-        </li>
-      </ul>
-    </div>
+  <div class="option">
+    <ul>
+      <li><a href="mailto:<?= $mail ?? "noah.quaghebeur@laposte.net" ?>"><i class="ti ti-mail" aria-hidden="true"></i></a></li>
+
+      <li class="lang-option" id="lang-btn">
+        <i class="ti ti-language" aria-hidden="true"></i>
+        <div class="lang-bubbles">
+          <button class="lang-bubble <?= $current_lang === 'fr' ? 'active': ''?>" data-lang="fr">FR</button>
+          <button class="lang-bubble <?= $current_lang === 'en' ? 'active': ''?>" data-lang="en">EN</button>
+        </div>
+      </li>
+
+      <li id="theme-btn" style="cursor:pointer;">
+        <i class="ti ti-moon" id="theme-icon" aria-hidden="true"></i>
+      </li>
+    </ul>
+  </div>
 
     <section class="hero" id="hero">
         <div class="hero-bg" aria-hidden="true"></div>
@@ -81,14 +90,14 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
             <div class="hero-left">
                 <h1 class="hero-name">NOAH<br><em>QUAGHEBEUR</em></h1>
                 <p class="hero-desc">
-                    <?= $bio ?? "" ?>
+                  <?= ($current_lang === 'en' ? ($bioEN ?? null) : null) ?? $bio ?? "" ?>
                 </p>
                 <div class="hero-actions">
                     <a class="btn-primary" href="#projets">
-                        <i class="ti ti-folders" aria-hidden="true"></i> Voir mes projets
+                        <i class="ti ti-folders" aria-hidden="true"></i><?= __tphp('view my projects') ?>
                     </a>
-                    <a href="assets/docs/<?= $cv ?? "CV_Noah_Quaghebeur.pdf" ?>" download="<?= $cv ? "CV_Noah_Quaghebeur.pdf" : "CV_Noah_Quaghebeur_non_actualiser.pdf"?>" aria-label="Télécharger le CV" class="btn-ghost">
-                        <i class="ti ti-download" aria-hidden="true"></i> Télécharger le CV
+                    <a href="assets/docs/<?= ($current_lang === 'en' ? ($cvEN ?? null) : null) ?? $cv ?? "CV_Noah_Quaghebeur.pdf" ?>" download="<?= __tphp('nomCV') ?>" aria-label="<?= __tphp('download the CV') ?>" class="btn-ghost">
+                        <i class="ti ti-download" aria-hidden="true"></i><?= __tphp('download the CV') ?>
                     </a>
                 </div>
             </div>
@@ -113,8 +122,8 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
 
     <section id="competences">
         <div class="section-header">
-            <p class="section-eyebrow">// chapitre 1</p>
-            <h2 class="section-title">Compétences</h2>
+            <p class="section-eyebrow">// <?= __tphp('chapter') ?> 1</p>
+            <h2 class="section-title"><?= __tphp('skills') ?></h2>
         </div>
         <div class="skills-grid" id="skill-zone"><span class="loader"></span></div>
     </section>
@@ -123,8 +132,8 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
 
     <section id="parcours">
         <div class="section-header">
-            <p class="section-eyebrow">// chapitre 2</p>
-            <h2 class="section-title">Parcours</h2>
+            <p class="section-eyebrow">// <?= __tphp('chapter') ?> 2</p>
+            <h2 class="section-title"><?= __tphp('courses') ?></h2>
         </div>
         <div class="timeline" id="timeline-zone"><span class="loader"></span></div>
     </section>
@@ -133,8 +142,8 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
 
     <section id="projets">
         <div class="section-header">
-            <p class="section-eyebrow">// chapitre 3</p>
-            <h2 class="section-title">Projets</h2>
+            <p class="section-eyebrow">// <?= __tphp('chapter') ?> 3</p>
+            <h2 class="section-title"><?= __tphp('projects') ?></h2>
         </div>
         <div class="projects-grid" id="projet-zone"><span class="loader"></span></div>
     </section>
@@ -143,8 +152,8 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
 
     <section id="experience">
         <div class="section-header">
-            <p class="section-eyebrow">// chapitre 4</p>
-            <h2 class="section-title">Expériences</h2>
+            <p class="section-eyebrow">// <?= __tphp('chapter') ?> 4</p>
+            <h2 class="section-title"><?= __tphp('experiences') ?></h2>
         </div>
         <div class="timeline" id="exp-zone"><span class="loader"></span></div>
     </section>
@@ -155,19 +164,19 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
   <section class="footerSection">
 
     <div>
-      <h4>Navigation</h4>
+      <h4><?= __tphp('navigation') ?></h4>
       <ul>
-        <li onclick="scrollTo('#hero')"><a href="#hero">Accueil</a></li>
-        <li onclick="scrollTo('#competences')"><a href="#competences">Compétences</a></li>
-        <li onclick="scrollTo('#parcours')"><a href="#parcours">Parcours</a></li>
-        <li onclick="scrollTo('#projets')"><a href="#projets">Projets</a></li>
-        <li onclick="scrollTo('#experience')"><a href="#experience">Expériences</a></li>
-        <li onclick="scrollTo('#experience')"><a href="auth/login.php">Connexion</a></li>
+        <li onclick="scrollTo('#hero')"><a href="#hero"><?= __tphp('home') ?></a></li>
+        <li onclick="scrollTo('#competences')"><a href="#competences"><?= __tphp('skills') ?></a></li>
+        <li onclick="scrollTo('#parcours')"><a href="#parcours"><?= __tphp('courses') ?></a></li>
+        <li onclick="scrollTo('#projets')"><a href="#projets"><?= __tphp('projects') ?></a></li>
+        <li onclick="scrollTo('#experience')"><a href="#experience"><?= __tphp('experiences') ?></a></li>
+        <li onclick="scrollTo('#experience')"><a href="auth/login.php"><?= __tphp('login') ?></a></li>
       </ul>
     </div>
 
     <div>
-      <h4>Réseaux & Projets</h4>
+      <h4><?= __tphp('networks & projects') ?></h4>
       <ul>
         <li><a href="mailto:<?= $mail ?? "noah.quaghebeur@laposte.net" ?>" target="_blank" rel="noopener">E-mail</a></li>
         <li><a href="https://github.com/NoahQuagh" target="_blank" rel="noopener">GitHub</a></li>
@@ -177,8 +186,8 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
     </div>
 
     <div>
-      <h4 class="titre-about">Portfolio de Noah Quaghebeur</h4>
-      <p class="about">Portfolio interactif développé pour mettre en valeur mon parcours, mes compétences et mes réalisations techniques. Réalisé le 06/09/2026</p>
+      <h4 class="titre-about"><?= __tphp('noah quaghebeur’s portfolio') ?></h4>
+      <p class="about"><?= __tphp('about') ?></p>
     </div>
 
   </section>
@@ -190,13 +199,14 @@ require_once __DIR__ . '/api/loaders/loadProfile.php'
   </section>
 
 </footer>
-
 <script src="assets/script/script_navigation.js"></script>
 <script src="assets/script/renderer/competenceRenderer.js"></script>
 <script src="assets/script/renderer/parcoursRenderer.js"></script>
 <script src="assets/script/renderer/projetsRenderer.js"></script>
 <script src="assets/script/renderer/experiencesRenderer.js"></script>
 <script src="assets/script/theme.js"></script>
+<script src="assets/script/langToggle.js"></script>
 <script src="assets/script/burger.js"></script>
+<script src="assets/script/getLang.js"></script>
 </body>
 </html>

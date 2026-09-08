@@ -12,13 +12,15 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $proId = trim($_POST['pro_id'] ?? '');
 $proNom = trim($_POST['pro_titre'] ?? '');
+$proNomEN = trim($_POST['pro_titre_en'] ?? '');
 $proDesc = trim($_POST['pro_desc'] ?? '');
+$proDescEN = trim($_POST['pro_desc_en'] ?? '');
 $proGit = trim($_POST['pro_github'] ?? '');
 $proLien = trim($_POST['pro_lien'] ?? '');
 $proImg = trim($_POST['pro_img'] ?? '');
 
 
-if (empty($proId) || empty($proNom) || empty($proDesc) || empty($proGit) || empty($proLien) || empty($proImg)) {
+if (empty($proId) || empty($proNom) || empty($proDesc) || empty($proGit) || empty($proLien) || empty($proImg) || empty($proDescEN) || empty($proNomEN)) {
     echo json_encode(['success' => false, 'message' => 'Informations manquantes']);
     exit;
 }
@@ -26,8 +28,8 @@ if (empty($proId) || empty($proNom) || empty($proDesc) || empty($proGit) || empt
 try {
     $pdo = getDB();
 
-    $stmt = $pdo->prepare("update POR_PROJETS set pro_nom=? , pro_desc=? , pro_github=? , pro_lien=? , pro_img=?  where pro_id=?");
-    $stmt->execute([$proNom,$proDesc,$proGit,$proLien,$proImg,$proId]);
+    $stmt = $pdo->prepare("update POR_PROJETS set pro_nom=? , pro_desc=? , pro_github=? , pro_lien=? , pro_img=?, pro_desc_en=?,pro_nom_en=?  where pro_id=?");
+    $stmt->execute([$proNom,$proDesc,$proGit,$proLien,$proImg,$proDescEN,$proNomEN,$proId]);
 
     header('Location: ../../../admin/admin_projets.php');
     exit;

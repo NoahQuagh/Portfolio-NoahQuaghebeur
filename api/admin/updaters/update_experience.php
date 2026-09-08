@@ -14,9 +14,12 @@ $expId = trim($_POST['exp_id'] ?? '');
 $expIcon = trim($_POST['exp_icon'] ?? '');
 $expLoc = trim($_POST['exp_loc'] ?? '');
 $expContrat = trim($_POST['exp_contrat'] ?? '');
+$expContratEN = trim($_POST['exp_contrat_en'] ?? '');
 $expPoste = trim($_POST['exp_poste'] ?? '');
+$expPosteEN = trim($_POST['exp_poste_en'] ?? '');
 $expEntreprise = trim($_POST['exp_entreprise'] ?? '');
 $expDesc = trim($_POST['exp_desc'] ?? '');
+$expDescEN = trim($_POST['exp_desc_en'] ?? '');
 $expDateDebut = trim($_POST['date_debut'] ?? '');
 $expDateFinInput = trim($_POST['date_fin'] ?? '');
 
@@ -28,7 +31,7 @@ if (!empty($expDateFinInput)) {
     $expDateFin = null;
 }
 
-if (empty($expId) || empty($expIcon) ||  empty($expLoc) ||  empty($expContrat) ||  empty($expPoste) ||  empty($expEntreprise)  ||  empty($expDesc) ||  empty($expDateDebut)) {
+if (empty($expId) || empty($expIcon) ||  empty($expLoc) ||  empty($expContrat) ||  empty($expPoste) ||  empty($expEntreprise)  ||  empty($expDesc) ||  empty($expDateDebut) ||  empty($expContratEN)  ||  empty($expPosteEN) ||  empty($expDescEN)) {
     echo json_encode(['success' => false, 'message' => 'Informations manquantes']);
     exit;
 }
@@ -36,9 +39,9 @@ if (empty($expId) || empty($expIcon) ||  empty($expLoc) ||  empty($expContrat) |
 try {
     $pdo = getDB();
 
-    $stmt = $pdo->prepare("update POR_EXPERIENCES set exp_logo=? , exp_date_debut=? , exp_date_fin=? ,exp_type_contrat=?,exp_nom_poste=? ,exp_entreprise=? , exp_localisation=? , exp_description=?
+    $stmt = $pdo->prepare("update POR_EXPERIENCES set exp_logo=? , exp_date_debut=? , exp_date_fin=? ,exp_type_contrat=?,exp_nom_poste=? ,exp_entreprise=? , exp_localisation=? , exp_description=?,exp_type_contrat_en=?,exp_nom_poste_en=?,exp_description_en=?
 where exp_id=?");
-    $stmt->execute([$expIcon,$expDateDebut,$expDateFin,$expContrat,$expPoste,$expEntreprise,$expLoc,$expDesc,$expId]);
+    $stmt->execute([$expIcon,$expDateDebut,$expDateFin,$expContrat,$expPoste,$expEntreprise,$expLoc,$expDesc,$expContratEN,$expPosteEN,$expDescEN,$expId]);
 
     header('Location: ../../../admin/admin_experiences.php');
     exit;

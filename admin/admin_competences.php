@@ -40,11 +40,15 @@ require_once __DIR__ . '/../auth/guard.php';
         <form action="../api/admin/inserters/add_competence.php" method="POST" class="admin-form" style="margin-top: 1rem;">
             <div class="form-grid">
                 <div class="form-group">
-                    <label for="com_categorie" class="form-label">Nom de la catégorie</label>
+                    <label class="form-label">Nom de la catégorie</label>
                     <input type="text" id="com_categorie" name="com_categorie" required placeholder="ex: Base de données" class="form-input">
                 </div>
+              <div class="form-group">
+                <label class="form-label">Nom de la catégorie angalais</label>
+                <input type="text" id="com_categorie" name="com_categorie_en" required placeholder="ex: Database" class="form-input">
+              </div>
                 <div class="form-group">
-                    <label for="com_icone" class="form-label">Classe Icône (Tabler Icons)</label>
+                    <label class="form-label">Classe Icône (Tabler Icons)</label>
                     <input type="text" id="com_icone" name="com_icone" required placeholder="ex: ti ti-database" class="form-input">
                 </div>
             </div>

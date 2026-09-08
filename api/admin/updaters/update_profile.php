@@ -35,9 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $dossierPhotos = __DIR__ . '/../../../assets/img/';
 $dossierDocs   = __DIR__ . '/../../../assets/docs/';
+$dossierDocsEN   = __DIR__ . '/../../../assets/docs/';
 
 $email = trim($_POST['email']    ?? '');
 $bio   = trim($_POST['biographie'] ?? '');
+$bioEN   = trim($_POST['biographie_en'] ?? '');
 
 if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     repondre(false, 'Adresse e-mail invalide.');
@@ -45,6 +47,10 @@ if (!$email || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 if (!$bio) {
     repondre(false, 'La biographie ne peut pas être vide.');
+}
+
+if (!$bioEN) {
+    repondre(false, 'La biographie anglaise ne peut pas être vide.');
 }
 
 $nomPhoto = null;
@@ -73,10 +79,23 @@ if (!empty($_FILES['cv']['name'])) {
     }
 }
 
+$nomCVEN = null;
+if (!empty($_FILES['cv_en']['name'])) {
+    $nomCVEN = uploadFichier(
+        $_FILES['cv_en'],
+        $dossierDocsEN,
+        ['pdf'],
+        10000000
+    );
+    if ($nomCVEN === false) {
+        repondre(false, 'CV EN invalide. Format accepté : PDF uniquement. Max 10 Mo.');
+    }
+}
+
 $db = getDB();
 
-$sets   = ['use_email = ?', 'use_bio = ?'];
-$params = [$email, $bio];
+$sets   = ['use_email = ?', 'use_bio = ?','use_bio_en = ?'];
+$params = [$email, $bio,$bioEN];
 
 if ($nomPhoto !== null) {
     $sets[]   = 'use_pp = ?';
@@ -86,6 +105,11 @@ if ($nomPhoto !== null) {
 if ($nomCV !== null) {
     $sets[]   = 'use_nom_cv = ?';
     $params[] = $nomCV;
+}
+
+if ($nomCVEN !== null) {
+    $sets[]   = 'use_nom_cv_en = ?';
+    $params[] = $nomCVEN;
 }
 
 $sql = 'UPDATE POR_USERS SET ' . implode(', ', $sets) . ' WHERE use_id = 1';
@@ -103,6 +127,13 @@ if ($nomCV !== null) {
     $ancien = $db->query('SELECT use_nom_cv FROM POR_USERS WHERE use_id = 1')->fetchColumn();
     if ($ancien && $ancien !== $nomCV && file_exists($dossierDocs . $ancien)) {
         unlink($dossierDocs . $ancien);
+    }
+}
+
+if ($nomCVEN !== null) {
+    $ancien = $db->query('SELECT use_nom_cv_en FROM POR_USERS WHERE use_id = 1')->fetchColumn();
+    if ($ancien && $ancien !== $nomCVEN && file_exists($dossierDocsEN . $ancien)) {
+        unlink($dossierDocsEN . $ancien);
     }
 }
 

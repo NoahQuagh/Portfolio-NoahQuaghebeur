@@ -50,14 +50,23 @@ function renderParcours_admin(data) {
                 <label  class="form-label">Contrat</label>
                 <input type="text" name="exp_contrat" value="${data.contrat}" required class="form-input">
                 
+                <label  class="form-label">Contrat anglais</label>
+                <input type="text" name="exp_contrat_en" value="${data.contrat_en}" required class="form-input">
+                
                 <label  class="form-label">Poste</label>
                 <input type="text" name="exp_poste" value="${data.poste}" required class="form-input">
+                
+                <label  class="form-label">Poste anglais</label>
+                <input type="text" name="exp_poste_en" value="${data.poste_en}" required class="form-input">
                 
                 <label  class="form-label">Entreprise</label>
                 <input type="text" name="exp_entreprise" value="${data.entreprise}" required class="form-input">
                 
                 <label class="form-label">Description</label>
                 <textarea name="exp_desc" required class="form-input">${data.description}</textarea>
+                
+                <label class="form-label">Description anglais</label>
+                <textarea name="exp_desc_en" required class="form-input">${data.description_en}</textarea>
                 
                 <label " class="form-label">Dates</label>
                 <input type="date" name="date_debut" value="${data.date_debut}" required class="form-input">
@@ -86,14 +95,23 @@ function renderParcours_admin(data) {
                 <label  class="form-label">Contrat</label>
                 <input type="text" name="exp_contrat" required class="form-input">
                 
+                <label  class="form-label">Contrat anglais</label>
+                <input type="text" name="exp_contrat_en" required class="form-input">
+                
                 <label  class="form-label">Poste</label>
                 <input type="text" name="exp_poste" required class="form-input">
+                
+                <label  class="form-label">Poste anglais</label>
+                <input type="text" name="exp_poste_en" required class="form-input">
                 
                 <label  class="form-label">Entreprise</label>
                 <input type="text" name="exp_entreprise" required class="form-input">
                 
                 <label class="form-label">Description</label>
                 <textarea name="exp_desc" required class="form-input"></textarea>
+                
+                <label class="form-label">Description anglais</label>
+                <textarea name="exp_desc_en" required class="form-input"></textarea>
                 
                 <label " class="form-label">Dates</label>
                 <input type="date" name="date_debut" required class="form-input">

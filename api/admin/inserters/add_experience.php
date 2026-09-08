@@ -13,14 +13,17 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $expIcon = trim($_POST['exp_icon'] ?? '');
 $expLoc = trim($_POST['exp_loc'] ?? '');
 $expContrat = trim($_POST['exp_contrat'] ?? '');
+$expContratEN = trim($_POST['exp_contrat_en'] ?? '');
 $expPoste = trim($_POST['exp_poste'] ?? '');
+$expPosteEN = trim($_POST['exp_poste_en'] ?? '');
 $expEntreprise = trim($_POST['exp_entreprise'] ?? '');
 $expDesc = trim($_POST['exp_desc'] ?? '');
+$expDescEN = trim($_POST['exp_desc_en'] ?? '');
 $expDateDebut = trim($_POST['date_debut'] ?? '');
 $expDateFin = trim($_POST['date_fin'] ?? null);
 
 
-if (empty($expIcon) ||  empty($expLoc) ||  empty($expContrat) ||  empty($expPoste) ||  empty($expEntreprise)  ||  empty($expDesc) ||  empty($expDateDebut)) {
+if (empty($expIcon) ||  empty($expLoc) ||  empty($expContrat) ||  empty($expPoste) ||  empty($expEntreprise)  ||  empty($expDesc) ||  empty($expDateDebut) ||  empty($expContratEN)  ||  empty($expPosteEN) ||  empty($expDescEN)) {
     echo json_encode(['success' => false, 'message' => 'Informations manquantes']);
     exit;
 }
@@ -29,9 +32,9 @@ try {
     $pdo = getDB();
 
     $stmt = $pdo->prepare("insert into POR_EXPERIENCES 
-    (exp_logo, exp_date_debut, exp_date_fin, exp_type_contrat, exp_nom_poste, exp_entreprise, exp_localisation, exp_description) 
-    VALUE (?,?,?,?,?,?,?,?)");
-    $stmt->execute([$expIcon,$expDateDebut,$expDateFin,$expContrat,$expPoste,$expEntreprise,$expLoc,$expDesc]);
+    (exp_logo, exp_date_debut, exp_date_fin, exp_type_contrat, exp_nom_poste, exp_entreprise, exp_localisation, exp_description,exp_type_contrat_en,exp_nom_poste_en,exp_description_en) 
+    VALUE (?,?,?,?,?,?,?,?,?,?,?)");
+    $stmt->execute([$expIcon,$expDateDebut,$expDateFin,$expContrat,$expPoste,$expEntreprise,$expLoc,$expDesc,$expContratEN,$expPosteEN,$expDescEN]);
 
     header('Location: ../../../admin/admin_experiences.php');
     exit;
