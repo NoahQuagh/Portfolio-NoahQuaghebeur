@@ -27,7 +27,7 @@ function renderExperiences(data) {
 
         return `
         <div class="timeline-item">
-            <div class="timeline-dot"><i class="${t.icon}" aria-hidden="true"></i></div>
+            <!--<div class="timeline-dot"><i class="${t.icon}" aria-hidden="true"></i></div>-->
             <div class="timeline-content">
                 <p class="timeline-period">${t.date}</p>
                 <h3 class="timeline-title">${travail}</h3>

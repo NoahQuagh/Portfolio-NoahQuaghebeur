@@ -85,7 +85,6 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 9px 10px;
     border-radius: 8px;
     cursor: pointer;
     color: var(--wh3);
@@ -104,9 +103,11 @@
     color: var(--wh3);
     font-family: var(--font-text);
     font-size: 14px;
+    padding: 9px 10px;
     font-weight: 500;
     text-align: left;
     gap: 12px;
+    width: 100%;
 }
 
 .sb-item a i {
@@ -139,7 +140,10 @@
 
 .sb-item.active {
     background: var(--ink3);
-    color: var(--wh)
+    a span,a i{
+        color: var(--wh);
+
+    }
 }
 
 .sb-bottom {
@@ -147,4 +151,35 @@
     display: flex;
     flex-direction: column;
     gap: 2px
+}
+
+#sidebar {
+    z-index: 9999;
+}
+
+.sb-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 998;
+    cursor: pointer;
+}
+
+.sb-overlay.open {
+    display: block;
+    z-index: 199;
+}
+
+#sidebar.open {
+    width: 240px !important;
+}
+
+#sidebar.open .sb-item span {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+#sidebar.open .sb-label {
+    opacity: 1 !important;
 }

@@ -27,20 +27,20 @@ require_once __DIR__ . '/api/loaders/loadProfile.php';
     <nav class="sb-nav">
         <p class="sb-label"><?= __tphp('navigation') ?></p>
         <ul class="sb-list">
-            <li class="sb-item active">
-                <a href="#hero"><i class="ti ti-home" aria-hidden="true"></i><span><?= __tphp('home') ?></span></a>
+            <li class="sb-item">
+                <a href="#hero" onclick="smothScrollTo('#hero')"><i class="ti ti-home" aria-hidden="true"></i><span><?= __tphp('home') ?></span></a>
             </li>
             <li class="sb-item">
-              <a href="#competences"><i class="ti ti-code" aria-hidden="true"></i><span><?= __tphp('skills') ?></span></a>
+              <a href="#competences" onclick="smothScrollTo('#competences')"><i class="ti ti-code" aria-hidden="true"></i><span><?= __tphp('skills') ?></span></a>
             </li>
             <li class="sb-item">
-              <a href="#parcours"><i class="ti ti-school" aria-hidden="true"></i><span><?= __tphp('courses') ?></span></a>
+              <a href="#parcours" onclick="smothScrollTo('#parcours')"><i class="ti ti-school" aria-hidden="true"></i><span><?= __tphp('courses') ?></span></a>
             </li>
             <li class="sb-item">
-              <a href="#projets"><i class="ti ti-folder" aria-hidden="true"></i><span><?= __tphp('projects') ?></span></a>
+              <a href="#projets" onclick="smothScrollTo('#projets')"><i class="ti ti-folder" aria-hidden="true"></i><span><?= __tphp('projects') ?></span></a>
             </li>
             <li class="sb-item">
-              <a href="#experience"><i class="ti ti-briefcase" aria-hidden="true"></i><span><?= __tphp('experiences') ?></span></a>
+              <a href="#experience" onclick="smothScrollTo('#experience')"><i class="ti ti-briefcase" aria-hidden="true"></i><span><?= __tphp('experiences') ?></span></a>
             </li>
         </ul>
     </nav>
@@ -50,11 +50,11 @@ require_once __DIR__ . '/api/loaders/loadProfile.php';
   <div class="header-container">
     <nav class="header-nav">
       <ul>
-        <li class="nav-item active" onclick="scrollTo('#hero')"><a href="#hero"><span><?= __tphp('home') ?></span></a></li>
-        <li class="nav-item" onclick="scrollTo('#competences')"><a href="#competences"><span><?= __tphp('skills') ?></span></a></li>
-        <li class="nav-item" onclick="scrollTo('#parcours')"><a href="#parcours"><span><?= __tphp('courses') ?></span></a></li>
-        <li class="nav-item" onclick="scrollTo('#projets')"><a href="#projets"><span><?= __tphp('projects') ?></span></a></li>
-        <li class="nav-item" onclick="scrollTo('#experience')"><a href="#experience"><span><?= __tphp('experiences') ?></span></a></li>
+        <li class="nav-item active" onclick="smothScrollTo('#hero')"><a href="#hero"><span><?= __tphp('home') ?></span></a></li>
+        <li class="nav-item" onclick="smothScrollTo('#competences')"><a href="#competences"><span><?= __tphp('skills') ?></span></a></li>
+        <li class="nav-item" onclick="smothScrollTo('#parcours')"><a href="#parcours"><span><?= __tphp('courses') ?></span></a></li>
+        <li class="nav-item" onclick="smothScrollTo('#projets')"><a href="#projets"><span><?= __tphp('projects') ?></span></a></li>
+        <li class="nav-item" onclick="smothScrollTo('#experience')"><a href="#experience"><span><?= __tphp('experiences') ?></span></a></li>
       </ul>
     </nav>
   </div>
@@ -122,7 +122,6 @@ require_once __DIR__ . '/api/loaders/loadProfile.php';
 
     <section id="competences">
         <div class="section-header">
-            <p class="section-eyebrow">// <?= __tphp('chapter') ?> 1</p>
             <h2 class="section-title"><?= __tphp('skills') ?></h2>
         </div>
         <div class="skills-grid" id="skill-zone"><span class="loader"></span></div>
@@ -132,7 +131,6 @@ require_once __DIR__ . '/api/loaders/loadProfile.php';
 
     <section id="parcours">
         <div class="section-header">
-            <p class="section-eyebrow">// <?= __tphp('chapter') ?> 2</p>
             <h2 class="section-title"><?= __tphp('courses') ?></h2>
         </div>
         <div class="timeline" id="timeline-zone"><span class="loader"></span></div>
@@ -142,7 +140,6 @@ require_once __DIR__ . '/api/loaders/loadProfile.php';
 
     <section id="projets">
         <div class="section-header">
-            <p class="section-eyebrow">// <?= __tphp('chapter') ?> 3</p>
             <h2 class="section-title"><?= __tphp('projects') ?></h2>
         </div>
         <div class="projects-grid" id="projet-zone"><span class="loader"></span></div>
@@ -152,7 +149,6 @@ require_once __DIR__ . '/api/loaders/loadProfile.php';
 
     <section id="experience">
         <div class="section-header">
-            <p class="section-eyebrow">// <?= __tphp('chapter') ?> 4</p>
             <h2 class="section-title"><?= __tphp('experiences') ?></h2>
         </div>
         <div class="timeline" id="exp-zone"><span class="loader"></span></div>
@@ -166,12 +162,12 @@ require_once __DIR__ . '/api/loaders/loadProfile.php';
     <div>
       <h4><?= __tphp('navigation') ?></h4>
       <ul>
-        <li onclick="scrollTo('#hero')"><a href="#hero"><?= __tphp('home') ?></a></li>
-        <li onclick="scrollTo('#competences')"><a href="#competences"><?= __tphp('skills') ?></a></li>
-        <li onclick="scrollTo('#parcours')"><a href="#parcours"><?= __tphp('courses') ?></a></li>
-        <li onclick="scrollTo('#projets')"><a href="#projets"><?= __tphp('projects') ?></a></li>
-        <li onclick="scrollTo('#experience')"><a href="#experience"><?= __tphp('experiences') ?></a></li>
-        <li onclick="scrollTo('#experience')"><a href="auth/login.php"><?= __tphp('login') ?></a></li>
+        <li><a href="#hero"><?= __tphp('home') ?></a></li>
+        <li><a href="#competences"><?= __tphp('skills') ?></a></li>
+        <li><a href="#parcours"><?= __tphp('courses') ?></a></li>
+        <li><a href="#projets"><?= __tphp('projects') ?></a></li>
+        <li><a href="#experience"><?= __tphp('experiences') ?></a></li>
+        <li><a href="auth/login.php"><?= __tphp('login') ?></a></li>
       </ul>
     </div>
 

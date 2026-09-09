@@ -77,10 +77,6 @@
         font-size: 0.8rem;
     }
 
-    .option ul li {
-        width: 42px;
-        height: 42px;
-    }
 
     .hero {
         padding: var(--marge-xl) var(--marge-lg);
@@ -268,20 +264,6 @@
     .project-icon {
         width: 48px;
         height: 48px;
-    }
-
-    .option {
-        bottom: 12px;
-        left: 12px;
-    }
-
-    .option ul li {
-        width: 38px;
-        height: 38px;
-    }
-
-    .option ul li i {
-        font-size: 17px;
     }
 
     .footerSection {
